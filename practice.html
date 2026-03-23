@@ -10,31 +10,28 @@
 
     <p><b>1. What is the primary function of roots?</b></p>
 
-  <ul>
-    <li onclick="checkAnswer(this, 'A')">A. Photosynthesis</li>
-    <li onclick="checkAnswer(this, 'B')">B. Absorption of water</li>
-    <li onclick="checkAnswer(this, 'C')">C. Pollination</li>
-    <li onclick="checkAnswer(this, 'D')">D. Respiration</li>
-</ul>>
-
-<p id="result"></p>
+    <ul>
+        <li onclick="checkAnswer(this, 'A')">A. Photosynthesis</li>
+        <li onclick="checkAnswer(this, 'B')">B. Absorption of water</li>
+        <li onclick="checkAnswer(this, 'C')">C. Pollination</li>
+        <li onclick="checkAnswer(this, 'D')">D. Respiration</li>
     </ul>
+
+    <p id="result"></p>
+
+    <script>
+    function checkAnswer(element, answer) {
+        let correct = 'B';
+
+        if (answer === correct) {
+            element.style.color = 'green';
+            document.getElementById("result").innerText = "Correct!";
+        } else {
+            element.style.color = 'red';
+            document.getElementById("result").innerText = "Wrong!";
+        }
+    }
+    </script>
 
 </body>
 </html>
-<script>
-function checkAnswer(element, answer) {
-    alert("Clicked " + answer);
-}
-</script>
-    let correct = 'B';
-
-    if (answer === correct) {
-        element.style.color = 'green';
-        document.getElementById("result").innerText = "Correct!";
-    } else {
-        element.style.color = 'red';
-        document.getElementById("result").innerText = "Wrong!";
-    }
-}
-</script>
