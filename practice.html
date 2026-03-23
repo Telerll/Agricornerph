@@ -10,12 +10,28 @@
 
     <p><b>1. What is the primary function of roots?</b></p>
 
-    <ul>
-        <li>A. Photosynthesis</li>
-        <li>B. Absorption of water</li>
-        <li>C. Pollination</li>
-        <li>D. Respiration</li>
+    <<ul>
+    <li onclick="checkAnswer(this, 'A')">A. Photosynthesis</li>
+    <li onclick="checkAnswer(this, 'B')">B. Absorption of water</li>
+    <li onclick="checkAnswer(this, 'C')">C. Pollination</li>
+    <li onclick="checkAnswer(this, 'D')">D. Respiration</li>
+</ul>
+
+<p id="result"></p>
     </ul>
 
 </body>
 </html>
+<script>
+function checkAnswer(element, answer) {
+    let correct = 'B';
+
+    if (answer === correct) {
+        element.style.color = 'green';
+        document.getElementById("result").innerText = "Correct!";
+    } else {
+        element.style.color = 'red';
+        document.getElementById("result").innerText = "Wrong!";
+    }
+}
+</script>
