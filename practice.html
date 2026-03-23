@@ -20,17 +20,17 @@
     <p id="result"></p>
 
     <script>
-    function checkAnswer(element, answer) {
-        let correct = 'B';
+        function checkAnswer(element, answer) {
+            let correct = 'B';
 
-        if (answer === correct) {
-            element.style.color = 'green';
-            document.getElementById("result").innerText = "Correct!";
-        } else {
-            element.style.color = 'red';
-            document.getElementById("result").innerText = "Wrong!";
+            if (answer === correct) {
+                element.style.color = 'green';
+                document.getElementById("result").innerText = "Correct!";
+            } else {
+                element.style.color = 'red';
+                document.getElementById("result").innerText = "Wrong!";
+            }
         }
-    }
     </script>
 
 </body>
