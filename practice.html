@@ -1,39 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Questions</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .quiz-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        }
+
+        .quiz-container h1 {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .choices {
+            list-style: none;
+            padding: 0;
+        }
+
+        .choices li {
+            background: #f4f8f3;
+            margin-bottom: 12px;
+            padding: 15px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .choices li:hover {
+            background: #e8f5e9;
+        }
+
+        .choices li.correct {
+            background: #d9f2d9;
+            color: green;
+            border-color: green;
+        }
+
+        .choices li.wrong {
+            background: #fde2e2;
+            color: red;
+            border-color: red;
+        }
+
+        .result-text {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .next-btn, .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #2e7d32;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .next-btn:hover, .home-btn:hover {
+            background: #1b5e20;
+        }
+
+        .score-box {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            color: #1b5e20;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Practice Questions</h1>
+    <div class="quiz-container">
+        <h1>Practice Questions</h1>
 
-<p><b>1. What is the primary function of roots?</b></p>
+        <div id="quiz-box">
+            <p class="question-number" id="question-number"></p>
+            <p class="question-text" id="question-text"></p>
+            <ul class="choices" id="choices"></ul>
+            <p class="result-text" id="result"></p>
+            <div class="center">
+                <button class="next-btn" id="next-btn" onclick="nextQuestion()" style="display:none;">Next Question</button>
+            </div>
+        </div>
 
-<ul>
-    <li onclick="checkAnswer(this, 'A')">A. Photosynthesis</li>
-    <li onclick="checkAnswer(this, 'B')">B. Absorption of water</li>
-    <li onclick="checkAnswer(this, 'C')">C. Pollination</li>
-    <li onclick="checkAnswer(this, 'D')">D. Respiration</li>
-</ul>
+        <div id="final-score" style="display:none;">
+            <p class="score-box" id="score-text"></p>
+            <div class="center">
+                <a href="index.html" class="home-btn">Back to Home</a>
+            </div>
+        </div>
+    </div>
 
-<p id="result"></p>
+    <script>
+        const questions = [
+            {
+                question: "What is the primary function of roots?",
+                choices: [
+                    "A. Photosynthesis",
+                    "B. Absorption of water",
+                    "C. Pollination",
+                    "D. Respiration"
+                ],
+                correct: 1
+            },
+            {
+                question: "Which soil-forming factor refers to topography?",
+                choices: [
+                    "A. Climate",
+                    "B. Organisms",
+                    "C. Relief",
+                    "D. Time"
+                ],
+                correct: 2
+            },
+            {
+                question: "Which branch of agriculture focuses on livestock production?",
+                choices: [
+                    "A. Crop Science",
+                    "B. Animal Science",
+                    "C. Soil Science",
+                    "D. Agronomy"
+                ],
+                correct: 1
+            },
+            {
+                question: "What gas is mainly used by plants during photosynthesis?",
+                choices: [
+                    "A. Oxygen",
+                    "B. Nitrogen",
+                    "C. Carbon dioxide",
+                    "D. Hydrogen"
+                ],
+                correct: 2
+            },
+            {
+                question: "Which part of the flower develops into a fruit?",
+                choices: [
+                    "A. Petal",
+                    "B. Sepal",
+                    "C. Ovary",
+                    "D. Stamen"
+                ],
+                correct: 2
+            }
+        ];
 
-<script>
-function checkAnswer(element, answer) {
-    const correct = 'B';
-    const result = document.getElementById('result');
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
 
-    if (answer === correct) {
-        element.style.color = 'green';
-        result.textContent = 'Correct!';
-    } else {
-        element.style.color = 'red';
-        result.textContent = 'Wrong!';
-    }
-}
-</script>
+        function loadQuestion() {
+            answered = false;
+            document.getElementById("result").textContent = "";
+            document.getElementById("next-btn").style.display = "none";
+
+            const q = questions[currentQuestion];
+            document.getElementById("question-number").textContent = "Question " + (currentQuestion + 1) + " of " + questions.length;
+            document.getElementById("question-text").textContent = q.question;
+
+            const choicesList = document.getElementById("choices");
+            choicesList.innerHTML = "";
+
+            q.choices.forEach((choice, index) => {
+                const li = document.createElement("li");
+                li.textContent = choice;
+                li.onclick = () => checkAnswer(li, index);
+                choicesList.appendChild(li);
+            });
+        }
+
+        function checkAnswer(element, selectedIndex) {
+            if (answered) return;
+            answered = true;
+
+            const q = questions[currentQuestion];
+            const choices = document.querySelectorAll("#choices li");
+
+            choices.forEach((li, index) => {
+                if (index === q.correct) {
+                    li.classList.add("correct");
+                }
+            });
+
+            if (selectedIndex === q.correct) {
+                score++;
+                document.getElementById("result").textContent = "Correct!";
+                document.getElementById("result").style.color = "green";
+            } else {
+                element.classList.add("wrong");
+                document.getElementById("result").textContent = "Wrong!";
+                document.getElementById("result").style.color = "red";
+            }
+
+            document.getElementById("next-btn").style.display = "inline-block";
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showFinalScore();
+            }
+        }
+
+        function showFinalScore() {
+            document.getElementById("quiz-box").style.display = "none";
+            document.getElementById("final-score").style.display = "block";
+            document.getElementById("score-text").textContent =
+                "You got " + score + " out of " + questions.length + " correct.";
+        }
+
+        loadQuestion();
+    </script>
 
 </body>
 </html>
