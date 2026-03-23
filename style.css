@@ -34,7 +34,7 @@ nav {
     background: linear-gradient(to right, #388e3c, #66bb6a);
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
 
     display: flex;
     flex-direction: column;
@@ -44,8 +44,8 @@ nav {
 }
 
 .hero-logo {
-    width: 100px;
-    margin-bottom: 15px;
+    width: 120px;
+    margin-bottom: 20px;
     border-radius: 50%;
 }
 }
