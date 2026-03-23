@@ -44,9 +44,11 @@ nav {
 }
 
 .hero-logo {
-    width: 120px;
-    margin-bottom: 20px;
-    border-radius: 50%;
+    width: 90px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
 }
 }
 
