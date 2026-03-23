@@ -155,3 +155,17 @@ footer h3 {
     margin-top: 10px;
     font-size: 14px;
 }
+...lahat ng existing CSS mo...
+
+.card,
+.card:visited,
+.card:hover,
+.card:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.card * {
+    color: inherit !important;
+    text-decoration: none !important;
+}
