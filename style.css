@@ -7,15 +7,23 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f8f3;
+    color: #222;
+    line-height: 1.6;
 }
 
-/* NAV */
+/* Navigation */
 nav {
-    background: #1b5e20;
+    background-color: #1b5e20;
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 40px;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -27,9 +35,10 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* HERO */
+/* Hero */
 .hero {
     background: linear-gradient(to right, #388e3c, #66bb6a);
     color: white;
@@ -38,24 +47,101 @@ nav {
 }
 
 .hero-logo {
-    width: 120px;
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 18px;
 }
 
-/* SECTIONS */
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #2e7d32;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections */
 .section {
     padding: 60px 20px;
     text-align: center;
 }
 
+.section h2 {
+    font-size: 36px;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* Cards */
 .card-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Highlight */
+.highlight {
+    background-color: #e8f5e9;
+}
+
+/* Footer */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 14px;
 }
