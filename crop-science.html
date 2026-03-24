@@ -65,7 +65,7 @@
  <button id="nextBtn" onclick="nextQuestion()">Next Question ➡</button>
 
     <script>
-       <script>
+   <script>
 let score = 0;
 let answered = {};
 let currentQuestion = 1;
@@ -97,6 +97,11 @@ function checkAnswer(element, questionNumber, answer) {
 }
 
 function nextQuestion() {
+    if (!answered[currentQuestion]) {
+        alert("Answer the question first.");
+        return;
+    }
+
     if (currentQuestion === 1) {
         document.getElementById("q1").style.display = "none";
         document.getElementById("q2").style.display = "block";
