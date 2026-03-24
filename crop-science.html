@@ -110,7 +110,7 @@
   <button id="nextBtn" type="button">Next ➡</button>
 
   <p id="finalResult"></p>
-<button id="restartBtn" type="button" onclick="restartQuiz()" style="display:none;">Restart 🔁</button>
+
   <script>
     let score = 0;
     let answered = {};
@@ -151,30 +151,24 @@
         return;
       }
 
-      function restartQuiz() {
-    score = 0;
-    answered = {};
-    currentQuestion = 1;
+      if (currentQuestion === 1) {
+        document.getElementById('q1').style.display = 'none';
+        document.getElementById('q2').style.display = 'block';
+        currentQuestion = 2;
+      } else if (currentQuestion === 2) {
+        document.getElementById('q2').style.display = 'none';
+        document.getElementById('q3').style.display = 'block';
+        currentQuestion = 3;
+        document.getElementById('nextBtn').textContent = 'Finish';
+      } else {
+        document.getElementById('finalResult').textContent =
+          '🎉 Quiz Finished! Your Score: ' + score;
+        document.getElementById('nextBtn').style.display = 'none';
+      }
+    }
 
-    document.getElementById('score').textContent = 'Score: 0';
-    document.getElementById('finalResult').textContent = '';
+    document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+  </script>
 
-    document.getElementById('q1').style.display = 'block';
-    document.getElementById('q2').style.display = 'none';
-    document.getElementById('q3').style.display = 'none';
-
-    document.getElementById('result1').textContent = '';
-    document.getElementById('result2').textContent = '';
-    document.getElementById('result3').textContent = '';
-
-    document.querySelectorAll('li').forEach(function(li) {
-      li.style.color = 'black';
-    });
-
-    document.getElementById('nextBtn').style.display = 'inline-block';
-    document.getElementById('nextBtn').textContent = 'Next ➡';
-    document.getElementById('restartBtn').style.display = 'none';
-  }
-
-  document.getElementById('nextBtn').addEventListener('click', nextQuestion);
-</script>
+</body>
+</html>
