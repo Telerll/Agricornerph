@@ -44,25 +44,17 @@ nav {
 
 /* Hero */
 .hero {
-  background: linear-gradient(to right, #388e3c, #66bb6a);
-  color: white;
-  text-align: center;
-
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-   gap: 20px;
-  padding: 20px;
-}
+    background: linear-gradient(to right, #388e3c, #66bb6a);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.hero img {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
+.hero-logo {
+    width: 300px !important;
+    height: auto;
+    display: block;
+    margin: 0 auto 40px;
 }
 }
 
