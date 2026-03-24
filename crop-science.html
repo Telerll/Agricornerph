@@ -58,9 +58,11 @@
   </ul>
   <p id="result3"></p>
 </div>
+  <button onclick="nextQuestion()">Next ➡</button>
   <script>
-    let score = 0;
+  let score = 0;
   let answered = {};
+  let currentQuestion = 1;
 
   function checkAnswer(element, questionNumber, answer) {
     const correctAnswers = {
@@ -89,5 +91,24 @@
 
     answered[questionNumber] = true;
     document.getElementById('score').textContent = 'Score: ' + score;
+  }
+
+  function nextQuestion() {
+    if (!answered[currentQuestion]) {
+      alert("Answer first!");
+      return;
+    }
+
+    if (currentQuestion === 1) {
+      document.getElementById("q1").style.display = "none";
+      document.getElementById("q2").style.display = "block";
+      currentQuestion = 2;
+    } else if (currentQuestion === 2) {
+      document.getElementById("q2").style.display = "none";
+      document.getElementById("q3").style.display = "block";
+      currentQuestion = 3;
+    } else {
+      alert("End of quiz!");
+    }
   }
 </script>
