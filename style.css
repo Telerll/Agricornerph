@@ -48,21 +48,21 @@ nav {
   color: white;
   text-align: center;
 
-  height: 100vh; /* full screen */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 20px; /* mas maliit para centered */
+   gap: 20px;
+  padding: 20px;
 }
 }
 
-.hero-logo {
-    width: 300px !important;
-    height: auto;
-    display: block;
-    margin: 0 auto 40px;
+.hero img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
 }
 }
 
