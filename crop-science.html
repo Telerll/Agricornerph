@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Crop Science Practice</title>
+    <style>
+        li {
+            list-style: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        li:hover {
+            background: #eee;
+        }
+    </style>
 </head>
 <body>
 
@@ -42,3 +53,20 @@ function checkAnswer(element, answer) {
 
 </body>
 </html>
+<script>
+function checkAnswer(element, answer) {
+    const correct = 'C';
+    const result = document.getElementById('result');
+
+    const choices = document.querySelectorAll('li');
+    choices.forEach(li => li.style.color = 'black');
+
+    if (answer === correct) {
+        element.style.color = 'green';
+        result.textContent = 'Correct!';
+    } else {
+        element.style.color = 'red';
+        result.textContent = 'Wrong!';
+    }
+}
+</script>
