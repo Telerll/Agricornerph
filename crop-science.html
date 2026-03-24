@@ -39,16 +39,32 @@
     </ul>
     <p id="result"></p>
 </div>
-
+<div class="question">
+    <p>1. Which part of the plant is responsible for photosynthesis?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'A')">A. Root</li>
+        <li onclick="checkAnswer(this, 'B')">B. Stem</li>
+        <li onclick="checkAnswer(this, 'C')">C. Leaf</li>
+    </ul>
+    <p id="result"></p>
+</div>
+<script>
 <script>
 function checkAnswer(element, answer) {
-    const correct = 'C';
-    const result = document.getElementById('result');
+    const correctAnswers = {
+        1: 'C',
+        2: 'A'
+    };
 
-    const choices = document.querySelectorAll('li');
+    const question = element.parentElement.parentElement;
+    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(question) + 1;
+
+    const result = question.querySelector('p[id^="result"]');
+    const choices = question.querySelectorAll('li');
+
     choices.forEach(li => li.style.color = 'black');
 
-    if (answer === correct) {
+    if (answer === correctAnswers[questionIndex]) {
         element.style.color = 'green';
         result.textContent = 'Correct!';
     } else {
