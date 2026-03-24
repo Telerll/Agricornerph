@@ -16,17 +16,18 @@
             cursor: pointer;
             padding: 10px;
             margin: 5px;
+            border: 1px solid #ccc;
         }
 
         li:hover {
             background: #eee;
         }
 
-        .question {
+        #q2 {
             display: none;
         }
 
-        #nextBtn {
+        button {
             padding: 10px 20px;
             margin-top: 20px;
             cursor: pointer;
@@ -62,50 +63,56 @@
         <p id="result2"></p>
     </div>
 
- <button id="nextBtn" onclick="nextQuestion()">Next Question ➡</button>
+    <button id="nextBtn" onclick="nextQuestion()">Next Question ➡</button>
 
     <script>
-   <script>
-let score = 0;
-let answered = {};
-let currentQuestion = 1;
+        let score = 0;
+        let answered = {};
+        let currentQuestion = 1;
 
-const correctAnswers = {
-    1: 'C',
-    2: 'A'
-};
+        const correctAnswers = {
+            1: 'C',
+            2: 'A'
+        };
 
-function checkAnswer(element, questionNumber, answer) {
-    if (answered[questionNumber]) return;
+        function checkAnswer(element, questionNumber, answer) {
+            if (answered[questionNumber]) return;
 
-    const result = document.getElementById('result' + questionNumber);
-    const choices = element.parentElement.querySelectorAll('li');
+            const result = document.getElementById('result' + questionNumber);
+            const choices = element.parentElement.querySelectorAll('li');
 
-    choices.forEach(li => li.style.color = 'black');
+            choices.forEach(function(li) {
+                li.style.color = 'black';
+            });
 
-    if (answer === correctAnswers[questionNumber]) {
-        element.style.color = 'green';
-        result.textContent = 'Correct!';
-        score++;
-    } else {
-        element.style.color = 'red';
-        result.textContent = 'Wrong!';
-    }
+            if (answer === correctAnswers[questionNumber]) {
+                element.style.color = 'green';
+                result.textContent = 'Correct!';
+                score++;
+            } else {
+                element.style.color = 'red';
+                result.textContent = 'Wrong!';
+            }
 
-    answered[questionNumber] = true;
-    document.getElementById('score').textContent = "Score: " + score;
-}
+            answered[questionNumber] = true;
+            document.getElementById('score').textContent = 'Score: ' + score;
+        }
 
-function nextQuestion() {
-    if (!answered[currentQuestion]) {
-        alert("Answer the question first.");
-        return;
-    }
+        function nextQuestion() {
+            if (!answered[currentQuestion]) {
+                alert('Answer the question first.');
+                return;
+            }
 
-    if (currentQuestion === 1) {
-        document.getElementById("q1").style.display = "none";
-        document.getElementById("q2").style.display = "block";
-        currentQuestion = 2;
-    }
-}
-</script>
+            if (currentQuestion === 1) {
+                document.getElementById('q1').style.display = 'none';
+                document.getElementById('q2').style.display = 'block';
+                currentQuestion = 2;
+            } else {
+                alert('End of questions');
+            }
+        }
+    </script>
+
+</body>
+</html>
