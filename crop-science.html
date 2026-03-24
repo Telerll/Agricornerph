@@ -49,39 +49,45 @@
     </ul>
     <p id="result2"></p>
   </div>
-
+<div class="question">
+  <p>3. What is the primary function of roots?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 3, 'A')">A. Absorb water and nutrients</li>
+    <li onclick="checkAnswer(this, 3, 'B')">B. Produce flowers</li>
+    <li onclick="checkAnswer(this, 3, 'C')">C. Make seeds</li>
+  </ul>
+  <p id="result3"></p>
+</div>
   <script>
     let score = 0;
-    let answered = {};
+  let answered = {};
 
-    function checkAnswer(element, questionNumber, answer) {
-      const correctAnswers = {
-        1: 'C',
-        2: 'A'
-      };
+  function checkAnswer(element, questionNumber, answer) {
+    const correctAnswers = {
+      1: 'C',
+      2: 'A',
+      3: 'A'
+    };
 
-      if (answered[questionNumber]) return;
+    if (answered[questionNumber]) return;
 
-      const result = document.getElementById('result' + questionNumber);
-      const choices = element.parentElement.querySelectorAll('li');
+    const result = document.getElementById('result' + questionNumber);
+    const choices = element.parentElement.querySelectorAll('li');
 
-      choices.forEach(function(li) {
-        li.style.color = 'black';
-      });
+    choices.forEach(function(li) {
+      li.style.color = 'black';
+    });
 
-      if (answer === correctAnswers[questionNumber]) {
-        element.style.color = 'green';
-        result.textContent = 'Correct!';
-        score++;
-      } else {
-        element.style.color = 'red';
-        result.textContent = 'Wrong!';
-      }
-
-      answered[questionNumber] = true;
-      document.getElementById('score').textContent = 'Score: ' + score;
+    if (answer === correctAnswers[questionNumber]) {
+      element.style.color = 'green';
+      result.textContent = 'Correct!';
+      score++;
+    } else {
+      element.style.color = 'red';
+      result.textContent = 'Wrong!';
     }
-  </script>
 
-</body>
-</html>
+    answered[questionNumber] = true;
+    document.getElementById('score').textContent = 'Score: ' + score;
+  }
+</script>
