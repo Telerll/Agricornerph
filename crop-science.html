@@ -140,7 +140,9 @@
         document.getElementById("q3").style.display = "block";
         currentQuestion = 3;
       } else {
-        alert("End of quiz!");
+         document.getElementById("finalResult").textContent =
+    "🎉 Quiz Finished! Your Score: " + score;
+}
       }
     }
   </script>
