@@ -184,3 +184,6 @@ footer p {
   transform: translateY(-5px);
   background: #e8f5e9;
 }
+.home-card:active {
+  transform: scale(0.97);
+}
