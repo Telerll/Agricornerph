@@ -29,7 +29,9 @@
 <a href="practice.html">⬅ Back to Subjects</a>
 
 <hr>
+
 <p id="score">Score: 0</p>
+
 <!-- QUESTION 1 -->
 <div class="question">
     <p>1. Which part of the plant is responsible for photosynthesis?</p>
@@ -53,11 +55,16 @@
 </div>
 
 <script>
+let score = 0;
+let answered = {};
+
 function checkAnswer(element, questionNumber, answer) {
     const correctAnswers = {
         1: 'C',
         2: 'A'
     };
+
+    if (answered[questionNumber]) return;
 
     const result = document.getElementById('result' + questionNumber);
     const choices = element.parentElement.querySelectorAll('li');
@@ -67,10 +74,14 @@ function checkAnswer(element, questionNumber, answer) {
     if (answer === correctAnswers[questionNumber]) {
         element.style.color = 'green';
         result.textContent = 'Correct!';
+        score++;
     } else {
         element.style.color = 'red';
         result.textContent = 'Wrong!';
     }
+
+    answered[questionNumber] = true;
+    document.getElementById('score').textContent = "Score: " + score;
 }
 </script>
 
