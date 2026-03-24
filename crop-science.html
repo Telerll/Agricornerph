@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Science Practice</title>
+</head>
+<body>
+
+<h1>🌱 Crop Science Practice</h1>
+<a href="practice.html">⬅ Back to Subjects</a>
+
+<hr>
+
+<div class="question">
+    <p>1. Which part of the plant is responsible for photosynthesis?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'A')">A. Root</li>
+        <li onclick="checkAnswer(this, 'B')">B. Stem</li>
+        <li onclick="checkAnswer(this, 'C')">C. Leaf</li>
+    </ul>
+    <p id="result"></p>
+</div>
+
+<script>
+function checkAnswer(element, answer) {
+    const correct = 'C';
+    const result = document.getElementById('result');
+
+    const choices = document.querySelectorAll('li');
+    choices.forEach(li => li.style.color = 'black');
+
+    if (answer === correct) {
+        element.style.color = 'green';
+        result.textContent = 'Correct!';
+    } else {
+        element.style.color = 'red';
+        result.textContent = 'Wrong!';
+    }
+}
+</script>
+
+</body>
+</html>
