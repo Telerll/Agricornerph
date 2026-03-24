@@ -104,10 +104,11 @@ nav {
 /* Cards */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  max-width: 900px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
 }
 }
 .card {
@@ -118,20 +119,24 @@ nav {
 }
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 16px;
   text-decoration: none;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: block;   /* IMPORTANT */
-}
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  text-align: center;
 }
 }
 
 .card h3 {
-    color: #2e7d32;
-    margin-bottom: 15px;
-    font-size: 24px;
+  margin: 0;
+  font-size: 28px;
+  color: #222;
+  line-height: 1.3;
 }
 
 .card p {
