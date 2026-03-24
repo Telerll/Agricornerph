@@ -52,13 +52,16 @@
       display: none;
     }
 
-    #nextBtn {
+    #nextBtn,
+    #restartBtn {
       padding: 12px 24px;
       margin-top: 20px;
       cursor: pointer;
       font-size: 16px;
-      position: relative;
-      z-index: 1000;
+    }
+
+    #restartBtn {
+      display: none;
     }
 
     #finalResult {
@@ -107,9 +110,11 @@
     <p id="result3"></p>
   </div>
 
-  <button id="nextBtn" type="button">Next ➡</button>
+  <button id="nextBtn" type="button" onclick="nextQuestion()">Next ➡</button>
 
   <p id="finalResult"></p>
+
+  <button id="restartBtn" type="button" onclick="restartQuiz()">Restart 🔁</button>
 
   <script>
     let score = 0;
@@ -164,10 +169,34 @@
         document.getElementById('finalResult').textContent =
           '🎉 Quiz Finished! Your Score: ' + score;
         document.getElementById('nextBtn').style.display = 'none';
+        document.getElementById('restartBtn').style.display = 'inline-block';
       }
     }
 
-    document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+    function restartQuiz() {
+      score = 0;
+      answered = {};
+      currentQuestion = 1;
+
+      document.getElementById('score').textContent = 'Score: 0';
+      document.getElementById('finalResult').textContent = '';
+
+      document.getElementById('q1').style.display = 'block';
+      document.getElementById('q2').style.display = 'none';
+      document.getElementById('q3').style.display = 'none';
+
+      document.getElementById('result1').textContent = '';
+      document.getElementById('result2').textContent = '';
+      document.getElementById('result3').textContent = '';
+
+      document.querySelectorAll('li').forEach(function(li) {
+        li.style.color = 'black';
+      });
+
+      document.getElementById('nextBtn').style.display = 'inline-block';
+      document.getElementById('nextBtn').textContent = 'Next ➡';
+      document.getElementById('restartBtn').style.display = 'none';
+    }
   </script>
 
 </body>
