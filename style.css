@@ -61,10 +61,11 @@ nav {
 }
 
 .hero-logo {
-    width: 400px !important;
-    height: auto;
-    display: block;
-    margin: 0 auto 40px;
+   .hero-logo {
+  width: 100px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
 }
 }
 
