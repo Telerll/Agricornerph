@@ -44,10 +44,18 @@ nav {
 
 /* Hero */
 .hero {
-    background: linear-gradient(to right, #388e3c, #66bb6a);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+  background: linear-gradient(to right, #388e3c, #66bb6a);
+  color: white;
+  text-align: center;
+
+  height: 100vh; /* full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px; /* mas maliit para centered */
+}
 }
 
 .hero-logo {
