@@ -176,3 +176,11 @@ footer p {
   font-size: 12px;
   opacity: 0.8;
 }
+.home-card {
+  transition: all 0.2s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  background: #e8f5e9;
+}
