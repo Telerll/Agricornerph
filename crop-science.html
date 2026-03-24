@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Science Practice</title>
 
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             text-align: center;
         }
 
@@ -19,94 +20,96 @@
 
         li:hover {
             background: #eee;
-              .question {
-        display: none;
-    }
+        }
 
-    .question:first-of-type {
-        display: block;
+        .question {
+            display: none;
+        }
+
+        #nextBtn {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-<h1>🌱 Crop Science Practice</h1>
+    <h1>🌱 Crop Science Practice</h1>
+    <a href="practice.html">⬅ Back to Subjects</a>
 
-<a href="practice.html">⬅ Back to Subjects</a>
+    <hr>
 
-<hr>
+    <p id="score">Score: 0</p>
 
-<p id="score">Score: 0</p>
+    <div class="question" id="q1">
+        <p>1. Which part of the plant is responsible for photosynthesis?</p>
+        <ul>
+            <li onclick="checkAnswer(this, 1, 'A')">A. Root</li>
+            <li onclick="checkAnswer(this, 1, 'B')">B. Stem</li>
+            <li onclick="checkAnswer(this, 1, 'C')">C. Leaf</li>
+        </ul>
+        <p id="result1"></p>
+    </div>
 
-<!-- QUESTION 1 -->
-<div class="question">
-    <p>1. Which part of the plant is responsible for photosynthesis?</p>
-    <ul>
-        <li onclick="checkAnswer(this, 1, 'A')">A. Root</li>
-        <li onclick="checkAnswer(this, 1, 'B')">B. Stem</li>
-        <li onclick="checkAnswer(this, 1, 'C')">C. Leaf</li>
-    </ul>
-    <p id="result1"></p>
-</div>
+    <div class="question" id="q2">
+        <p>2. Which nutrient is essential for plant growth?</p>
+        <ul>
+            <li onclick="checkAnswer(this, 2, 'A')">A. Nitrogen</li>
+            <li onclick="checkAnswer(this, 2, 'B')">B. Oxygen</li>
+            <li onclick="checkAnswer(this, 2, 'C')">C. Carbon</li>
+        </ul>
+        <p id="result2"></p>
+    </div>
 
-<!-- QUESTION 2 -->
-<div class="question">
-    <p>2. Which nutrient is essential for plant growth?</p>
-    <ul>
-        <li onclick="checkAnswer(this, 2, 'A')">A. Nitrogen</li>
-        <li onclick="checkAnswer(this, 2, 'B')">B. Oxygen</li>
-        <li onclick="checkAnswer(this, 2, 'C')">C. Carbon</li>
-    </ul>
-    <p id="result2"></p>
-</div>
-<button onclick="nextQuestion()">Next Question ➡</button>
-<script>
-<script>
-let score = 0;
-let answered = {};
-let currentQuestion = 1;
+    <button id="nextBtn" onclick="nextQuestion()">Next Question ➡</button>
 
-window.onload = function() {
-    const questions = document.querySelectorAll('.question');
-    questions.forEach((q, index) => {
-        if (index !== 0) q.style.display = 'none';
-    });
-};
+    <script>
+        let score = 0;
+        let answered = {};
+        let currentQuestion = 1;
 
-function checkAnswer(element, questionNumber, answer) {
-    const correctAnswers = {
-        1: 'C',
-        2: 'A'
-    };
+        const correctAnswers = {
+            1: 'C',
+            2: 'A'
+        };
 
-    if (answered[questionNumber]) return;
+        window.onload = function () {
+            document.getElementById("q1").style.display = "block";
+            document.getElementById("q2").style.display = "none";
+        };
 
-    const result = document.getElementById('result' + questionNumber);
-    const choices = element.parentElement.querySelectorAll('li');
+        function checkAnswer(element, questionNumber, answer) {
+            if (answered[questionNumber]) return;
 
-    choices.forEach(li => li.style.color = 'black');
+            const result = document.getElementById("result" + questionNumber);
+            const choices = element.parentElement.querySelectorAll("li");
 
-    if (answer === correctAnswers[questionNumber]) {
-        element.style.color = 'green';
-        result.textContent = 'Correct!';
-        score++;
-    } else {
-        element.style.color = 'red';
-        result.textContent = 'Wrong!';
-    }
+            choices.forEach(li => li.style.color = "black");
 
-    answered[questionNumber] = true;
-    document.getElementById('score').textContent = "Score: " + score;
-}
+            if (answer === correctAnswers[questionNumber]) {
+                element.style.color = "green";
+                result.textContent = "Correct!";
+                score++;
+                document.getElementById("score").textContent = "Score: " + score;
+            } else {
+                element.style.color = "red";
+                result.textContent = "Wrong!";
+            }
 
-function nextQuestion() {
-    const questions = document.querySelectorAll('.question');
+            answered[questionNumber] = true;
+        }
 
-    questions[currentQuestion - 1].style.display = 'none';
+        function nextQuestion() {
+            if (currentQuestion === 1) {
+                document.getElementById("q1").style.display = "none";
+                document.getElementById("q2").style.display = "block";
+                currentQuestion = 2;
+            } else {
+                alert("End of questions");
+            }
+        }
+    </script>
 
-    if (currentQuestion < questions.length) {
-        questions[currentQuestion].style.display = 'block';
-        currentQuestion++;
-    }
-}
-</script>
+</body>
+</html>
