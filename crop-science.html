@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crop Science Practice</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
     }
+
     li {
       list-style: none;
       cursor: pointer;
@@ -16,11 +18,36 @@
       margin: 5px;
       border: 1px solid #ccc;
     }
+
     li:hover {
       background: #eee;
     }
+
+    .question {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 15px;
+      border-radius: 10px;
+    }
+
+    #score {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Hide next questions */
+    #q2, #q3 {
+      display: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
 
   <h1>🌱 Crop Science Practice</h1>
@@ -30,7 +57,8 @@
 
   <p id="score">Score: 0</p>
 
-  <div class="question">
+  <!-- Q1 -->
+  <div class="question" id="q1">
     <p>1. Which part of the plant is responsible for photosynthesis?</p>
     <ul>
       <li onclick="checkAnswer(this, 1, 'A')">A. Root</li>
@@ -40,7 +68,8 @@
     <p id="result1"></p>
   </div>
 
-  <div class="question">
+  <!-- Q2 -->
+  <div class="question" id="q2">
     <p>2. Which nutrient is essential for plant growth?</p>
     <ul>
       <li onclick="checkAnswer(this, 2, 'A')">A. Nitrogen</li>
@@ -49,66 +78,72 @@
     </ul>
     <p id="result2"></p>
   </div>
-<div class="question">
-  <p>3. What is the primary function of roots?</p>
-  <ul>
-    <li onclick="checkAnswer(this, 3, 'A')">A. Absorb water and nutrients</li>
-    <li onclick="checkAnswer(this, 3, 'B')">B. Produce flowers</li>
-    <li onclick="checkAnswer(this, 3, 'C')">C. Make seeds</li>
-  </ul>
-  <p id="result3"></p>
-</div>
+
+  <!-- Q3 -->
+  <div class="question" id="q3">
+    <p>3. What is the primary function of roots?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 3, 'A')">A. Absorb water and nutrients</li>
+      <li onclick="checkAnswer(this, 3, 'B')">B. Produce flowers</li>
+      <li onclick="checkAnswer(this, 3, 'C')">C. Make seeds</li>
+    </ul>
+    <p id="result3"></p>
+  </div>
+
+  <!-- NEXT BUTTON -->
   <button onclick="nextQuestion()">Next ➡</button>
+
   <script>
-  let score = 0;
-  let answered = {};
-  let currentQuestion = 1;
+    let score = 0;
+    let answered = {};
+    let currentQuestion = 1;
 
-  function checkAnswer(element, questionNumber, answer) {
-    const correctAnswers = {
-      1: 'C',
-      2: 'A',
-      3: 'A'
-    };
+    function checkAnswer(element, questionNumber, answer) {
+      const correctAnswers = {
+        1: 'C',
+        2: 'A',
+        3: 'A'
+      };
 
-    if (answered[questionNumber]) return;
+      if (answered[questionNumber]) return;
 
-    const result = document.getElementById('result' + questionNumber);
-    const choices = element.parentElement.querySelectorAll('li');
+      const result = document.getElementById('result' + questionNumber);
+      const choices = element.parentElement.querySelectorAll('li');
 
-    choices.forEach(function(li) {
-      li.style.color = 'black';
-    });
+      choices.forEach(li => li.style.color = 'black');
 
-    if (answer === correctAnswers[questionNumber]) {
-      element.style.color = 'green';
-      result.textContent = 'Correct!';
-      score++;
-    } else {
-      element.style.color = 'red';
-      result.textContent = 'Wrong!';
+      if (answer === correctAnswers[questionNumber]) {
+        element.style.color = 'green';
+        result.textContent = 'Correct!';
+        score++;
+      } else {
+        element.style.color = 'red';
+        result.textContent = 'Wrong!';
+      }
+
+      answered[questionNumber] = true;
+      document.getElementById('score').textContent = 'Score: ' + score;
     }
 
-    answered[questionNumber] = true;
-    document.getElementById('score').textContent = 'Score: ' + score;
-  }
+    function nextQuestion() {
+      if (!answered[currentQuestion]) {
+        alert("Answer first!");
+        return;
+      }
 
-  function nextQuestion() {
-    if (!answered[currentQuestion]) {
-      alert("Answer first!");
-      return;
+      if (currentQuestion === 1) {
+        document.getElementById("q1").style.display = "none";
+        document.getElementById("q2").style.display = "block";
+        currentQuestion = 2;
+      } else if (currentQuestion === 2) {
+        document.getElementById("q2").style.display = "none";
+        document.getElementById("q3").style.display = "block";
+        currentQuestion = 3;
+      } else {
+        alert("End of quiz!");
+      }
     }
+  </script>
 
-    if (currentQuestion === 1) {
-      document.getElementById("q1").style.display = "none";
-      document.getElementById("q2").style.display = "block";
-      currentQuestion = 2;
-    } else if (currentQuestion === 2) {
-      document.getElementById("q2").style.display = "none";
-      document.getElementById("q3").style.display = "block";
-      currentQuestion = 3;
-    } else {
-      alert("End of quiz!");
-    }
-  }
-</script>
+</body>
+</html>
