@@ -131,9 +131,16 @@ footer {
     padding: 30px 20px;
 }
 
-footer h3 {
-    font-size: 28px;
-    margin-bottom: 8px;
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 5px 0;
 }
 
 .footer-copy {
