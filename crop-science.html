@@ -62,54 +62,45 @@
         <p id="result2"></p>
     </div>
 
-    <button id="nextBtn" onclick="nextQuestion()">Next Question ➡</button>
+ <button id="nextBtn" onclick="nextQuestion()">Next Question ➡</button>
 
     <script>
-        let score = 0;
-        let answered = {};
-        let currentQuestion = 1;
+       <script>
+let score = 0;
+let answered = {};
+let currentQuestion = 1;
 
-        const correctAnswers = {
-            1: 'C',
-            2: 'A'
-        };
+const correctAnswers = {
+    1: 'C',
+    2: 'A'
+};
 
-        window.onload = function () {
-            document.getElementById("q1").style.display = "block";
-            document.getElementById("q2").style.display = "none";
-        };
+function checkAnswer(element, questionNumber, answer) {
+    if (answered[questionNumber]) return;
 
-        function checkAnswer(element, questionNumber, answer) {
-            if (answered[questionNumber]) return;
+    const result = document.getElementById('result' + questionNumber);
+    const choices = element.parentElement.querySelectorAll('li');
 
-            const result = document.getElementById("result" + questionNumber);
-            const choices = element.parentElement.querySelectorAll("li");
+    choices.forEach(li => li.style.color = 'black');
 
-            choices.forEach(li => li.style.color = "black");
+    if (answer === correctAnswers[questionNumber]) {
+        element.style.color = 'green';
+        result.textContent = 'Correct!';
+        score++;
+    } else {
+        element.style.color = 'red';
+        result.textContent = 'Wrong!';
+    }
 
-            if (answer === correctAnswers[questionNumber]) {
-                element.style.color = "green";
-                result.textContent = "Correct!";
-                score++;
-                document.getElementById("score").textContent = "Score: " + score;
-            } else {
-                element.style.color = "red";
-                result.textContent = "Wrong!";
-            }
+    answered[questionNumber] = true;
+    document.getElementById('score').textContent = "Score: " + score;
+}
 
-            answered[questionNumber] = true;
-        }
-
-        function nextQuestion() {
-            if (currentQuestion === 1) {
-                document.getElementById("q1").style.display = "none";
-                document.getElementById("q2").style.display = "block";
-                currentQuestion = 2;
-            } else {
-                alert("End of questions");
-            }
-        }
-    </script>
-
-</body>
-</html>
+function nextQuestion() {
+    if (currentQuestion === 1) {
+        document.getElementById("q1").style.display = "none";
+        document.getElementById("q2").style.display = "block";
+        currentQuestion = 2;
+    }
+}
+</script>
