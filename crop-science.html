@@ -61,8 +61,17 @@
 </div>
 <button onclick="nextQuestion()">Next Question ➡</button>
 <script>
+<script>
 let score = 0;
 let answered = {};
+let currentQuestion = 1;
+
+window.onload = function() {
+    const questions = document.querySelectorAll('.question');
+    questions.forEach((q, index) => {
+        if (index !== 0) q.style.display = 'none';
+    });
+};
 
 function checkAnswer(element, questionNumber, answer) {
     const correctAnswers = {
@@ -89,7 +98,15 @@ function checkAnswer(element, questionNumber, answer) {
     answered[questionNumber] = true;
     document.getElementById('score').textContent = "Score: " + score;
 }
-</script>
 
-</body>
-</html>
+function nextQuestion() {
+    const questions = document.querySelectorAll('.question');
+
+    questions[currentQuestion - 1].style.display = 'none';
+
+    if (currentQuestion < questions.length) {
+        questions[currentQuestion].style.display = 'block';
+        currentQuestion++;
+    }
+}
+</script>
