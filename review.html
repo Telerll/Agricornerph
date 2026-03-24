@@ -1,29 +1,138 @@
-<section class="welcome">
-  <h2>Review Materials 📘</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Materials - AgricornerPh</title>
 
-  <div class="card-container">
-    <a href="crop-review.html" class="card">
-      <h3>🌱 Crop Science</h3>
-    </a>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f1f5f1;
+    }
 
-    <a href="soil-review.html" class="card">
-      <h3>🧪 Soil Science</h3>
-    </a>
+    header {
+      background: #1b5e20;
+      color: white;
+      padding: 20px 40px;
+    }
 
-    <a href="crop-protection-review.html" class="card">
-      <h3>🐛 Crop Protection</h3>
-    </a>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    <a href="animal-review.html" class="card">
-      <h3>🐄 Animal Science</h3>
-    </a>
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+    }
 
-    <a href="agri-econ-review.html" class="card">
-      <h3>💼 Agricultural Economics & Marketing</h3>
-    </a>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
 
-    <a href="extension-review.html" class="card">
-      <h3>📣 Agricultural Extension & Communication</h3>
-    </a>
-  </div>
-</section>
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .welcome {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .welcome h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #222;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      display: block;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: #e8f5e9;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 28px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>AgricornerPh</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="review.html">Review</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="welcome">
+    <h2>Review Materials 📘</h2>
+    <p>Select a subject to start reviewing.</p>
+
+    <div class="card-container">
+      <a href="crop-review.html" class="card">
+        <h3>🌱 Crop Science</h3>
+      </a>
+
+      <a href="soil-review.html" class="card">
+        <h3>🧪 Soil Science</h3>
+      </a>
+
+      <a href="crop-protection-review.html" class="card">
+        <h3>🐛 Crop Protection</h3>
+      </a>
+
+      <a href="animal-review.html" class="card">
+        <h3>🐄 Animal Science</h3>
+      </a>
+
+      <a href="agri-econ-review.html" class="card">
+        <h3>💼 Agricultural Economics & Marketing</h3>
+      </a>
+
+      <a href="extension-review.html" class="card">
+        <h3>📣 Agricultural Extension & Communication</h3>
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
