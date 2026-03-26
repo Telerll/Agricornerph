@@ -26,10 +26,11 @@
     }
 
     .practice-card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
     .practice-card {
       background: white;
       padding: 24px;
@@ -51,6 +52,7 @@
       margin: 0;
       font-size: 26px;
       line-height: 1.3;
+      text-align: center;
     }
 
     .back-link {
@@ -65,19 +67,27 @@
     .back-link:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 900px) {
+      .practice-card-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .practice-card-container {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="page">
- <section class="section practice">
-  <h1>Practice Subjects</h1>
-
-  <div class="home-card-container">
-    <!-- existing cards -->
-  </div>
-
-  <a href="index.html">⬅ Back to Home</a>
-</section
+    <h1>Practice Subjects</h1>
 
     <div class="practice-card-container">
       <a href="crop-science.html" class="practice-card">
