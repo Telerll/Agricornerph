@@ -1,1 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agri Extension Practice</title>
 
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f4f8f3;
+      padding: 20px;
+    }
+
+    h1 { margin-bottom: 10px; }
+
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #4a148c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #score {
+      font-size: 22px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .question-box {
+      background: white;
+      padding: 20px;
+      margin: auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    li {
+      list-style: none;
+      padding: 12px;
+      margin: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    li:hover { background: #eee; }
+
+    .correct { color: green; }
+    .wrong { color: red; }
+
+    button {
+      padding: 12px 24px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #nextBtn { background: #2e7d32; color: white; }
+    #restartBtn { background: #1565c0; color: white; display: none; }
+
+    #final {
+      font-size: 22px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>📣 Agri Extension Practice</h1>
+<a href="practice.html">⬅ Back to Subjects</a>
+
+<p id="score">Score: 0</p>
+
+<div class="question-box">
+  <h3 id="question"></h3>
+  <ul id="choices"></ul>
+</div>
+
+<button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
+<button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
+
+<h2 id="final"></h2>
+
+<script>
+
+const quiz = [
+{
+q: "1. What is agricultural extension?",
+choices: [
+"Teaching farmers through formal education",
+"Providing farmers with practical knowledge and skills",
+"Only distributing farm inputs",
+"Managing farm finances"
+],
+answer: 1
+},
+{
+q: "2. Who are the primary clients of extension services?",
+choices: ["Students","Farmers","Scientists","Traders"],
+answer: 1
+},
+{
+q: "3. Which method involves one-on-one communication?",
+choices: ["Mass method","Group method","Individual method","Media method"],
+answer: 2
+},
+{
+q: "4. Which is an example of group extension method?",
+choices: ["Farm visit","Radio broadcast","Field day","Text messaging"],
+answer: 2
+},
+{
+q: "5. Which is an example of mass extension method?",
+choices: ["Farmers meeting","Radio program","Home visit","Demonstration"],
+answer: 1
+},
+{
+q: "6. What is the main goal of extension?",
+choices: [
+"Increase farmer knowledge and improve livelihood",
+"Control farmers",
+"Sell products",
+"Reduce production"
+],
+answer: 0
+},
+{
+q: "7. Which communication is two-way?",
+choices: ["Lecture","Discussion","Radio","TV"],
+answer: 1
+},
+{
+q: "8. What is feedback in communication?",
+choices: [
+"Message sent",
+"Response from receiver",
+"Channel used",
+"Noise in system"
+],
+answer: 1
+},
+{
+q: "9. Which is NOT part of communication process?",
+choices: ["Sender","Message","Noise","Fertilizer"],
+answer: 3
+},
+{
+q: "10. Which extension approach focuses on farmer participation?",
+choices: [
+"Top-down approach",
+"Participatory approach",
+"Traditional approach",
+"Directive approach"
+],
+answer: 1
+}
+];
+
+let current = 0;
+let score = 0;
+let answered = false;
+
+function loadQuestion(){
+  document.getElementById("question").textContent = quiz[current].q;
+
+  let html = "";
+  quiz[current].choices.forEach((c,i)=>{
+    html += `<li onclick="check(${i}, this)">${c}</li>`;
+  });
+
+  document.getElementById("choices").innerHTML = html;
+  answered = false;
+}
+
+function check(i, el){
+  if(answered) return;
+
+  const correct = quiz[current].answer;
+  const all = document.querySelectorAll("#choices li");
+
+  if(i === correct){
+    el.classList.add("correct");
+    score++;
+  } else {
+    el.classList.add("wrong");
+    all[correct].classList.add("correct");
+  }
+
+  document.getElementById("score").textContent = "Score: " + score;
+  answered = true;
+
+  all.forEach(li => li.onclick = null);
+}
+
+function nextQuestion(){
+  if(!answered){
+    alert("Answer first!");
+    return;
+  }
+
+  current++;
+
+  if(current >= quiz.length){
+    document.querySelector(".question-box").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("restartBtn").style.display = "inline-block";
+    document.getElementById("final").textContent =
+      "🎉 Final Score: " + score + "/" + quiz.length;
+    return;
+  }
+
+  loadQuestion();
+}
+
+function restartQuiz(){
+  current = 0;
+  score = 0;
+
+  document.getElementById("score").textContent = "Score: 0";
+  document.getElementById("final").textContent = "";
+  document.querySelector(".question-box").style.display = "block";
+  document.getElementById("nextBtn").style.display = "inline-block";
+  document.getElementById("restartBtn").style.display = "none";
+
+  loadQuestion();
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
