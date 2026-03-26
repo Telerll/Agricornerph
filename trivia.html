@@ -1,18 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Agri Trivia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agri Trivia & Updates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f8f3;
+      padding: 20px;
+    }
+
+    .trivia-box {
+      background: white;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #4a148c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+<body>
 
-<body style="font-family: Arial; text-align:center; background:#f4f8f3; padding:20px;">
+  <h1>🌱 Agri Trivia & Updates</h1>
 
-<h1>🌱 Agri Trivia & Updates</h1>
-<a href="index.html">⬅ Back to Home</a>
+  <div class="trivia-box">
+    <h2 id="trivia-title">Today's Trivia</h2>
+    <p id="trivia-text"></p>
+  </div>
 
-  <p style="margin-top:20px;">
-Did you know? 🌾  
-Rice is the staple food for more than half of the world's population.
-</p>
+  <a href="index.html">⬅ Back to Home</a>
+
+  <script>
+    const triviaList = [
+      "Rice is the staple food for more than half of the world's population.",
+      "Goats are browsers, while sheep are grazers.",
+      "Clay soil has the highest water-holding capacity among common soil textures.",
+      "Cattle are responsible for the largest share of livestock greenhouse gas emissions.",
+      "Anas luzonica is a duck species endemic to the Philippines.",
+      "Integrated Pest Management combines cultural, biological, and chemical control methods.",
+      "The O horizon is richest in organic matter.",
+      "Carbohydrates are the main source of energy for animals.",
+      "Neutral soil pH is 7.",
+      "Agricultural extension helps farmers improve knowledge, skills, and livelihood."
+    ];
+
+    const randomIndex = Math.floor(Math.random() * triviaList.length);
+    document.getElementById("trivia-text").textContent = triviaList[randomIndex];
+  </script>
 
 </body>
 </html>
