@@ -1,1 +1,103 @@
+<script>
+const quiz = [
+{
+q: "1. What does CLORPT stand for in soil formation?",
+choices: [
+"Climate, Land, Organism, Relief, Parent Material",
+"Climate, Organisms, Relief, Parent Material, Time",
+"Climate, Location, Rock, Plant, Temperature",
+"Climate, Landform, Organic matter, Rock, Time"
+],
+answer: 1
+},
+{
+q: "2. Which soil-forming factor refers to topography?",
+choices: ["Climate","Organisms","Relief","Time"],
+answer: 2
+},
+{
+q: "3. What is the study of soil formation called?",
+choices: ["Edaphology","Pedology","Geology","Agronomy"],
+answer: 1
+},
+{
+q: "4. Which soil horizon is richest in organic matter?",
+choices: ["O horizon","A horizon","B horizon","C horizon"],
+answer: 0
+},
+{
+q: "5. Which soil horizon is known as subsoil?",
+choices: ["O","A","B","C"],
+answer: 2
+},
+{
+q: "6. Which soil property refers to particle size distribution?",
+choices: ["Structure","Texture","Color","Consistency"],
+answer: 1
+},
+{
+q: "7. What soil texture has the highest water-holding capacity?",
+choices: ["Sand","Silt","Clay","Loam"],
+answer: 2
+},
+{
+q: "8. Which soil pH is considered neutral?",
+choices: ["5","6","7","8"],
+answer: 2
+},
+{
+q: "9. Which factor affects soil color?",
+choices: ["Organic matter","Moisture","Iron content","All of the above"],
+answer: 3
+},
+{
+q: "10. Which soil type drains water the fastest?",
+choices: ["Clay","Loam","Sandy soil","Silty soil"],
+answer: 2
+}
+];
 
+let current = 0;
+let score = 0;
+
+function loadQuestion(){
+  document.getElementById("question").textContent = quiz[current].q;
+
+  let choicesHTML = "";
+  quiz[current].choices.forEach((c,i)=>{
+    choicesHTML += `<li onclick="check(${i}, this)">${c}</li>`;
+  });
+
+  document.getElementById("choices").innerHTML = choicesHTML;
+}
+
+function check(i, element){
+  const correct = quiz[current].answer;
+
+  if(i === correct){
+    element.classList.add("correct");
+    score++;
+  } else {
+    element.classList.add("wrong");
+  }
+
+  document.getElementById("score").textContent = "Score: " + score;
+
+  document.querySelectorAll("li").forEach(li => li.onclick = null);
+}
+
+function nextQuestion(){
+  current++;
+
+  if(current >= quiz.length){
+    document.getElementById("final").textContent =
+      "🎉 Final Score: " + score + "/" + quiz.length;
+    document.querySelector(".question-box").style.display = "none";
+    return;
+  }
+
+  loadQuestion();
+}
+
+loadQuestion();
+</script>
