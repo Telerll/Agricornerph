@@ -1,1 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Protection Practice</title>
 
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f4f8f3;
+      padding: 20px;
+    }
+
+    h1 { margin-bottom: 10px; }
+
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #4a148c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #score {
+      font-size: 22px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .question-box {
+      background: white;
+      padding: 20px;
+      margin: auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    li {
+      list-style: none;
+      padding: 12px;
+      margin: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    li:hover { background: #eee; }
+
+    .correct { color: green; }
+    .wrong { color: red; }
+
+    button {
+      padding: 12px 24px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #nextBtn { background: #2e7d32; color: white; }
+    #restartBtn { background: #1565c0; color: white; display: none; }
+
+    #final {
+      font-size: 22px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🛡 Crop Protection Practice</h1>
+<a href="practice.html">⬅ Back to Subjects</a>
+
+<p id="score">Score: 0</p>
+
+<div class="question-box">
+  <h3 id="question"></h3>
+  <ul id="choices"></ul>
+</div>
+
+<button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
+<button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
+
+<h2 id="final"></h2>
+
+<script>
+
+const quiz = [
+{
+q: "1. What is pest?",
+choices: [
+"Any organism beneficial to crops",
+"Any organism that causes damage to crops",
+"Only insects",
+"Only weeds"
+],
+answer: 1
+},
+{
+q: "2. Which is an example of biological control?",
+choices: [
+"Using pesticides",
+"Using natural predators",
+"Burning crops",
+"Plowing soil"
+],
+answer: 1
+},
+{
+q: "3. Which pest type feeds on plant sap?",
+choices: ["Chewing insects","Sucking insects","Boring insects","Soil pests"],
+answer: 1
+},
+{
+q: "4. What does IPM stand for?",
+choices: [
+"Integrated Pest Management",
+"International Plant Method",
+"Internal Pest Mechanism",
+"Integrated Plant Method"
+],
+answer: 0
+},
+{
+q: "5. Which is a chemical control method?",
+choices: [
+"Crop rotation",
+"Hand picking",
+"Applying insecticides",
+"Using predators"
+],
+answer: 2
+},
+{
+q: "6. Which disease is caused by fungi?",
+choices: ["Bacterial wilt","Rust","Virus disease","Nematode infection"],
+answer: 1
+},
+{
+q: "7. What is a weed?",
+choices: [
+"A useful plant",
+"A plant growing where it is not wanted",
+"A pest insect",
+"A disease"
+],
+answer: 1
+},
+{
+q: "8. Which method reduces pest population without chemicals?",
+choices: [
+"Chemical control",
+"Cultural control",
+"Herbicide use",
+"Pesticide spraying"
+],
+answer: 1
+},
+{
+q: "9. Which pest damages roots underground?",
+choices: ["Leaf miner","Stem borer","Root nematode","Aphids"],
+answer: 2
+},
+{
+q: "10. Which is a preventive control method?",
+choices: [
+"Spraying pesticide after damage",
+"Planting resistant varieties",
+"Destroying crops",
+"Using chemicals only"
+],
+answer: 1
+}
+];
+
+let current = 0;
+let score = 0;
+let answered = false;
+
+function loadQuestion(){
+  document.getElementById("question").textContent = quiz[current].q;
+
+  let html = "";
+  quiz[current].choices.forEach((c,i)=>{
+    html += `<li onclick="check(${i}, this)">${c}</li>`;
+  });
+
+  document.getElementById("choices").innerHTML = html;
+  answered = false;
+}
+
+function check(i, el){
+  if(answered) return;
+
+  const correct = quiz[current].answer;
+  const all = document.querySelectorAll("#choices li");
+
+  if(i === correct){
+    el.classList.add("correct");
+    score++;
+  } else {
+    el.classList.add("wrong");
+    all[correct].classList.add("correct");
+  }
+
+  document.getElementById("score").textContent = "Score: " + score;
+  answered = true;
+
+  all.forEach(li => li.onclick = null);
+}
+
+function nextQuestion(){
+  if(!answered){
+    alert("Answer first!");
+    return;
+  }
+
+  current++;
+
+  if(current >= quiz.length){
+    document.querySelector(".question-box").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("restartBtn").style.display = "inline-block";
+    document.getElementById("final").textContent =
+      "🎉 Final Score: " + score + "/" + quiz.length;
+    return;
+  }
+
+  loadQuestion();
+}
+
+function restartQuiz(){
+  current = 0;
+  score = 0;
+
+  document.getElementById("score").textContent = "Score: 0";
+  document.getElementById("final").textContent = "";
+  document.querySelector(".question-box").style.display = "block";
+  document.getElementById("nextBtn").style.display = "inline-block";
+  document.getElementById("restartBtn").style.display = "none";
+
+  loadQuestion();
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
