@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agri Economics Practice</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background: #f4f8f3;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #4a148c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #score {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .question-box {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    li {
+      list-style: none;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background: #eee;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .wrong {
+      color: red;
+    }
+
+    #nextBtn, #restartBtn {
+      padding: 12px 24px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    #nextBtn {
+      background: #2e7d32;
+      color: white;
+    }
+
+    #restartBtn {
+      display: none;
+      background: #1565c0;
+      color: white;
+    }
+
+    #final {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💼 Agri Economics Practice</h1>
+  <a href="practice.html">⬅ Back to Subjects</a>
+
+  <hr>
+
+  <p id="score">Score: 0</p>
+
+  <div class="question-box">
+    <h3 id="question"></h3>
+    <ul id="choices"></ul>
+  </div>
+
+  <button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
+  <button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
+
+  <h2 id="final"></h2>
+
+  <script>
+    const quiz = [
+      {
+        q: "1. What is the law of demand?",
+        choices: [
+          "As price increases, quantity demanded increases",
+          "As price increases, quantity demanded decreases",
+          "Demand stays the same regardless of price",
+          "Supply determines demand"
+        ],
+        answer: 1
+      },
+      {
+        q: "2. What is the law of supply?",
+        choices: [
+          "As price increases, quantity supplied increases",
+          "As price increases, quantity supplied decreases",
+          "Supply stays the same regardless of price",
+          "Demand determines supply"
+        ],
+        answer: 0
+      },
+      {
+        q: "3. What is the meeting point of supply and demand called?",
+        choices: [
+          "Break-even point",
+          "Equilibrium",
+          "Surplus",
+          "Deficit"
+        ],
+        answer: 1
+      },
+      {
+        q: "4. Which is considered a fixed cost in farming?",
+        choices: [
+          "Seeds",
+          "Fertilizer",
+          "Land rent",
+          "Fuel"
+        ],
+        answer: 2
+      },
+      {
+        q: "5. Which is considered a variable cost?",
+        choices: [
+          "Land tax",
+          "Depreciation",
+          "Seeds",
+          "Interest on capital"
+        ],
+        answer: 2
+      },
+      {
+        q: "6. What is profit?",
+        choices: [
+          "Total cost minus total revenue",
+          "Total revenue minus total cost",
+          "Fixed cost plus variable cost",
+          "Gross income only"
+        ],
+        answer: 1
+      },
+      {
+        q: "7. What does marketing primarily involve?",
+        choices: [
+          "Only selling products",
+          "Producing farm goods only",
+          "Moving goods from producer to consumer",
+          "Storing goods only"
+        ],
+        answer: 2
+      },
+      {
+        q: "8. What is opportunity cost?",
+        choices: [
+          "The cost of labor",
+          "The next best alternative forgone",
+          "The amount spent on inputs",
+          "The total fixed cost"
+        ],
+        answer: 1
+      },
+      {
+        q: "9. What happens when supply is greater than demand?",
+        choices: [
+          "Shortage",
+          "Surplus",
+          "Equilibrium",
+          "Inflation"
+        ],
+        answer: 1
+      },
+      {
+        q: "10. What is gross income?",
+        choices: [
+          "Total sales or revenue before expenses",
+          "Net income after all costs",
+          "Profit after taxes",
+          "Fixed income"
+        ],
+        answer: 0
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let answered = false;
+
+    function loadQuestion() {
+      document.getElementById("question").textContent = quiz[current].q;
+
+      let choicesHTML = "";
+      quiz[current].choices.forEach((choice, i) => {
+        choicesHTML += `<li onclick="checkAnswer(${i}, this)">${choice}</li>`;
+      });
+
+      document.getElementById("choices").innerHTML = choicesHTML;
+      answered = false;
+    }
+
+    function checkAnswer(i, element) {
+      if (answered) return;
+
+      const correct = quiz[current].answer;
+      const allChoices = document.querySelectorAll("#choices li");
+
+      if (i === correct) {
+        element.classList.add("correct");
+        score++;
+      } else {
+        element.classList.add("wrong");
+        allChoices[correct].classList.add("correct");
+      }
+
+      document.getElementById("score").textContent = "Score: " + score;
+      answered = true;
+
+      allChoices.forEach(li => li.onclick = null);
+    }
+
+    function nextQuestion() {
+      if (!answered) {
+        alert("Answer first!");
+        return;
+      }
+
+      current++;
+
+      if (current >= quiz.length) {
+        document.querySelector(".question-box").style.display = "none";
+        document.getElementById("nextBtn").style.display = "none";
+        document.getElementById("restartBtn").style.display = "inline-block";
+        document.getElementById("final").textContent =
+          "🎉 Final Score: " + score + "/" + quiz.length;
+        return;
+      }
+
+      loadQuestion();
+    }
+
+    function restartQuiz() {
+      current = 0;
+      score = 0;
+      answered = false;
+
+      document.getElementById("score").textContent = "Score: 0";
+      document.getElementById("final").textContent = "";
+      document.querySelector(".question-box").style.display = "block";
+      document.getElementById("nextBtn").style.display = "inline-block";
+      document.getElementById("restartBtn").style.display = "none";
+
+      loadQuestion();
+    }
+
+    loadQuestion();
+  </script>
+
+</body>
+</html>
