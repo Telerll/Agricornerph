@@ -179,7 +179,28 @@ function showSection(index) {
     sec.style.display = (i === index) ? "block" : "none";
   });
 
-  progressText.textContent = `Slide ${index + 1} of ${sections.length}`;
+<p id="progress-text" style="text-align:center; margin-top:20px; font-weight:bold;"></p>
+
+<div class="nav-buttons">
+  <button onclick="prevSection()">⬅ Previous</button>
+  <button onclick="nextSection()">Next ➡</button>
+</div>
+
+<a href="review.html" class="back-link">⬅ Back to Review Materials</a>
+
+<script>
+let current = 0;
+const sections = document.querySelectorAll(".section-box");
+const progressText = document.getElementById("progress-text");
+
+function showSection(index) {
+  sections.forEach((sec, i) => {
+    sec.style.display = i === index ? "block" : "none";
+  });
+
+  if (progressText) {
+    progressText.textContent = "Slide " + (index + 1) + " of " + sections.length;
+  }
 }
 
 function nextSection() {
@@ -197,6 +218,7 @@ function prevSection() {
 }
 
 showSection(current);
+</script>
 </script>
 </body>
 </html>
