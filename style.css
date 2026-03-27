@@ -74,6 +74,12 @@ nav {
 }
 
 .btn {
+  .btn:hover {
+  background-color: #2e7d32;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
   display: inline-block;
   background-color: white;
   color: #2e7d32;
