@@ -199,11 +199,11 @@ footer p {
   background: #e8f5e9;
   border-radius: 20px;
   margin: 40px auto;
-  max-width: 1100px;
+  max-width: 700px;
   padding: 40px 20px;
 }
 .review-img {
-  width: 70%;
+  width: 100%;
   border-radius: 12px;
   margin: 20px auto;
   display: block;
