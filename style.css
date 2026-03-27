@@ -230,9 +230,8 @@ footer p {
   transform: translateY(-5px);
 }
 .review-img {
-  width: 100%;
-  max-width: 650px;
-  border-radius: 12px;
+  width: 40%;
+    border-radius: 12px;
   margin: 20px auto;
   display: block;
 }
@@ -240,7 +239,6 @@ footer p {
   background: white;
   padding: 20px;
   border-radius: 16px;
-  max-width: 700px;
   margin: 20px auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
