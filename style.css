@@ -264,3 +264,29 @@ footer p {
   color: green;
   font-weight: bold;
 }
+.contact-box {
+  background: #1b5e20;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.contact-box h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact-box a {
+  color: #a5d6a7;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
