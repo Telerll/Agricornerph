@@ -142,5 +142,31 @@
 </div>
     <a href="review.html" class="back-link">⬅ Back to Review Materials</a>
   </div>
+  <script>
+let current = 0;
+const sections = document.querySelectorAll(".section-box");
+
+function showSection(index) {
+  sections.forEach((sec, i) => {
+    sec.style.display = (i === index) ? "block" : "none";
+  });
+}
+
+function nextSection() {
+  if (current < sections.length - 1) {
+    current++;
+    showSection(current);
+  }
+}
+
+function prevSection() {
+  if (current > 0) {
+    current--;
+    showSection(current);
+  }
+}
+
+showSection(current);
+</script>
 </body>
 </html>
