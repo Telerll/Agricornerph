@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - AgricornerPh</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f8f3;
+      color: #222;
+    }
+
+    nav {
+      background-color: #1b5e20;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    .nav-logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #2e7d32;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 30px;
+      margin-top: 30px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+      text-align: left;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #00c853;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">AgricornerPh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="review.html">Review</a></li>
+      <li><a href="practice.html">Practice</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+    <h1>Contact Us</h1>
+
+    <div class="contact-card">
+      <form action="https://formsubmit.co/lemoncito.roldan@yahoo.com" method="POST">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-grid">
+          <input type="text" name="name" placeholder="Your Name here" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" rows="5" placeholder="Your message here ..." required></textarea>
+
+          <button type="submit">SEND</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 AgricornerPh | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
