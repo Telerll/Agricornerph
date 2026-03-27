@@ -239,3 +239,28 @@ footer p {
 .section-box {
   text-align: center;
 }
+.featured-news {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.news-card {
+  display: block;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.news-card:hover {
+  background: #e8f5e9;
+}
+
+.read-more {
+  color: green;
+  font-weight: bold;
+}
