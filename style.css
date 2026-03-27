@@ -74,12 +74,6 @@ nav {
 }
 
 .btn {
-  .btn:hover {
-  background-color: #2e7d32;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
   display: inline-block;
   background-color: white;
   color: #2e7d32;
@@ -87,6 +81,15 @@ nav {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2e7d32;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
 }
 
 /* Sections */
