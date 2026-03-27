@@ -136,7 +136,7 @@
         and how soils can be managed properly for agriculture.
       </p>
     </div>
-    <p id="progress-text" style="text-align:center; margin-top:20px;"></p>
+      <p id="progress-text" style="text-align:center; margin-top:20px;"></p>
 <div class="nav-buttons">
   <button onclick="prevSection()">⬅ Previous</button>
   <button onclick="nextSection()">Next ➡</button>
@@ -151,6 +151,35 @@ function showSection(index) {
   sections.forEach((sec, i) => {
     sec.style.display = (i === index) ? "block" : "none";
   });
+}
+
+function nextSection() {
+  if (current < sections.length - 1) {
+    current++;
+    showSection(current);
+  }
+}
+
+function prevSection() {
+  if (current > 0) {
+    current--;
+    showSection(current);
+  }
+}
+
+showSection(current);
+</script>
+  <script>
+let current = 0;
+const sections = document.querySelectorAll(".section-box");
+const progressText = document.getElementById("progress-text");
+
+function showSection(index) {
+  sections.forEach((sec, i) => {
+    sec.style.display = (i === index) ? "block" : "none";
+  });
+
+  progressText.textContent = `Slide ${index + 1} of ${sections.length}`;
 }
 
 function nextSection() {
