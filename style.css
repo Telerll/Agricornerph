@@ -229,12 +229,6 @@ footer p {
   background: #e8f5e9;
   transform: translateY(-5px);
 }
-.review-img {
-  width: 40%;
-    border-radius: 12px;
-  margin: 20px auto;
-  display: block;
-}
 .section-box {
   background: white;
   padding: 20px;
