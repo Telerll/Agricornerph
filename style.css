@@ -337,3 +337,12 @@ footer p {
 .trivia-box img:hover {
   transform: scale(1.02);
 }
+.news-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden; /* 🔥 IMPORTANT */
+}
