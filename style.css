@@ -313,6 +313,15 @@ footer p {
   font-size: 16px;
   cursor: pointer;
 }
+.update-box {
+  background: white;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  text-align: left;
+}
 
 .nav-buttons button:hover {
   background: #1b5e20;
