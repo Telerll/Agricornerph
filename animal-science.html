@@ -421,10 +421,12 @@
   q: "50. Which avian disease is caused by mycoplasma?",
   choices: ["Coccidiosis", "Marek’s disease", "Avian malaria", "Chronic respiratory disease"],
   answer: 3
-},
+}
+];
+
 let current = 0;
-    let score = 0;
-    let answered = false;
+let score = 0;
+let answered = false;
 
     function loadQuestion() {
       document.getElementById("question").textContent = quiz[current].q;
