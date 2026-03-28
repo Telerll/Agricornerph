@@ -346,3 +346,8 @@ footer p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden; /* 🔥 IMPORTANT */
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
