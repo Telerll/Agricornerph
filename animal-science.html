@@ -100,104 +100,33 @@
 
   <p id="score">Score: 0</p>
 
-<script>
-const questions = [
-  {
-    q: "1. In 2021, what is the average milk intake per capita in the Philippines?",
-    options: ["22 kg", "16 kg", "27 kg", "287 kg"],
-    answer: "16 kg"
-  },
-  {
-    q: "2. Highly Pathogenic Avian Influenza (HPAI) is also known as?",
-    options: ["avian paramyxovirus Type 1 (APVM-1) virus", "Infectious Bronchitis Virus", "fowlpox virus", "H5N1"],
-    answer: "H5N1"
-  },
-  {
-    q: "3. Which region in the Philippines had the most broilers in 2022?",
-    options: ["CALABARZON", "Western Visayas", "Central Luzon", "Southern Mindanao"],
-    answer: "Central Luzon"
-  },
-  {
-    q: "4. What province produces the most beef?",
-    options: ["Bukidnon", "Masbate", "Cebu", "Batangas"],
-    answer: "Bukidnon"
-  },
-  {
-    q: "5. Who is the Father of Poultry Science in the Philippines?",
-    options: ["Dr. Dioscoro Umali", "Dr. Ramon Barba", "Dr. Francisco Fronda", "Dr. Valentino Arganosa"],
-    answer: "Dr. Francisco Fronda"
-  },
-  {
-    q: "6. Which of the following is a species of duck that is endemic to the Philippines?",
-    options: ["Anas crecca", "Anas platyrhynchos", "Dendrocygna arcuata", "Anas luzonica"],
-    answer: "Anas luzonica"
-  },
-  {
-    q: "7. What is one of the Agricultural Training Institute's (ATI) training centers specializing in comprehensive and practice-oriented swine production?",
-    options: ["ITCPH", "DTRI", "NSPRDC", "TESDA"],
-    answer: "NSPRDC"
-  },
-  {
-    q: "8. If a farmer fails to provide adequate food for their pigs or cows, causing them to suffer from malnutrition and starvation, which Philippine law may punish this type of animal cruelty?",
-    options: ["RA 1556", "RA 8485", "RA 9296", "RA 7884"],
-    answer: "RA 8485"
-  },
-  {
-    q: "9. Livestock production for human consumption accounts for around 15% of total global greenhouse gas emissions; which animal is responsible for the majority of these emissions?",
-    options: ["Ovis aries", "Gallus gallus domesticus", "Bos taurus", "Sus scrofa domesticus"],
-    answer: "Bos taurus"
-  },
-  {
-    q: "10. What is antimicrobial resistance (AMR)?",
-    options: [
-      "The ability of animals to tolerate higher doses of antibiotics without adverse effects.",
-      "The ability of animals to develop immunity against bacterial infections.",
-      "The ability of bacteria to survive and multiply despite the presence of antibiotics.",
-      "The ability of animals to resist viral infections."
-    ],
-    answer: "The ability of bacteria to survive and multiply despite the presence of antibiotics."
-  }
-];
+  <div class="question" id="q1">
+    <p>1. Which nutrient is the main source of energy for animals?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 1, 'A')">A. Carbohydrates</li>
+      <li onclick="checkAnswer(this, 1, 'B')">B. Vitamins</li>
+      <li onclick="checkAnswer(this, 1, 'C')">C. Minerals</li>
+    </ul>
+    <p id="result1"></p>
+  </div>
 
-let current = 0;
+  <div class="question" id="q2">
+    <p>2. Which animal is classified as a ruminant?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 2, 'A')">A. Pig</li>
+      <li onclick="checkAnswer(this, 2, 'B')">B. Chicken</li>
+      <li onclick="checkAnswer(this, 2, 'C')">C. Cow</li>
+    </ul>
+    <p id="result2"></p>
+  </div>
 
-function showQuestion() {
-  let q = questions[current];
-
-  let html = `<div class="question">${q.q}</div>`;
-
-  q.options.forEach(opt => {
-    html += `<div class="option" onclick="checkAnswer(this, \`${q.answer}\`)">${opt}</div>`;
-  });
-
-  document.getElementById("quiz-box").innerHTML = html;
-}
-
-function checkAnswer(el, correct) {
-  let options = document.querySelectorAll(".option");
-
-  options.forEach(o => {
-    o.style.pointerEvents = "none";
-    if (o.innerText === correct) {
-      o.classList.add("correct");
-    }
-  });
-
-  if (el.innerText !== correct) {
-    el.classList.add("wrong");
-  }
-}
-
-function nextQuestion() {
-  current++;
-  if (current >= questions.length) {
-    current = 0;
-  }
-  showQuestion();
-}
-
-showQuestion();
-</script>
+  <div class="question" id="q3">
+    <p>3. What is the normal body covering of poultry?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 3, 'A')">A. Hair</li>
+      <li onclick="checkAnswer(this, 3, 'B')">B. Feathers</li>
+      <li onclick="checkAnswer(this, 3, 'C')">C. Fur</li>
+    </ul>
     <p id="result3"></p>
   </div>
 
