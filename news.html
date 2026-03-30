@@ -23,6 +23,7 @@
       color: #2e7d32;
     }
 
+    /* NORMAL NEWS CARD */
     .news-card {
       background: white;
       padding: 20px;
@@ -44,6 +45,48 @@
       text-decoration: none;
       color: purple;
     }
+
+    /* 🔥 AUTO SCROLL SECTION */
+    .agri-news {
+      padding: 30px 20px;
+    }
+
+    .scroll-container {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .scroll-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scrollNews 30s linear infinite;
+    }
+
+    .scroll-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* override card for scrolling */
+    .agri-news .news-card {
+      min-width: 280px;
+      margin: 0;
+      flex-shrink: 0;
+      text-align: left;
+    }
+
+    .agri-news img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    @keyframes scrollNews {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
   </style>
 </head>
 
@@ -52,50 +95,71 @@
 <div class="page">
 
   <h1>📰 Agri News</h1>
+
+  <!-- 🔥 AUTO SCROLL NEWS -->
   <section class="agri-news">
-  <h2>🌱 Agri News</h2>
+    <h2>🌱 Agri News</h2>
 
-  <div class="scroll-container">
-    <div class="scroll-track">
+    <div class="scroll-container">
+      <div class="scroll-track">
 
-      <!-- CARD 1 -->
-      <div class="news-card">
-        <img src="agri-loan.jpg">
-        <h3>World Bank OKs $1-B Loan</h3>
-        <p>Supports PH agriculture and 5M farmers.</p>
-        <a href="https://www.pna.gov.ph/articles/1272001" target="_blank">Read →</a>
+        <!-- ORIGINAL CARDS -->
+        <div class="news-card">
+          <img src="agri-loan.jpg">
+          <h3>World Bank OKs $1-B Loan</h3>
+          <p>Supports PH agriculture and 5M farmers.</p>
+          <a href="https://www.pna.gov.ph/articles/1272001" target="_blank">Read →</a>
+        </div>
+
+        <div class="news-card">
+          <img src="isabela-agri.jpg">
+          <h3>Agri Facilities in Isabela</h3>
+          <p>Boosts productivity and reduces losses.</p>
+          <a href="https://www.pna.gov.ph/articles/1271837" target="_blank">Read →</a>
+        </div>
+
+        <div class="news-card">
+          <img src="fern-news.jpg">
+          <h3>Fern Conservation in Mindanao</h3>
+          <p>Protecting indigenous plant species.</p>
+          <a href="#">Read →</a>
+        </div>
+
+        <!-- DUPLICATE (IMPORTANT FOR SMOOTH LOOP) -->
+        <div class="news-card">
+          <img src="agri-loan.jpg">
+          <h3>World Bank OKs $1-B Loan</h3>
+          <p>Supports PH agriculture and 5M farmers.</p>
+          <a href="https://www.pna.gov.ph/articles/1272001" target="_blank">Read →</a>
+        </div>
+
+        <div class="news-card">
+          <img src="isabela-agri.jpg">
+          <h3>Agri Facilities in Isabela</h3>
+          <p>Boosts productivity and reduces losses.</p>
+          <a href="https://www.pna.gov.ph/articles/1271837" target="_blank">Read →</a>
+        </div>
+
+        <div class="news-card">
+          <img src="fern-news.jpg">
+          <h3>Fern Conservation in Mindanao</h3>
+          <p>Protecting indigenous plant species.</p>
+          <a href="#">Read →</a>
+        </div>
+
       </div>
-
-      <!-- CARD 2 -->
-      <div class="news-card">
-        <img src="isabela-agri.jpg">
-        <h3>Agri Facilities in Isabela</h3>
-        <p>Boosts productivity and reduces losses.</p>
-        <a href="https://www.pna.gov.ph/articles/1271837" target="_blank">Read →</a>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="news-card">
-        <img src="fern-news.jpg">
-        <h3>Fern Conservation in Mindanao</h3>
-        <p>Protecting indigenous plant species.</p>
-        <a href="#">Read →</a>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- VIDEO 1 -->
   <div class="news-card">
     <h3>🎥 Featured Video</h3>
-
     <iframe src="https://www.facebook.com/plugins/video.php?href=YOUR_VIDEO_LINK"></iframe>
   </div>
 
   <!-- VIDEO 2 -->
   <div class="news-card">
     <h3>🚜 Farming Tips</h3>
-
     <iframe src="https://www.facebook.com/plugins/video.php?href=YOUR_VIDEO_LINK"></iframe>
   </div>
 
