@@ -427,14 +427,14 @@ h3 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .topic-box {
-  display: block; /* VERY IMPORTANT */
+  display: block;
   background: white;
   padding: 20px;
-  margin: 15px 0;
+  margin: 15px auto;   /* ✅ CENTER */
+  max-width: 700px;    /* ✅ PARA NASA GITNA */
   border-radius: 12px;
   text-align: left;
-  text-decoration: none; /* remove underline */
-  color: #222; /* remove blue */
+  color: #222;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: 0.2s;
 }
