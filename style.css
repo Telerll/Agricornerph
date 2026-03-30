@@ -519,3 +519,6 @@ a.back-btn:active {
   color: #2e7d32 !important;
   text-decoration: none;
 }
+.hero h1 {
+  color: white;
+}
