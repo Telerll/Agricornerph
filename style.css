@@ -372,3 +372,23 @@ h3 {
   content: counter(news) ". ";
   font-weight: bold;
 }
+.news-card {
+  position: relative;
+}
+
+.news-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+.news-card img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
