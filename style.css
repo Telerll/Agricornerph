@@ -502,3 +502,10 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+.back-btn,
+.back-btn:visited,
+.back-btn:hover,
+.back-btn:active {
+  color: #2e7d32;
+  text-decoration: none;
+}
