@@ -710,3 +710,11 @@ nav {
   box-sizing: border-box;
   background: white;
 }
+.contact-card {
+  max-width: 700px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
