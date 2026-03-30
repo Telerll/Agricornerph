@@ -417,7 +417,7 @@ h3 {
   color: #2e7d32;
 }
 .card {
-  display: block;        /* 🔥 pinaka important */
+  display: block;       
   background: white;
   padding: 20px;
   margin: 15px;
