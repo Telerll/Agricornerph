@@ -427,13 +427,18 @@ h3 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .topic-box {
-  display: block;
+  display: block; /* VERY IMPORTANT */
   background: white;
-  padding: 15px;
+  padding: 20px;
   margin: 15px 0;
   border-radius: 12px;
   text-align: left;
-  text-decoration: none;
-  color: #222;
+  text-decoration: none; /* remove underline */
+  color: #222; /* remove blue */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+.topic-box:hover {
+  background: #e8f5e9;
+  transform: translateY(-3px);
 }
