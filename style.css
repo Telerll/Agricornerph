@@ -522,3 +522,18 @@ a.back-btn:active {
 .hero h1 {
   color: white;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.topic-box {
+  width: 100%;
+  box-sizing: border-box;
+}
