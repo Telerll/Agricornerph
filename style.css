@@ -438,6 +438,17 @@ h3 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: 0.2s;
 }
+
+  .topic-box h3,
+  .topic-box h4,
+  .topic-box h5 {
+    color: #2e7d32;
+  }
+  .topic-box strong {
+    color : #2e7d32;
+  }
+  
+}
 .topic-box:hover {
   background: #e8f5e9;
   transform: translateY(-3px);
