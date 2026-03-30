@@ -685,3 +685,17 @@ nav {
 .contact-box button:hover {
   background: #1b5e20;
 }
+.contact-box h2,
+.contact-box p {
+  text-align: center;
+}
+
+.contact-box h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
