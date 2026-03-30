@@ -450,3 +450,46 @@ h3 {
   background: #e8f5e9;
   transform: translateY(-3px);
 }
+/* 🌿 FINAL HEADER CENTER FIX */
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #444;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* 🌿 SECTION TITLE (A. PLANT CELL, etc.) */
+.section-title {
+  color: #2e7d32;
+  font-weight: bold;
+  border-left: 5px solid #2e7d32;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* 🌿 TOPIC BOX (CENTERED CARDS) */
+.topic-box {
+  display: block;
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 12px;
+  text-align: left;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 🌿 BODY FIX (para walang side space issue) */
+body {
+  margin: 0;
+  padding: 0;
+}
