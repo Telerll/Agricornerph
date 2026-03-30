@@ -555,3 +555,14 @@ img {
 body {
   overflow-x: hidden;
 }
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;   /* ✅ para bumaba sa next line */
+    justify-content: center;
+  }
+
+  .nav-links li {
+    margin: 5px 10px;
+  }
+}
