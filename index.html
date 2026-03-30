@@ -48,6 +48,13 @@
       color: #222;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       display: block;
+      transition: all 0.2s ease;
+    }
+
+    .home-card:hover {
+      background: #e8f5e9;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
     }
 
     .home-card h3 {
@@ -61,6 +68,31 @@
       margin-top: 10px;
       color: #222;
     }
+
+    #contactBox {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      z-index: 1000;
+      width: 300px;
+      text-align: center;
+    }
+
+    #contactBox button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #2e7d32;
+      color: white;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -71,7 +103,8 @@
       <li><a href="#home">Home</a></li>
       <li><a href="news.html">Agri News</a></li>
       <li><a href="about.html">About Us</a></li>
-   <li><a href="contact.html">Contact</a></li>
+      <li><a href="#" onclick="openContact()">Contact</a></li>
+    </ul>
   </nav>
 
   <header id="home" class="hero">
@@ -105,15 +138,12 @@
       </a>
 
       <a href="trivia.html" class="home-card">
-  <h3>Agri Trivia & Quick Recall</h3>
-  <p>Trivia, Quick facts, and key points to help you recall important agriculture concept .</p>
+        <h3>Trivia & Quick Recall</h3>
+        <p>Trivia, quick facts, and key points to help you recall important agriculture concepts.</p>
       </a>
-      </div>
     </div>
   </section>
-<div class="featured-news">
 
- </div>
   <section class="section highlight">
     <h2>Why AgricornerPh?</h2>
     <p>
@@ -127,23 +157,23 @@
     <p>Your Daily Dose of Agriculture Knowledge</p>
     <p class="footer-copy">© 2026 AgricornerPh | All Rights Reserved</p>
   </footer>
-  <div id="contactBox" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
-background:white; padding:20px; border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.3); z-index:1000; width:300px; text-align:center;">
 
-  <h3>Contact Us</h3>
-  <p>📧 lemoncito.roldan@yahoo.com</p>
-  <p>📱 0919-2820-664</p>
+  <div id="contactBox">
+    <h3>Contact Us</h3>
+    <p>📧 lemoncito.roldan@yahoo.com</p>
+    <p>📱 0919-2820-664</p>
+    <button onclick="closeContact()">Close</button>
+  </div>
 
-  <button onclick="closeContact()">Close</button>
-</div>
   <script>
-function openContact() {
-  document.getElementById("contactBox").style.display = "block";
-}
+    function openContact() {
+      document.getElementById("contactBox").style.display = "block";
+    }
 
-function closeContact() {
-  document.getElementById("contactBox").style.display = "none";
-}
-</script>
+    function closeContact() {
+      document.getElementById("contactBox").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
