@@ -444,11 +444,8 @@ h3 {
   .topic-box h5 {
     color: #2e7d32;
   }
-  .topic-box strong {
-    color : #2e7d32;
+
   }
-  
-}
 .topic-box:hover {
   background: #e8f5e9;
   transform: translateY(-3px);
