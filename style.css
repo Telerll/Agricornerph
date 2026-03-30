@@ -671,3 +671,17 @@ nav {
   font-size: 16px;
   box-sizing: border-box;
 }
+.contact-box button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-box button:hover {
+  background: #1b5e20;
+}
