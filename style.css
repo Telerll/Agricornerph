@@ -416,3 +416,13 @@ h3 {
 .topic-card h3 {
   color: #2e7d32;
 }
+.card {
+  display: block;        /* 🔥 pinaka important */
+  background: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
