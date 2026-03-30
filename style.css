@@ -699,3 +699,14 @@ nav {
   color: #555;
   margin-bottom: 20px;
 }
+.contact-card input,
+.contact-card textarea,
+.contact-card select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: white;
+}
