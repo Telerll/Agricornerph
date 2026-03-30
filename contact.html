@@ -7,21 +7,19 @@
   <link rel="stylesheet" href="style.css?v=2">
 
   <style>
-    .contact-page {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 50px 20px;
+    .contact-section {
+      padding: 60px 20px;
       text-align: center;
     }
 
-    .contact-page h1 {
+    .contact-section h1 {
       color: #2e7d32;
       margin-bottom: 10px;
     }
 
-    .contact-page p {
+    .contact-section p {
       color: #555;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .contact-card {
@@ -45,23 +43,18 @@
       padding: 14px;
       border: 1px solid #ccc;
       border-radius: 10px;
-      box-sizing: border-box;
       font-size: 16px;
-    }
-
-    .contact-card textarea {
-      resize: vertical;
+      box-sizing: border-box;
     }
 
     .contact-card button {
       width: 100%;
-      margin-top: 12px;
       padding: 14px;
-      border: none;
-      border-radius: 10px;
+      margin-top: 10px;
       background: #2e7d32;
       color: white;
-      font-size: 16px;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
     }
 
@@ -70,8 +63,10 @@
     }
   </style>
 </head>
+
 <body>
 
+  <!-- SAME NAV STYLE -->
   <nav>
     <div class="nav-logo">AgricornerPh</div>
     <ul class="nav-links">
@@ -82,12 +77,14 @@
     </ul>
   </nav>
 
-  <div class="contact-page">
+  <!-- CONTACT CONTENT -->
+  <section class="contact-section">
     <h1>Contact Us</h1>
     <p>Send us a message and we’ll be happy to assist you.</p>
 
     <div class="contact-card">
       <form action="https://formsubmit.co/lemoncito.roldan@yahoo.com" method="POST">
+        
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="thankyou.html">
 
@@ -95,13 +92,14 @@
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
           <input type="tel" name="number" placeholder="Your Contact Number">
-          <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+          <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
         </div>
 
         <button type="submit">SEND</button>
+
       </form>
     </div>
-  </div>
+  </section>
 
 </body>
 </html>
