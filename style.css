@@ -512,3 +512,10 @@ body {
 .back-btn:hover {
   text-decoration: underline;
 }
+a.back-btn,
+a.back-btn:visited,
+a.back-btn:hover,
+a.back-btn:active {
+  color: #2e7d32 !important;
+  text-decoration: none;
+}
