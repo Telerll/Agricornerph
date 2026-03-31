@@ -722,3 +722,15 @@ nav {
   max-width: 200px;
   margin: 0 auto;
 }
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  align-items: stretch; /* 🔥 ito importante */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
