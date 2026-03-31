@@ -797,3 +797,11 @@ nav {
   from { transform: translateX(200%); }
   to   { transform: translateX(0%); }
 }
+.item2 {
+  animation: ticker2 15s linear infinite;
+  animation-delay: 7.5s; /* 🔥 kalahati ng duration */
+}
+.item2 {
+  animation: ticker2 15s linear infinite;
+  animation-delay: 7.5s; /* 🔥 kalahati ng duration */
+}
