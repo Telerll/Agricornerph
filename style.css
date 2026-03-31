@@ -801,7 +801,7 @@ ticker-label {
   color: white;
   font-weight: bold;
   font-size: 11px;
-  padding: 4px 14px 4px 8px;
+  padding: 4px 30px 4px 10px;
 }
 
 /* 🔥 SLANTED EDGE */
@@ -809,8 +809,8 @@ ticker-label {
   content: "";
   position: absolute;
   top: 0;
-  right: -12px;
-  width: 24px;
+  right: -15px;
+  width: 30px;
   height: 100%;
   background: #2e7d32;
   transform: skewX(-30deg);
