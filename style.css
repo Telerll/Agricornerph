@@ -788,5 +788,10 @@ nav {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-.ticker-labe {
-  font-weight: bold
+.ticker-label {
+  font-weight: bold;
+}
+ticker-label {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
