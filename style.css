@@ -798,8 +798,8 @@ nav {
   to   { transform: translateX(0%); }
 }
 .item2 {
-  animation: ticker2 18s linear infinite;
-  animation-delay: 9s; /* 🔥 kalahati ng duration */
+  animation: ticker2 15s linear infinite;
+  animation-delay: 7.5s; /* 🔥 kalahati ng duration */
 }
 .item2 {
   animation: ticker2 15s linear infinite;
