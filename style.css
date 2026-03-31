@@ -763,7 +763,7 @@ nav {
   display: inline-block;
   margin: 0;
   padding-left: 100%;
-  animation: tickerMove 18s linear infinite;
+  animation: tickerMove 25s linear infinite;
 }
 
 @keyframes tickerMove {
