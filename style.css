@@ -795,3 +795,23 @@ ticker-label {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
+.ticker-label {
+  position: relative;
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 4px 14px 4px 8px;
+}
+
+/* 🔥 SLANTED EDGE */
+.ticker-label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 24px;
+  height: 100%;
+  background: #2e7d32;
+  transform: skewX(-30deg);
+}
