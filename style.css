@@ -741,3 +741,7 @@ nav {
 .card p {
   flex-grow: 1;
 }
+.ticker-text p {
+  margin: 0;
+  white-space: nowrap;
+}
