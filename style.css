@@ -774,3 +774,6 @@ nav {
     transform: translateX(-100%);
   }
 }
+.ticker-text p {
+  font-size: 14px;
+}
