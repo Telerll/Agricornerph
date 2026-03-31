@@ -1556,3 +1556,23 @@ nav {
 .ticker-text p {
   font-size: 12px;
 }
+.ticker-label {
+  position: relative;
+  display: inline-block;
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+  padding: 8px 25px 8px 15px;
+  z-index: 1;
+}
+
+.ticker-label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 30px;
+  height: 100%;
+  background: #2e7d32;
+  transform: skewX(-30deg);
+}
