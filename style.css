@@ -745,3 +745,32 @@ nav {
   margin: 0;
   white-space: nowrap;
 }
+.news-ticker {
+  background: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.ticker-text {
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 100%;
+}
+
+.ticker-text p {
+  display: inline-block;
+  margin: 0;
+  padding-left: 100%;
+  animation: tickerMove 18s linear infinite;
+}
+
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
