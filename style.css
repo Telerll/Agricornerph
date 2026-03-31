@@ -773,7 +773,7 @@ nav {
 .ticker-move {
   display: inline-flex;
   width: max-content;
-  animation: tickerScroll 15s linear infinite;
+  animation: tickerScroll 20s linear infinite;
 }
 
 .ticker-move span {
@@ -788,3 +788,5 @@ nav {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+.ticker-labe {
+  font-weight: bold
