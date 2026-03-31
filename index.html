@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgricornerPh Dashboard</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <title>AgricornerPh</title>
 
   <style>
     body {
@@ -35,7 +34,6 @@
       gap: 15px;
       margin: 0;
       padding: 0;
-      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -44,123 +42,79 @@
       font-weight: bold;
     }
 
-    .hero-dashboard {
-      background: linear-gradient(135deg, #388e3c, #66bb6a);
+    /* HERO */
+    .hero {
+      background: linear-gradient(#388e3c, #66bb6a);
       color: white;
-      padding: 50px 20px;
       text-align: center;
+      padding: 60px 20px;
     }
 
-    .hero-dashboard img {
-      width: 90px;
-      margin-bottom: 10px;
-    }
-
-    .hero-dashboard h1 {
-      margin: 10px 0 5px;
-      font-size: 38px;
-    }
-
-    .hero-dashboard p {
+    .hero h1 {
       margin: 0;
-      font-size: 17px;
+      font-size: 36px;
     }
 
+    .hero p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    /* DASHBOARD */
     .dashboard {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 40px 20px;
     }
 
-    .dashboard-title {
-      text-align: center;
-      color: #2e7d32;
-      margin-bottom: 25px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-bottom: 35px;
-    }
-
-    .stat-card {
-      background: white;
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      text-align: center;
-    }
-
-    .stat-card h3 {
-      margin: 0 0 10px;
-      color: #2e7d32;
-      font-size: 20px;
-    }
-
-    .stat-card p {
-      margin: 0;
-      color: #555;
-      font-size: 14px;
-    }
-
-    .dashboard-section {
-      margin-top: 35px;
-    }
-
-    .dashboard-section h2 {
+    .dashboard h2 {
       text-align: center;
       color: #2e7d32;
       margin-bottom: 20px;
     }
 
-    .feature-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
 
-    .feature-card {
+    .card {
       background: white;
       padding: 25px;
       border-radius: 16px;
       text-decoration: none;
       color: #222;
       box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      transition: 0.2s ease;
-      display: block;
+      transition: 0.2s;
+      text-align: center;
     }
 
-    .feature-card:hover {
-      transform: translateY(-4px);
+    .card:hover {
       background: #e8f5e9;
-      box-shadow: 0 8px 20px rgba(46,125,50,0.18);
+      transform: translateY(-4px);
     }
 
-    .feature-card h3 {
-      margin-top: 0;
+    .card h3 {
       margin-bottom: 10px;
       color: #2e7d32;
     }
 
-    .feature-card p {
-      margin: 0;
+    .card p {
       font-size: 14px;
       color: #555;
-      line-height: 1.6;
     }
 
-    .quick-box {
+    /* HIGHLIGHTS */
+    .highlights {
       background: white;
-      border-radius: 16px;
       padding: 25px;
+      border-radius: 16px;
+      margin-top: 30px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      max-width: 900px;
-      margin: 0 auto;
     }
 
-    .quick-box ul {
+    .highlights ul {
       margin: 0;
       padding-left: 20px;
       line-height: 1.8;
@@ -175,39 +129,15 @@
       margin-top: 50px;
     }
 
-    footer h3 {
-      margin: 0 0 8px;
-      font-size: 22px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      font-size: 14px;
-    }
-
     .footer-copy {
       font-size: 12px;
       opacity: 0.8;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .nav-links {
-        justify-content: center;
-      }
-
-      .hero-dashboard h1 {
-        font-size: 30px;
-      }
     }
   </style>
 </head>
 <body>
 
+  <!-- NAV -->
   <nav>
     <div class="nav-logo">AgricornerPh</div>
     <ul class="nav-links">
@@ -218,71 +148,50 @@
     </ul>
   </nav>
 
-  <section id="home" class="hero-dashboard">
-    <img src="logo.png" alt="AgricornerPh Logo">
-    <h1>AgricornerPh Dashboard</h1>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>AgricornerPh</h1>
     <p>Your Daily Dose of Agriculture Knowledge</p>
   </section>
 
+  <!-- QUICK ACCESS -->
   <div class="dashboard">
-    <h2 class="dashboard-title">Welcome to Your Learning Hub</h2>
+    <h2>Quick Access</h2>
 
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3>Review</h3>
-        <p>Organized materials for board exam preparation.</p>
-      </div>
-      <div class="stat-card">
-        <h3>Practice</h3>
-        <p>Daily drills and exercises to test your knowledge.</p>
-      </div>
-      <div class="stat-card">
+    <div class="grid">
+      <a href="review.html" class="card">
+        <h3>Review Materials</h3>
+        <p>Board exam reviewers and lessons</p>
+      </a>
+
+      <a href="practice.html" class="card">
+        <h3>Practice Questions</h3>
+        <p>Test your knowledge with drills</p>
+      </a>
+
+      <a href="trivia.html" class="card">
         <h3>Trivia</h3>
-        <p>Quick facts and easy recall concepts.</p>
-      </div>
-      <div class="stat-card">
-        <h3>Updates</h3>
-        <p>Latest AgricornerPh content and news.</p>
-      </div>
+        <p>Quick facts and recall</p>
+      </a>
+
+      <a href="contact.html" class="card">
+        <h3>Contact</h3>
+        <p>Send us your questions</p>
+      </a>
     </div>
 
-    <div class="dashboard-section">
-      <h2>Quick Access</h2>
-      <div class="feature-grid">
-        <a href="review.html" class="feature-card">
-          <h3>Review Materials</h3>
-          <p>Access agriculture board exam reviewers and topic-based lessons.</p>
-        </a>
-
-        <a href="practice.html" class="feature-card">
-          <h3>Practice Questions</h3>
-          <p>Answer drills, quizzes, and test-type review items.</p>
-        </a>
-
-        <a href="trivia.html" class="feature-card">
-          <h3>Trivia & Quick Recall</h3>
-          <p>Strengthen memory through short facts and key concepts.</p>
-        </a>
-
-        <a href="contact.html" class="feature-card">
-          <h3>Contact</h3>
-          <p>Send messages, questions, and suggestions to AgricornerPh.</p>
-        </a>
-      </div>
-    </div>
-
-    <div class="dashboard-section">
-      <h2>About This Site</h2>
-      <div class="quick-box">
-        <ul>
-          <li>AgricornerPh is built for agriculture learners, reviewees, and future agriculturists.</li>
-          <li>It provides accessible review content, practice questions, and quick learning tools.</li>
-          <li>The goal is to make board exam preparation simple, organized, and motivating.</li>
-        </ul>
-      </div>
+    <!-- HIGHLIGHTS -->
+    <div class="highlights">
+      <h2>Latest Updates</h2>
+      <ul>
+        <li>New Crop Science reviewer added</li>
+        <li>New practice set uploaded</li>
+        <li>New trivia content available</li>
+      </ul>
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <h3>AgricornerPh</h3>
     <p>Your Daily Dose of Agriculture Knowledge</p>
