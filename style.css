@@ -746,11 +746,11 @@ nav {
   white-space: nowrap;
 }
 .news-ticker {
-  background: #fff;
+  background: #e8f5e9;
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .ticker-text {
