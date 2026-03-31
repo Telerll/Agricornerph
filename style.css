@@ -1576,3 +1576,46 @@ nav {
   background: #2e7d32;
   transform: skewX(-30deg);
 }
+.news-ticker {
+  display: flex;
+  align-items: center;
+  background: #e8f5e9;
+  padding: 6px 0;
+}
+
+.ticker-label {
+  position: relative;
+  display: inline-block;
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+  padding: 8px 25px 8px 15px;
+}
+
+.ticker-label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 30px;
+  height: 100%;
+  background: #2e7d32;
+  transform: skewX(-30deg);
+}
+
+.ticker-wrap {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-move {
+  display: inline-flex;
+  width: max-content;
+  animation: tickerScroll 18s linear infinite;
+}
+
+.ticker-move span {
+  padding-right: 40px;
+  font-size: 13px;
+}
