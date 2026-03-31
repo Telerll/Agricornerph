@@ -1548,3 +1548,17 @@ nav {
     transform: translateX(-50%);
   }
 }
+.ticker-wrap {
+  white-space: nowrap;
+}
+
+.ticker-move span {
+  white-space: nowrap;
+}
+.ticker-wrap {
+  white-space: nowrap;
+}
+
+.ticker-move span {
+  white-space: nowrap;
+}
