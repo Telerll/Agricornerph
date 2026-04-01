@@ -434,15 +434,16 @@
   }
 
   function selectAnswer(index, element) {
-    const options = document.querySelectorAll("#options li");
+  if (answered) return; // 🔒 lock after first click
 
-    options.forEach(li => li.classList.remove("selected"));
-    element.classList.add("selected");
+  const options = document.querySelectorAll("#options li");
 
-    selectedAnswer = index;
-    answered = true;
-    document.getElementById("result").innerHTML = "";
-  }
+  options.forEach(li => li.classList.remove("selected"));
+  element.classList.add("selected");
+
+  selectedAnswer = index;
+  answered = true;
+}
 
   function nextQuestion() {
     if (!answered) {
