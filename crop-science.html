@@ -1,203 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crop Science Practice</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Science Part 4 Quiz - AgricornerPH</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
+      background: #f4f8f3;
       margin: 0;
       padding: 20px;
+      text-align: center;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: auto;
     }
 
     h1 {
-      margin-bottom: 10px;
+      color: #2e7d32;
+      margin-bottom: 5px;
     }
 
-    a {
-      display: inline-block;
-      margin-bottom: 20px;
+    .subtitle {
+      color: #444;
+      margin-bottom: 25px;
     }
 
-    #score {
-      font-size: 22px;
-      font-weight: bold;
+    .quiz-box {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
       margin: 20px 0;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .question {
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin: 20px auto;
-      border-radius: 10px;
-      max-width: 700px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #1b5e20;
     }
 
-    li {
+    .options {
       list-style: none;
-      cursor: pointer;
-      padding: 12px;
+      padding: 0;
+    }
+
+    .options li {
+      background: #f8f8f8;
       margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
     }
 
-    li:hover {
-      background: #eee;
+    .options li:hover {
+      background: #e8f5e9;
     }
 
-    #q2, #q3 {
-      display: none;
+    .correct {
+      background: #c8e6c9 !important;
+      color: #1b5e20;
+      font-weight: bold;
     }
 
-    #nextBtn,
-    #restartBtn {
-      padding: 12px 24px;
+    .wrong {
+      background: #ffcdd2 !important;
+      color: #b71c1c;
+      font-weight: bold;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    #scoreBox {
+      background: white;
+      padding: 15px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      font-size: 18px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .btn {
       margin-top: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 16px;
     }
 
-    #restartBtn {
-      display: none;
+    .btn:hover {
+      background: #1b5e20;
     }
 
-    #finalResult {
-      font-size: 22px;
+    .back {
+      display: inline-block;
+      margin-top: 25px;
+      color: purple;
+      text-decoration: none;
       font-weight: bold;
-      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+  <div class="page">
+    <h1>🌱 Crop Science</h1>
+    <p class="subtitle">Part 4 Quiz – Propagation &amp; Production Factors</p>
 
-  <h1>🌱 Crop Science Practice</h1>
-  <a href="practice.html">⬅ Back to Subjects</a>
+    <div id="scoreBox">Score: <span id="score">0</span> / 50</div>
 
-  <hr>
+    <div id="quizContainer"></div>
 
-  <p id="score">Score: 0</p>
-
-  <div class="question" id="q1">
-    <p>1. Which part of the plant is responsible for photosynthesis?</p>
-    <ul>
-      <li onclick="checkAnswer(this, 1, 'A')">A. Root</li>
-      <li onclick="checkAnswer(this, 1, 'B')">B. Stem</li>
-      <li onclick="checkAnswer(this, 1, 'C')">C. Leaf</li>
-    </ul>
-    <p id="result1"></p>
+    <button class="btn" onclick="restartQuiz()">Restart Quiz</button>
+    <br>
+    <a href="crop-part4.html" class="back">← Back to Part 4</a>
   </div>
-
-  <div class="question" id="q2">
-    <p>2. Which nutrient is essential for plant growth?</p>
-    <ul>
-      <li onclick="checkAnswer(this, 2, 'A')">A. Nitrogen</li>
-      <li onclick="checkAnswer(this, 2, 'B')">B. Oxygen</li>
-      <li onclick="checkAnswer(this, 2, 'C')">C. Carbon</li>
-    </ul>
-    <p id="result2"></p>
-  </div>
-
-  <div class="question" id="q3">
-    <p>3. What is the primary function of roots?</p>
-    <ul>
-      <li onclick="checkAnswer(this, 3, 'A')">A. Absorb water and nutrients</li>
-      <li onclick="checkAnswer(this, 3, 'B')">B. Produce flowers</li>
-      <li onclick="checkAnswer(this, 3, 'C')">C. Make seeds</li>
-    </ul>
-    <p id="result3"></p>
-  </div>
-
-  <button id="nextBtn" type="button" onclick="nextQuestion()">Next ➡</button>
-
-  <p id="finalResult"></p>
-
-  <button id="restartBtn" type="button" onclick="restartQuiz()">Restart 🔁</button>
 
   <script>
+    const quizData = [
+      {
+        q: "1. Which process converts wild plants into cultivated forms?",
+        options: ["Hybridization", "Domestication", "Mutation", "Selection"],
+        answer: 1
+      },
+      {
+        q: "2. Collection of genetic materials of crops is called:",
+        options: ["Introduction", "Germplasm collection", "Hybridization", "Inbreeding"],
+        answer: 1
+      },
+      {
+        q: "3. Crossing genetically different plants is:",
+        options: ["Inbreeding", "Hybridization", "Backcross", "Mutation"],
+        answer: 1
+      },
+      {
+        q: "4. Repeated mating of related individuals leads to:",
+        options: ["Heterosis", "Mutation", "Inbreeding depression", "Selection"],
+        answer: 2
+      },
+      {
+        q: "5. F1 superiority over parents is:",
+        options: ["Mutation", "Heterosis", "Selection", "Introgression"],
+        answer: 1
+      },
+      {
+        q: "6. Cross between hybrid and one parent is:",
+        options: ["Testcross", "Backcross", "Polycross", "Topcross"],
+        answer: 1
+      },
+      {
+        q: "7. Cross within same species is:",
+        options: ["Wide cross", "Reciprocal cross", "Intraspecific cross", "Polycross"],
+        answer: 2
+      },
+      {
+        q: "8. Cross between distant species is:",
+        options: ["Backcross", "Wide cross", "Testcross", "Hybridization"],
+        answer: 1
+      },
+      {
+        q: "9. Ability to transmit traits to offspring is:",
+        options: ["Heritability", "Combining ability", "Selection intensity", "Variance"],
+        answer: 1
+      },
+      {
+        q: "10. Genetic change that is heritable is:",
+        options: ["Mutation", "Selection", "Variation", "Hybridization"],
+        answer: 0
+      },
+      {
+        q: "11. Selection based on environment is:",
+        options: ["Artificial", "Natural", "Directional", "Stabilizing"],
+        answer: 1
+      },
+      {
+        q: "12. Selection controlled by humans is:",
+        options: ["Natural", "Artificial", "Random", "Genetic"],
+        answer: 1
+      },
+      {
+        q: "13. Selection favoring average traits is:",
+        options: ["Directional", "Stabilizing", "Diversifying", "Artificial"],
+        answer: 1
+      },
+      {
+        q: "14. Selection favoring one extreme trait is:",
+        options: ["Stabilizing", "Diversifying", "Directional", "Natural"],
+        answer: 2
+      },
+      {
+        q: "15. Traits controlled by many genes are:",
+        options: ["Qualitative", "Quantitative", "Genetic", "Environmental"],
+        answer: 1
+      },
+      {
+        q: "16. Total observable variation is:",
+        options: ["Genotypic variance", "Environmental variance", "Phenotypic variance", "Selection differential"],
+        answer: 2
+      },
+      {
+        q: "17. Variation due to genes is:",
+        options: ["Environmental variance", "Phenotypic variance", "Genotypic variance", "Selection intensity"],
+        answer: 2
+      },
+      {
+        q: "18. Proportion of trait controlled by genes:",
+        options: ["Heritability", "Variance", "Selection gain", "Hybridization"],
+        answer: 0
+      },
+      {
+        q: "19. Initial testing of lines is:",
+        options: ["Preliminary", "Observational", "General", "Advanced"],
+        answer: 1
+      },
+      {
+        q: "20. Final testing across many locations:",
+        options: ["Preliminary", "Observational", "Advanced", "General"],
+        answer: 2
+      },
+      {
+        q: "21. Test for variety identity is:",
+        options: ["G×E", "DUS", "CEC", "SOM"],
+        answer: 1
+      },
+      {
+        q: "22. Seeds produced from breeder seeds:",
+        options: ["Certified", "Registered", "Foundation", "Good"],
+        answer: 2
+      },
+      {
+        q: "23. Seeds used by farmers:",
+        options: ["Breeder", "Foundation", "Certified", "Registered"],
+        answer: 2
+      },
+      {
+        q: "24. Locally adapted traditional varieties:",
+        options: ["Hybrids", "Landraces", "Inbreds", "Synthetics"],
+        answer: 1
+      },
+      {
+        q: "25. Pure genetically uniform lines:",
+        options: ["Hybrids", "Inbreds", "Composites", "Synthetics"],
+        answer: 1
+      },
+      {
+        q: "26. Which seed class is the original pure seed maintained by the breeder?",
+        options: ["Certified seed", "Registered seed", "Breeder seed", "Foundation seed"],
+        answer: 2
+      },
+      {
+        q: "27. Which seed class comes after foundation seed?",
+        options: ["Registered seed", "Good seed", "Breeder seed", "Hybrid seed"],
+        answer: 0
+      },
+      {
+        q: "28. Which system uses A, B, and R lines?",
+        options: ["1-line system", "2-line system", "3-line system", "Topcross system"],
+        answer: 2
+      },
+      {
+        q: "29. Which hybrid seed production system depends on environment-sensitive male sterility?",
+        options: ["1-line system", "2-line system", "3-line system", "Backcross system"],
+        answer: 1
+      },
+      {
+        q: "30. Which system uses apomixis to maintain hybrid genotype?",
+        options: ["1-line system", "2-line system", "3-line system", "Polycross system"],
+        answer: 0
+      },
+      {
+        q: "31. Storage of germplasm at ultra-low temperature is called:",
+        options: ["Refrigeration", "Isolation", "Cryopreservation", "Stratification"],
+        answer: 2
+      },
+      {
+        q: "32. A farming system that avoids synthetic fertilizers and pesticides is:",
+        options: ["Precision farming", "Organic farming", "Biodynamic farming", "Kyusei farming"],
+        answer: 1
+      },
+      {
+        q: "33. A system with no tillage, no pesticides, and minimal intervention is:",
+        options: ["Biological farming", "Natural farming", "Regenerative agriculture", "Open farming"],
+        answer: 1
+      },
+      {
+        q: "34. A farming design integrating plants, animals, and structures is:",
+        options: ["Permaculture", "Organic farming", "Topworking", "Stratification"],
+        answer: 0
+      },
+      {
+        q: "35. Use of beneficial microorganisms to improve soil and crop productivity refers to:",
+        options: ["Biodynamic farming", "Kyusei Nature Farming", "Natural farming", "Certified farming"],
+        answer: 1
+      },
+      {
+        q: "36. A feature of sustainable agriculture that allows adaptation to local conditions is:",
+        options: ["Participatory", "Proactive", "Flexible", "Holistic"],
+        answer: 2
+      },
+      {
+        q: "37. A feature of sustainable agriculture based on learning by doing is:",
+        options: ["Experiential", "Resource-based", "Gender sensitive", "Economically viable"],
+        answer: 0
+      },
+      {
+        q: "38. A feature of sustainable agriculture that involves farmers and communities is:",
+        options: ["Proactive", "Participatory", "Flexible", "Holistic"],
+        answer: 1
+      },
+      {
+        q: "39. A forward-looking feature of sustainable agriculture is:",
+        options: ["Proactive", "Experiential", "Social equity", "Cultural appropriateness"],
+        answer: 0
+      },
+      {
+        q: "40. Which dimension of sustainable agriculture emphasizes fairness?",
+        options: ["Resource-based", "Social equity", "Location specific", "Holistic approach"],
+        answer: 1
+      },
+      {
+        q: "41. Which dimension emphasizes suitability to local conditions?",
+        options: ["Ecologically sound", "Economically viable", "Location specific", "Gender sensitive"],
+        answer: 2
+      },
+      {
+        q: "42. Which dimension emphasizes protection of the environment?",
+        options: ["Social equity", "Ecologically sound and friendly", "Human values", "Participatory"],
+        answer: 1
+      },
+      {
+        q: "43. Which dimension emphasizes respect for traditions and local practices?",
+        options: ["Culturally appropriate", "Proactive", "Experiential", "Resource-based"],
+        answer: 0
+      },
+      {
+        q: "44. Which dimension emphasizes use of local resources?",
+        options: ["Resource-based", "Holistic", "Gender sensitive", "Flexible"],
+        answer: 0
+      },
+      {
+        q: "45. Which dimension emphasizes the whole farm system and interactions?",
+        options: ["Economically viable", "Holistic approach", "Participatory", "Location specific"],
+        answer: 1
+      },
+      {
+        q: "46. Which term refers to reproduction from vegetative parts without fertilization?",
+        options: ["Sexual propagation", "Asexual propagation", "Germination", "Dormancy"],
+        answer: 1
+      },
+      {
+        q: "47. Which propagation method joins plant parts so they grow as one?",
+        options: ["Layering", "Budding", "Grafting", "Cutting"],
+        answer: 2
+      },
+      {
+        q: "48. Which propagation method uses a single bud as scion?",
+        options: ["Grafting", "Budding", "Layering", "Division"],
+        answer: 1
+      },
+      {
+        q: "49. Which propagation method induces roots while the stem is still attached to the parent plant?",
+        options: ["Cutting", "Layering", "Budding", "Tissue culture"],
+        answer: 1
+      },
+      {
+        q: "50. Which process weakens the seed coat to allow water entry?",
+        options: ["Vernalization", "Stratification", "Scarification", "Germination"],
+        answer: 2
+      }
+    ];
+
     let score = 0;
     let answered = {};
-    let currentQuestion = 1;
 
-    const correctAnswers = {
-      1: 'C',
-      2: 'A',
-      3: 'A'
-    };
+    const quizContainer = document.getElementById("quizContainer");
+    const scoreSpan = document.getElementById("score");
 
-    function checkAnswer(element, questionNumber, answer) {
-      if (answered[questionNumber]) return;
+    function renderQuiz() {
+      quizContainer.innerHTML = "";
 
-      const result = document.getElementById('result' + questionNumber);
-      const choices = element.parentElement.querySelectorAll('li');
+      quizData.forEach((item, qIndex) => {
+        const box = document.createElement("div");
+        box.className = "quiz-box";
 
-      choices.forEach(function(li) {
-        li.style.color = 'black';
+        const question = document.createElement("div");
+        question.className = "question";
+        question.textContent = item.q;
+        box.appendChild(question);
+
+        const ul = document.createElement("ul");
+        ul.className = "options";
+
+        item.options.forEach((opt, oIndex) => {
+          const li = document.createElement("li");
+          li.textContent = opt;
+          li.onclick = () => checkAnswer(qIndex, oIndex, li, ul);
+          ul.appendChild(li);
+        });
+
+        box.appendChild(ul);
+
+        const result = document.createElement("div");
+        result.className = "result";
+        result.id = "result-" + qIndex;
+        box.appendChild(result);
+
+        quizContainer.appendChild(box);
       });
-
-      if (answer === correctAnswers[questionNumber]) {
-        element.style.color = 'green';
-        result.textContent = 'Correct!';
-        score++;
-      } else {
-        element.style.color = 'red';
-        result.textContent = 'Wrong!';
-      }
-
-      answered[questionNumber] = true;
-      document.getElementById('score').textContent = 'Score: ' + score;
     }
 
-    function nextQuestion() {
-      if (!answered[currentQuestion]) {
-        alert('Answer first!');
-        return;
+    function checkAnswer(qIndex, oIndex, clickedLi, ul) {
+      if (answered[qIndex]) return;
+      answered[qIndex] = true;
+
+      const correctIndex = quizData[qIndex].answer;
+      const options = ul.querySelectorAll("li");
+      const resultDiv = document.getElementById("result-" + qIndex);
+
+      options.forEach((li, idx) => {
+        if (idx === correctIndex) li.classList.add("correct");
+      });
+
+      if (oIndex === correctIndex) {
+        clickedLi.classList.add("correct");
+        resultDiv.textContent = "✅ Correct";
+        resultDiv.style.color = "#2e7d32";
+        score++;
+      } else {
+        clickedLi.classList.add("wrong");
+        resultDiv.textContent = "❌ Wrong";
+        resultDiv.style.color = "#b71c1c";
       }
 
-      if (currentQuestion === 1) {
-        document.getElementById('q1').style.display = 'none';
-        document.getElementById('q2').style.display = 'block';
-        currentQuestion = 2;
-      } else if (currentQuestion === 2) {
-        document.getElementById('q2').style.display = 'none';
-        document.getElementById('q3').style.display = 'block';
-        currentQuestion = 3;
-        document.getElementById('nextBtn').textContent = 'Finish';
-      } else {
-        document.getElementById('finalResult').textContent =
-          '🎉 Quiz Finished! Your Score: ' + score;
-        document.getElementById('nextBtn').style.display = 'none';
-        document.getElementById('restartBtn').style.display = 'inline-block';
-      }
+      scoreSpan.textContent = score;
     }
 
     function restartQuiz() {
       score = 0;
       answered = {};
-      currentQuestion = 1;
-
-      document.getElementById('score').textContent = 'Score: 0';
-      document.getElementById('finalResult').textContent = '';
-
-      document.getElementById('q1').style.display = 'block';
-      document.getElementById('q2').style.display = 'none';
-      document.getElementById('q3').style.display = 'none';
-
-      document.getElementById('result1').textContent = '';
-      document.getElementById('result2').textContent = '';
-      document.getElementById('result3').textContent = '';
-
-      document.querySelectorAll('li').forEach(function(li) {
-        li.style.color = 'black';
-      });
-
-      document.getElementById('nextBtn').style.display = 'inline-block';
-      document.getElementById('nextBtn').textContent = 'Next ➡';
-      document.getElementById('restartBtn').style.display = 'none';
+      scoreSpan.textContent = score;
+      renderQuiz();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  </script>
 
+    renderQuiz();
+  </script>
 </body>
 </html>
