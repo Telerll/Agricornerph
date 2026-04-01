@@ -157,8 +157,7 @@
 
     <a href="practice.html" class="back">← Back to Subjects</a>
   </div>
-
- <script>
+<script>
   const quiz = [
     {
       q: "Which process converts wild plants into cultivated forms?",
@@ -416,50 +415,60 @@
   let score = 0;
   let answered = false;
   let selectedAnswer = null;
-  }
-   
- function nextQuestion() {
-  if (!answered) {
-    document.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
-    document.getElementById("result").style.color = "#b71c1c";
-    return;
-  }
 
-  if (selectedAnswer === quiz[current].answer) {
-    score++;
-  }
+  function loadQuestion() {
+    answered = false;
+    selectedAnswer = null;
+    document.getElementById("result").innerHTML = "";
 
-  current++;
+    const q = quiz[current];
+    document.getElementById("question").innerHTML = (current + 1) + ". " + q.q;
 
-  if (current >= quiz.length) {
-    document.querySelector(".quiz-box").style.display = "none";
-    document.getElementById("score-box").style.display = "none";
-    document.getElementById("end-screen").style.display = "block";
-    document.getElementById("final-score-top").innerText = score;
-    document.getElementById("final-score").innerText = score + "/" + quiz.length;
-    return;
+    let optionsHTML = "";
+    q.options.forEach((opt, i) => {
+      optionsHTML += `<li onclick="selectAnswer(${i}, this)">${opt}</li>`;
+    });
+
+    document.getElementById("options").innerHTML = optionsHTML;
   }
 
-  loadQuestion();
-}
+  function selectAnswer(index, element) {
+    if (answered) return;
 
-  if (selectedAnswer === quiz[current].answer) {
-    score++;
+    const options = document.querySelectorAll("#options li");
+    options.forEach(li => li.classList.remove("selected"));
+
+    element.classList.add("selected");
+    selectedAnswer = index;
+    answered = true;
+    document.getElementById("result").innerHTML = "";
   }
 
-  current++;
+  function nextQuestion() {
+    if (!answered) {
+      document.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
+      document.getElementById("result").style.color = "#b71c1c";
+      return;
+    }
 
-  if (current >= quiz.length) {
-    document.querySelector(".quiz-box").style.display = "none";
-    document.getElementById("score-box").style.display = "none";
-    document.getElementById("end-screen").style.display = "block";
-    document.getElementById("final-score-top").innerText = score;
-    document.getElementById("final-score").innerText = score + "/" + quiz.length;
-    return;
+    if (selectedAnswer === quiz[current].answer) {
+      score++;
+    }
+
+    current++;
+
+    if (current >= quiz.length) {
+      document.querySelector(".quiz-box").style.display = "none";
+      document.getElementById("score-box").style.display = "none";
+      document.getElementById("end-screen").style.display = "block";
+      document.getElementById("final-score-top").innerText = score;
+      document.getElementById("final-score").innerText = score + "/" + quiz.length;
+      return;
+    }
+
+    loadQuestion();
   }
 
-  loadQuestion();
-}
   function restartQuiz() {
     current = 0;
     score = 0;
