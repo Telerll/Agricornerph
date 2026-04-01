@@ -417,40 +417,30 @@
   let answered = false;
   let selectedAnswer = null;
 
-  function loadQuestion() {
-    answered = false;
-    selectedAnswer = null;
-    document.getElementById("result").innerHTML = "";
-
-    const q = quiz[current];
-    document.getElementById("question").innerHTML = (current + 1) + ". " + q.q;
-
-    let optionsHTML = "";
-    q.options.forEach((opt, i) => {
-      optionsHTML += `<li onclick="selectAnswer(${i}, this)">${opt}</li>`;
-    });
-
-    document.getElementById("options").innerHTML = optionsHTML;
-  }
-
-  function selectAnswer(index, element) {
-  if (answered) return; // 🔒 lock after first click
-
-  const options = document.querySelectorAll("#options li");
-
-  options.forEach(li => li.classList.remove("selected"));
-  element.classList.add("selected");
-
-  selectedAnswer = index;
-  answered = true;
-}
-
   function nextQuestion() {
-    if (!answered) {
-      ddocument.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
+  if (!answered) {
+    document.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
     document.getElementById("result").style.color = "#b71c1c";
     return;
   }
+
+  if (selectedAnswer === quiz[current].answer) {
+    score++;
+  }
+
+  current++;
+
+  if (current >= quiz.length) {
+    document.querySelector(".quiz-box").style.display = "none";
+    document.getElementById("score-box").style.display = "none";
+    document.getElementById("end-screen").style.display = "block";
+    document.getElementById("final-score-top").innerText = score;
+    document.getElementById("final-score").innerText = score + "/" + quiz.length;
+    return;
+  }
+
+  loadQuestion();
+}
 
   if (selectedAnswer === quiz[current].answer) {
     score++;
