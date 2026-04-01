@@ -456,9 +456,18 @@
 
     function nextQuestion() {
       if (!answered) {
-        alert("Please asnwer first to proceed!");
-        return;
-      }
+  document.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
+  document.getElementById("result").style.color = "#b71c1c";
+
+  const box = document.querySelector(".quiz-box");
+  box.style.border = "2px solid red";
+
+  setTimeout(() => {
+    box.style.border = "";
+  }, 500);
+
+  return;
+}
 
       current++;
 
