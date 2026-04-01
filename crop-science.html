@@ -447,29 +447,28 @@
 
   function nextQuestion() {
     if (!answered) {
-      document.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
-      document.getElementById("result").style.color = "#b71c1c";
-      return;
-    }
-
-    if (selectedAnswer === quiz[current].answer) {
-      score++;
-    }
-
-    current++;
-
-    if (current >= quiz.length) {
-      document.querySelector(".quiz-box").style.display = "none";
-      document.getElementById("score-box").style.display = "none";
-      document.getElementById("end-screen").style.display = "block";
-      document.getElementById("final-score-top").innerText = score;
-      document.getElementById("final-score").innerText = score + "/" + quiz.length;
-      return;
-    }
-
-    loadQuestion();
+      ddocument.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
+    document.getElementById("result").style.color = "#b71c1c";
+    return;
   }
 
+  if (selectedAnswer === quiz[current].answer) {
+    score++;
+  }
+
+  current++;
+
+  if (current >= quiz.length) {
+    document.querySelector(".quiz-box").style.display = "none";
+    document.getElementById("score-box").style.display = "none";
+    document.getElementById("end-screen").style.display = "block";
+    document.getElementById("final-score-top").innerText = score;
+    document.getElementById("final-score").innerText = score + "/" + quiz.length;
+    return;
+  }
+
+  loadQuestion();
+}
   function restartQuiz() {
     current = 0;
     score = 0;
