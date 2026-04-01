@@ -815,7 +815,6 @@ nav {
   border-radius: 12px;
   cursor: pointer;
 }
-
 .options li.selected {
   background: #a5d6a7 !important;
   color: #000;
