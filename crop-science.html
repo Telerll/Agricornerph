@@ -134,20 +134,23 @@
 </head>
 <body>
 
-  <div class="page">
-    <h1>🌱 Crop Science Practice</h1>
-    <p class="subtitle">Part 4 – Propagation &amp; Production Factors</p>
+<p id="score-box">Score: <span id="score">0</span></p>
 
-    <p id="score-box">Score: <span id="score">0</span></p>
+<div class="quiz-box">
+  <div id="question"></div>
+  <ul class="options" id="options"></ul>
+  <div id="result"></div>
 
-    <div class="quiz-box">
-      <div id="question"></div>
-      <ul class="options" id="options"></ul>
-      <div id="result"></div>
-    </div>
+  <div class="button-group">
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+</div>
 
-    <p id="score-box">Score: <span id="score">0</span></p>
-
+<div id="end-screen">
+  <h2>Score: <span id="final-score-top"></span></h2>
+  <button onclick="restartQuiz()">Restart 🔁</button>
+  <h2>🎉 Final Score: <span id="final-score"></span></h2>
+</div>
 <div class="quiz-box">
   <div id="question"></div>
   <ul class="options" id="options"></ul>
