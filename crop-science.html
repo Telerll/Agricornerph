@@ -73,14 +73,11 @@
       background: #dcedc8;
     }
 
-    .correct {
+    .options li.selected {
       background: #a5d6a7 !important;
       color: #000;
-    }
-
-    .wrong {
-      background: #ef9a9a !important;
-      color: #000;
+      font-weight: bold;
+      border: 2px solid #2e7d32;
     }
 
     #result {
@@ -157,331 +154,335 @@
 
     <a href="practice.html" class="back">← Back to Subjects</a>
   </div>
-<script>
-  const quiz = [
-    {
-      q: "Which process converts wild plants into cultivated forms?",
-      options: ["Hybridization", "Domestication", "Mutation", "Selection"],
-      answer: 1
-    },
-    {
-      q: "Collection of genetic materials of crops is called:",
-      options: ["Introduction", "Germplasm collection", "Hybridization", "Inbreeding"],
-      answer: 1
-    },
-    {
-      q: "Crossing genetically different plants is:",
-      options: ["Inbreeding", "Hybridization", "Backcross", "Mutation"],
-      answer: 1
-    },
-    {
-      q: "Repeated mating of related individuals leads to:",
-      options: ["Heterosis", "Mutation", "Inbreeding depression", "Selection"],
-      answer: 2
-    },
-    {
-      q: "F1 superiority over parents is:",
-      options: ["Mutation", "Heterosis", "Selection", "Introgression"],
-      answer: 1
-    },
-    {
-      q: "Cross between hybrid and one parent is:",
-      options: ["Testcross", "Backcross", "Polycross", "Topcross"],
-      answer: 1
-    },
-    {
-      q: "Cross within same species is:",
-      options: ["Wide cross", "Reciprocal cross", "Intraspecific cross", "Polycross"],
-      answer: 2
-    },
-    {
-      q: "Cross between distant species is:",
-      options: ["Backcross", "Wide cross", "Testcross", "Hybridization"],
-      answer: 1
-    },
-    {
-      q: "Ability to transmit traits to offspring is:",
-      options: ["Heritability", "Combining ability", "Selection intensity", "Variance"],
-      answer: 1
-    },
-    {
-      q: "Genetic change that is heritable is:",
-      options: ["Mutation", "Selection", "Variation", "Hybridization"],
-      answer: 0
-    },
-    {
-      q: "Selection based on environment is:",
-      options: ["Artificial", "Natural", "Directional", "Stabilizing"],
-      answer: 1
-    },
-    {
-      q: "Selection controlled by humans is:",
-      options: ["Natural", "Artificial", "Random", "Genetic"],
-      answer: 1
-    },
-    {
-      q: "Selection favoring average traits is:",
-      options: ["Directional", "Stabilizing", "Diversifying", "Artificial"],
-      answer: 1
-    },
-    {
-      q: "Selection favoring one extreme trait is:",
-      options: ["Stabilizing", "Diversifying", "Directional", "Natural"],
-      answer: 2
-    },
-    {
-      q: "Traits controlled by many genes are:",
-      options: ["Qualitative", "Quantitative", "Genetic", "Environmental"],
-      answer: 1
-    },
-    {
-      q: "Total observable variation is:",
-      options: ["Genotypic variance", "Environmental variance", "Phenotypic variance", "Selection differential"],
-      answer: 2
-    },
-    {
-      q: "Variation due to genes is:",
-      options: ["Environmental variance", "Phenotypic variance", "Genotypic variance", "Selection intensity"],
-      answer: 2
-    },
-    {
-      q: "Proportion of trait controlled by genes:",
-      options: ["Heritability", "Variance", "Selection gain", "Hybridization"],
-      answer: 0
-    },
-    {
-      q: "Initial testing of lines is:",
-      options: ["Preliminary", "Observational", "General", "Advanced"],
-      answer: 1
-    },
-    {
-      q: "Final testing across many locations:",
-      options: ["Preliminary", "Observational", "Advanced", "General"],
-      answer: 2
-    },
-    {
-      q: "Test for distinctness, uniformity, and stability is:",
-      options: ["G×E", "DUS", "CEC", "SOM"],
-      answer: 1
-    },
-    {
-      q: "Seeds produced from breeder seeds are called:",
-      options: ["Certified", "Registered", "Foundation", "Good"],
-      answer: 2
-    },
-    {
-      q: "Seeds used by farmers are usually:",
-      options: ["Breeder", "Foundation", "Certified", "Registered"],
-      answer: 2
-    },
-    {
-      q: "Locally adapted traditional varieties are called:",
-      options: ["Hybrids", "Landraces", "Inbreds", "Synthetics"],
-      answer: 1
-    },
-    {
-      q: "Pure genetically uniform lines are:",
-      options: ["Hybrids", "Inbreds", "Composites", "Synthetics"],
-      answer: 1
-    },
-    {
-      q: "Which seed class is the original pure seed maintained by the breeder?",
-      options: ["Certified seed", "Registered seed", "Breeder seed", "Foundation seed"],
-      answer: 2
-    },
-    {
-      q: "Which seed class comes after foundation seed?",
-      options: ["Registered seed", "Good seed", "Breeder seed", "Hybrid seed"],
-      answer: 0
-    },
-    {
-      q: "Which system uses A, B, and R lines?",
-      options: ["1-line system", "2-line system", "3-line system", "Topcross system"],
-      answer: 2
-    },
-    {
-      q: "Which hybrid seed production system depends on environment-sensitive male sterility?",
-      options: ["1-line system", "2-line system", "3-line system", "Backcross system"],
-      answer: 1
-    },
-    {
-      q: "Which system uses apomixis to maintain hybrid genotype?",
-      options: ["1-line system", "2-line system", "3-line system", "Polycross system"],
-      answer: 0
-    },
-    {
-      q: "Storage of germplasm at ultra-low temperature is called:",
-      options: ["Refrigeration", "Isolation", "Cryopreservation", "Stratification"],
-      answer: 2
-    },
-    {
-      q: "A farming system that avoids synthetic fertilizers and pesticides is:",
-      options: ["Precision farming", "Organic farming", "Biodynamic farming", "Kyusei farming"],
-      answer: 1
-    },
-    {
-      q: "A system with no tillage, no pesticides, and minimal intervention is:",
-      options: ["Biological farming", "Natural farming", "Regenerative agriculture", "Open farming"],
-      answer: 1
-    },
-    {
-      q: "A farming design integrating plants, animals, and structures is:",
-      options: ["Permaculture", "Organic farming", "Topworking", "Stratification"],
-      answer: 0
-    },
-    {
-      q: "Use of beneficial microorganisms to improve soil and crop productivity refers to:",
-      options: ["Biodynamic farming", "Kyusei Nature Farming", "Natural farming", "Certified farming"],
-      answer: 1
-    },
-    {
-      q: "A feature of sustainable agriculture that allows adaptation to local conditions is:",
-      options: ["Participatory", "Proactive", "Flexible", "Holistic"],
-      answer: 2
-    },
-    {
-      q: "A feature of sustainable agriculture based on learning by doing is:",
-      options: ["Experiential", "Resource-based", "Gender sensitive", "Economically viable"],
-      answer: 0
-    },
-    {
-      q: "A feature of sustainable agriculture that involves farmers and communities is:",
-      options: ["Proactive", "Participatory", "Flexible", "Holistic"],
-      answer: 1
-    },
-    {
-      q: "A forward-looking feature of sustainable agriculture is:",
-      options: ["Proactive", "Experiential", "Social equity", "Cultural appropriateness"],
-      answer: 0
-    },
-    {
-      q: "Which dimension of sustainable agriculture emphasizes fairness?",
-      options: ["Resource-based", "Social equity", "Location specific", "Holistic approach"],
-      answer: 1
-    },
-    {
-      q: "Which dimension emphasizes suitability to local conditions?",
-      options: ["Ecologically sound", "Economically viable", "Location specific", "Gender sensitive"],
-      answer: 2
-    },
-    {
-      q: "Which dimension emphasizes protection of the environment?",
-      options: ["Social equity", "Ecologically sound and friendly", "Human values", "Participatory"],
-      answer: 1
-    },
-    {
-      q: "Which dimension emphasizes respect for traditions and local practices?",
-      options: ["Culturally appropriate", "Proactive", "Experiential", "Resource-based"],
-      answer: 0
-    },
-    {
-      q: "Which dimension emphasizes use of local resources?",
-      options: ["Resource-based", "Holistic", "Gender sensitive", "Flexible"],
-      answer: 0
-    },
-    {
-      q: "Which dimension emphasizes the whole farm system and interactions?",
-      options: ["Economically viable", "Holistic approach", "Participatory", "Location specific"],
-      answer: 1
-    },
-    {
-      q: "Which term refers to reproduction from vegetative parts without fertilization?",
-      options: ["Sexual propagation", "Asexual propagation", "Germination", "Dormancy"],
-      answer: 1
-    },
-    {
-      q: "Which propagation method joins plant parts so they grow as one?",
-      options: ["Layering", "Budding", "Grafting", "Cutting"],
-      answer: 2
-    },
-    {
-      q: "Which propagation method uses a single bud as scion?",
-      options: ["Grafting", "Budding", "Layering", "Division"],
-      answer: 1
-    },
-    {
-      q: "Which propagation method induces roots while the stem is still attached to the parent plant?",
-      options: ["Cutting", "Layering", "Budding", "Tissue culture"],
-      answer: 1
-    },
-    {
-      q: "Which process weakens the seed coat to allow water entry?",
-      options: ["Vernalization", "Stratification", "Scarification", "Germination"],
-      answer: 2
-    }
-  ];
 
-  let current = 0;
-  let score = 0;
-  let answered = false;
-  let selectedAnswer = null;
+  <script>
+    const quiz = [
+      {
+        q: "Which process converts wild plants into cultivated forms?",
+        options: ["Hybridization", "Domestication", "Mutation", "Selection"],
+        answer: 1
+      },
+      {
+        q: "Collection of genetic materials of crops is called?",
+        options: ["Introduction", "Germplasm collection", "Hybridization", "Inbreeding"],
+        answer: 1
+      },
+      {
+        q: "Crossing genetically different plants is:",
+        options: ["Inbreeding", "Hybridization", "Backcross", "Mutation"],
+        answer: 1
+      },
+      {
+        q: "Repeated mating of related individuals leads to:",
+        options: ["Heterosis", "Mutation", "Inbreeding depression", "Selection"],
+        answer: 2
+      },
+      {
+        q: "F1 superiority over parents is:",
+        options: ["Mutation", "Heterosis", "Selection", "Introgression"],
+        answer: 1
+      },
+      {
+        q: "Cross between hybrid and one parent is:",
+        options: ["Testcross", "Backcross", "Polycross", "Topcross"],
+        answer: 1
+      },
+      {
+        q: "Cross within the same species is:",
+        options: ["Wide cross", "Reciprocal cross", "Intraspecific cross", "Polycross"],
+        answer: 2
+      },
+      {
+        q: "Cross between distant species is:",
+        options: ["Backcross", "Wide cross", "Testcross", "Hybridization"],
+        answer: 1
+      },
+      {
+        q: "Ability to transmit traits to offspring is:",
+        options: ["Heritability", "Combining ability", "Selection intensity", "Variance"],
+        answer: 1
+      },
+      {
+        q: "Genetic change that is heritable is:",
+        options: ["Mutation", "Selection", "Variation", "Hybridization"],
+        answer: 0
+      },
+      {
+        q: "Selection based on environment is:",
+        options: ["Artificial", "Natural", "Directional", "Stabilizing"],
+        answer: 1
+      },
+      {
+        q: "Selection controlled by humans is:",
+        options: ["Natural", "Artificial", "Random", "Genetic"],
+        answer: 1
+      },
+      {
+        q: "Selection favoring average traits is:",
+        options: ["Directional", "Stabilizing", "Diversifying", "Artificial"],
+        answer: 1
+      },
+      {
+        q: "Selection favoring one extreme trait is:",
+        options: ["Stabilizing", "Diversifying", "Directional", "Natural"],
+        answer: 2
+      },
+      {
+        q: "Traits controlled by many genes are:",
+        options: ["Qualitative", "Quantitative", "Genetic", "Environmental"],
+        answer: 1
+      },
+      {
+        q: "Total observable variation is:",
+        options: ["Genotypic variance", "Environmental variance", "Phenotypic variance", "Selection differential"],
+        answer: 2
+      },
+      {
+        q: "Variation due to genes is:",
+        options: ["Environmental variance", "Phenotypic variance", "Genotypic variance", "Selection intensity"],
+        answer: 2
+      },
+      {
+        q: "Proportion of trait controlled by genes is:",
+        options: ["Heritability", "Variance", "Selection gain", "Hybridization"],
+        answer: 0
+      },
+      {
+        q: "Initial testing of lines is:",
+        options: ["Preliminary", "Observational", "General", "Advanced"],
+        answer: 1
+      },
+      {
+        q: "Final testing across many locations is:",
+        options: ["Preliminary", "Observational", "Advanced", "General"],
+        answer: 2
+      },
+      {
+        q: "Test for distinctness, uniformity, and stability is:",
+        options: ["G×E", "DUS", "CEC", "SOM"],
+        answer: 1
+      },
+      {
+        q: "Seeds produced from breeder seeds are called:",
+        options: ["Certified", "Registered", "Foundation", "Good"],
+        answer: 2
+      },
+      {
+        q: "Seeds used by farmers are usually:",
+        options: ["Breeder", "Foundation", "Certified", "Registered"],
+        answer: 2
+      },
+      {
+        q: "Locally adapted traditional varieties are called:",
+        options: ["Hybrids", "Landraces", "Inbreds", "Synthetics"],
+        answer: 1
+      },
+      {
+        q: "Pure genetically uniform lines are:",
+        options: ["Hybrids", "Inbreds", "Composites", "Synthetics"],
+        answer: 1
+      },
+      {
+        q: "Which seed class is the original pure seed maintained by the breeder?",
+        options: ["Certified seed", "Registered seed", "Breeder seed", "Foundation seed"],
+        answer: 2
+      },
+      {
+        q: "Which seed class comes after foundation seed?",
+        options: ["Registered seed", "Good seed", "Breeder seed", "Hybrid seed"],
+        answer: 0
+      },
+      {
+        q: "Which system uses A, B, and R lines?",
+        options: ["1-line system", "2-line system", "3-line system", "Topcross system"],
+        answer: 2
+      },
+      {
+        q: "Which hybrid seed production system depends on environment-sensitive male sterility?",
+        options: ["1-line system", "2-line system", "3-line system", "Backcross system"],
+        answer: 1
+      },
+      {
+        q: "Which system uses apomixis to maintain hybrid genotype?",
+        options: ["1-line system", "2-line system", "3-line system", "Polycross system"],
+        answer: 0
+      },
+      {
+        q: "Storage of germplasm at ultra-low temperature is called:",
+        options: ["Refrigeration", "Isolation", "Cryopreservation", "Stratification"],
+        answer: 2
+      },
+      {
+        q: "A farming system that avoids synthetic fertilizers and pesticides is:",
+        options: ["Precision farming", "Organic farming", "Biodynamic farming", "Kyusei farming"],
+        answer: 1
+      },
+      {
+        q: "A system with no tillage, no pesticides, and minimal intervention is:",
+        options: ["Biological farming", "Natural farming", "Regenerative agriculture", "Open farming"],
+        answer: 1
+      },
+      {
+        q: "A farming design integrating plants, animals, and structures is:",
+        options: ["Permaculture", "Organic farming", "Topworking", "Stratification"],
+        answer: 0
+      },
+      {
+        q: "Use of beneficial microorganisms to improve soil and crop productivity refers to:",
+        options: ["Biodynamic farming", "Kyusei Nature Farming", "Natural farming", "Certified farming"],
+        answer: 1
+      },
+      {
+        q: "A feature of sustainable agriculture that allows adaptation to local conditions is:",
+        options: ["Participatory", "Proactive", "Flexible", "Holistic"],
+        answer: 2
+      },
+      {
+        q: "A feature of sustainable agriculture based on learning by doing is:",
+        options: ["Experiential", "Resource-based", "Gender sensitive", "Economically viable"],
+        answer: 0
+      },
+      {
+        q: "A feature of sustainable agriculture that involves farmers and communities is:",
+        options: ["Proactive", "Participatory", "Flexible", "Holistic"],
+        answer: 1
+      },
+      {
+        q: "A forward-looking feature of sustainable agriculture is:",
+        options: ["Proactive", "Experiential", "Social equity", "Cultural appropriateness"],
+        answer: 0
+      },
+      {
+        q: "Which dimension of sustainable agriculture emphasizes fairness?",
+        options: ["Resource-based", "Social equity", "Location specific", "Holistic approach"],
+        answer: 1
+      },
+      {
+        q: "Which dimension emphasizes suitability to local conditions?",
+        options: ["Ecologically sound", "Economically viable", "Location specific", "Gender sensitive"],
+        answer: 2
+      },
+      {
+        q: "Which dimension emphasizes protection of the environment?",
+        options: ["Social equity", "Ecologically sound and friendly", "Human values", "Participatory"],
+        answer: 1
+      },
+      {
+        q: "Which dimension emphasizes respect for traditions and local practices?",
+        options: ["Culturally appropriate", "Proactive", "Experiential", "Resource-based"],
+        answer: 0
+      },
+      {
+        q: "Which dimension emphasizes use of local resources?",
+        options: ["Resource-based", "Holistic", "Gender sensitive", "Flexible"],
+        answer: 0
+      },
+      {
+        q: "Which dimension emphasizes the whole farm system and interactions?",
+        options: ["Economically viable", "Holistic approach", "Participatory", "Location specific"],
+        answer: 1
+      },
+      {
+        q: "Which term refers to reproduction from vegetative parts without fertilization?",
+        options: ["Sexual propagation", "Asexual propagation", "Germination", "Dormancy"],
+        answer: 1
+      },
+      {
+        q: "Which propagation method joins plant parts so they grow as one?",
+        options: ["Layering", "Budding", "Grafting", "Cutting"],
+        answer: 2
+      },
+      {
+        q: "Which propagation method uses a single bud as scion?",
+        options: ["Grafting", "Budding", "Layering", "Division"],
+        answer: 1
+      },
+      {
+        q: "Which propagation method induces roots while the stem is still attached to the parent plant?",
+        options: ["Cutting", "Layering", "Budding", "Tissue culture"],
+        answer: 1
+      },
+      {
+        q: "Which process weakens the seed coat to allow water entry?",
+        options: ["Vernalization", "Stratification", "Scarification", "Germination"],
+        answer: 2
+      }
+    ];
 
-  function loadQuestion() {
-    answered = false;
-    selectedAnswer = null;
-    document.getElementById("result").innerHTML = "";
+    let current = 0;
+    let score = 0;
+    let answered = false;
+    let selectedAnswer = null;
 
-    const q = quiz[current];
-    document.getElementById("question").innerHTML = (current + 1) + ". " + q.q;
+    function loadQuestion() {
+      answered = false;
+      selectedAnswer = null;
+      document.getElementById("result").innerHTML = "";
 
-    let optionsHTML = "";
-    q.options.forEach((opt, i) => {
-      optionsHTML += `<li onclick="selectAnswer(${i}, this)">${opt}</li>`;
-    });
+      const q = quiz[current];
+      document.getElementById("question").innerHTML = (current + 1) + ". " + q.q;
 
-    document.getElementById("options").innerHTML = optionsHTML;
-  }
+      let optionsHTML = "";
+      q.options.forEach((opt, i) => {
+        optionsHTML += `<li onclick="selectAnswer(${i}, this)">${opt}</li>`;
+      });
 
-  function selectAnswer(index, element) {
-    if (answered) return;
-
-    const options = document.querySelectorAll("#options li");
-    options.forEach(li => li.classList.remove("selected"));
-
-    element.classList.add("selected");
-    selectedAnswer = index;
-    answered = true;
-    document.getElementById("result").innerHTML = "";
-  }
-
-  function nextQuestion() {
-    if (!answered) {
-      document.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
-      document.getElementById("result").style.color = "#b71c1c";
-      return;
+      document.getElementById("options").innerHTML = optionsHTML;
     }
 
-    if (selectedAnswer === quiz[current].answer) {
-      score++;
+    function selectAnswer(index, element) {
+      if (answered) return;
+
+      const options = document.querySelectorAll("#options li");
+      options.forEach(li => li.classList.remove("selected"));
+
+      element.classList.add("selected");
+      selectedAnswer = index;
+      answered = true;
+      document.getElementById("result").innerHTML = "";
     }
 
-    current++;
+    function nextQuestion() {
+      if (!answered) {
+        document.getElementById("result").innerHTML = "⚠️ Please answer first to proceed.";
+        document.getElementById("result").style.color = "#b71c1c";
+        return;
+      }
 
-    if (current >= quiz.length) {
-      document.querySelector(".quiz-box").style.display = "none";
-      document.getElementById("score-box").style.display = "none";
-      document.getElementById("end-screen").style.display = "block";
-      document.getElementById("final-score-top").innerText = score;
-      document.getElementById("final-score").innerText = score + "/" + quiz.length;
-      return;
+      if (selectedAnswer === quiz[current].answer) {
+        score++;
+      }
+
+      current++;
+
+      if (current >= quiz.length) {
+        document.querySelector(".quiz-box").style.display = "none";
+        document.getElementById("score-box").style.display = "none";
+        document.getElementById("end-screen").style.display = "block";
+        document.getElementById("final-score-top").innerText = score;
+        document.getElementById("final-score").innerText = score + "/" + quiz.length;
+        return;
+      }
+
+      loadQuestion();
+    }
+
+    function restartQuiz() {
+      current = 0;
+      score = 0;
+      answered = false;
+      selectedAnswer = null;
+
+      document.getElementById("score").innerText = score;
+      document.querySelector(".quiz-box").style.display = "block";
+      document.getElementById("score-box").style.display = "block";
+      document.getElementById("end-screen").style.display = "none";
+
+      loadQuestion();
     }
 
     loadQuestion();
-  }
+  </script>
 
-  function restartQuiz() {
-    current = 0;
-    score = 0;
-    answered = false;
-    selectedAnswer = null;
-
-    document.getElementById("score").innerText = score;
-    document.querySelector(".quiz-box").style.display = "block";
-    document.getElementById("score-box").style.display = "block";
-    document.getElementById("end-screen").style.display = "none";
-
-    loadQuestion();
-  }
-
-  loadQuestion();
-</script>
+</body>
+</html>
