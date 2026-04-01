@@ -55,16 +55,13 @@ button {
 <body>
 
 <div class="page">
+<div class="quiz-box">
+  <div id="question"></div>
+  <ul class="options" id="options"></ul>
+  <div id="result"></div>
 
-<h1>🌱 Crop Science Quiz</h1>
-<p>Score: <span id="score">0</span></p>
-
-<div id="question"></div>
-<ul class="options" id="options"></ul>
-<div id="result"></div>
-<div id="question"></div>
-<ul class="options" id="options"></ul>
-<div id="result"></div>
+  <button onclick="nextQuestion()">Next</button>
+  <button onclick="restartQuiz()">Restart 🔁</button>
 </div>
 
 </div>
