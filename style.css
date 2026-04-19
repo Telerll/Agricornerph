@@ -267,3 +267,32 @@ nav {
 .topic-box h5 {
   color: #2e7d32;
 }
+
+.topic-box:hover {
+  background: #e8f5e9;
+  transform: translateY(-3px);
+}
+
+/* Back button */
+.back-btn {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  width: fit-content;
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
