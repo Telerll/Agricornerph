@@ -7,14 +7,16 @@
   <link rel="stylesheet" href="style.css?v=2">
 
   <style>
-    news-ticker {
-  background: #e8f5e9;
-  padding: 6px 0;
-}
+    /* small safe page-specific fixes only */
+    .news-ticker {
+      background: #e8f5e9;
+      padding: 6px 0;
+    }
 
-.ticker-text p {
-  font-size: 12px;
-}
+    .ticker-text p {
+      font-size: 12px;
+    }
+
     footer {
       background: #1b5e20;
       color: white;
@@ -33,45 +35,44 @@
       font-size: 14px;
     }
 
-.footer-copy {
-  font-size: 12px;
-  opacity: 0.8;
-}
+    .footer-copy {
+      font-size: 12px;
+      opacity: 0.8;
+    }
 
-.contact-card {
-  background: white;
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  text-align: left;
-}
+    .contact-card {
+      background: white;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      text-align: left;
+    }
 
-.form-grid {
-  display: grid;
-  gap: 15px;
-}
+    .form-grid {
+      display: grid;
+      gap: 15px;
+    }
 
-.contact-card input,
-.contact-card textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
-}
+    .contact-card input,
+    .contact-card textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
 
-.contact-card button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 10px;
-  background: #2e7d32;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
+    .contact-card button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
     }
 
     .home-card-container {
@@ -147,22 +148,22 @@
       <li><a href="#home">Home</a></li>
       <li><a href="news.html">Agri News</a></li>
       <li><a href="about.html">About Us</a></li>
-   <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
- <div class="news-ticker">
-  <span class="ticker-label">WHAT'S NEW:</span>
-  <div class="ticker-wrap">
-    <div class="ticker-move">
-      <span>📢 New Crop Science reviewer added • 📘 Practice Questions for the Mock Exam have been updated • 🧠 New trivia content available •</span>
-      <span>📢 New Crop Science reviewer added • 📘 Practice Questions for the Mock Exam have been updated• 🧠 New trivia content available •</span>
+  <div class="news-ticker">
+    <span class="ticker-label">WHAT'S NEW:</span>
+    <div class="ticker-wrap">
+      <div class="ticker-move">
+        <span>📢 New Crop Science reviewer added • 📘 Practice Questions for the Mock Exam have been updated • 🧠 New trivia content available •</span>
+        <span>📢 New Crop Science reviewer added • 📘 Practice Questions for the Mock Exam have been updated • 🧠 New trivia content available •</span>
+      </div>
     </div>
   </div>
-</div>
 
   <header id="home" class="hero">
-    <img src="logo.png" alt="AgricornerPh Logo" class="hero-logo" />
+    <img src="logo.png" alt="AgricornerPh Logo" class="hero-logo">
     <h1>AgricornerPh</h1>
     <p class="tagline">Your Daily Dose of Agriculture Knowledge</p>
     <h3>AgriBoard Review | Practice Questions</h3>
@@ -195,11 +196,11 @@
         <h3>Trivia & Quick Recall</h3>
         <p>Trivia, quick facts, and key points to help you recall important agriculture concepts.</p>
       </a>
-       <a href="login.html" class="home-card">
-  <h3>Login</h3>
-  <p>Access your account and track your progress.</p>
-</a>
 
+      <a href="login.html" class="home-card">
+        <h3>Login</h3>
+        <p>Access your account and track your progress.</p>
+      </a>
     </div>
   </section>
 
@@ -212,15 +213,12 @@
   </section>
 
   <footer id="contact">
-     <h3>AgricornerPh</h3>
-  <p>Your Daily Dose of Agriculture Knowledge</p>
+    <h3>AgricornerPh</h3>
+    <p>Your Daily Dose of Agriculture Knowledge</p>
+    <p class="footer-copy">© 2026 AgricornerPh | All Rights Reserved</p>
+  </footer>
 
-
-  <p class="footer-copy">© 2026 AgricornerPh | All Rights Reserved</p>
-
-</footer>
   <script>
-   
   </script>
 
 </body>
