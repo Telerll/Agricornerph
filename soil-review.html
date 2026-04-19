@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css?
-  v=2">
+  <link rel="stylesheet" href="style.css?v=2">
   
   <title>Soil Science Review - AgricornerPh</title>
   <style>
@@ -59,7 +58,7 @@
     }
 
     .review-img {
-      width: 80%;
+      width: 100%; /* FIXED */
       max-width: 700px;
       display: block;
       margin: 20px auto;
@@ -102,9 +101,9 @@
     <div class="section-box">
       <h2>1. Soil Genesis</h2>
 
-      <img src="1- SOIL GENEISIS- SOIL CONCEPT.png" class="review-img" alt="Soil Genesis">
-      <img src="2- HISTORY OF SOIL GEN.png" class="review-img" alt="History of Soil Genesis">
-      <img src="3- SOIL FORMING PROCESS.png" class="review-img" alt="Soil Forming Process">
+      <img src="1- SOIL GENEISIS- SOIL CONCEPT.png" class="review-img">
+      <img src="2- HISTORY OF SOIL GEN.png" class="review-img">
+      <img src="3- SOIL FORMING PROCESS.png" class="review-img">
 
       <p>
         Soil is formed through the interaction of five major factors known as
@@ -119,10 +118,10 @@
     <div class="section-box">
       <h2>2. CLORPT Factors</h2>
 
-      <img src="4-CLORPT.png" class="review-img" alt="CLORPT Overview">
-      <img src="5- CLORPT1.png.png" class="review-img" alt="CLORPT 1">
-      <img src="6. CLORPT2.png.png" class="review-img" alt="CLORPT 2">
-      <img src="7. CLORPT3.png.png" class="review-img" alt="CLORPT 3">
+      <img src="4-CLORPT.png" class="review-img">
+      <img src="5- CLORPT1.png.png" class="review-img">
+      <img src="6. CLORPT2.png.png" class="review-img">
+      <img src="7. CLORPT3.png.png" class="review-img">
 
       <p>
         The five soil-forming factors influence how soils develop over time.
@@ -132,24 +131,25 @@
     <div class="section-box">
       <h2>3. Importance of Soil Genesis</h2>
 
-      <img src="8-IMPORTANCE OF SOIL GENESIS.png" class="review-img" alt="Importance of Soil Genesis">
+      <img src="8-IMPORTANCE OF SOIL GENESIS.png" class="review-img">
 
       <p>
         Soil genesis helps explain how soils develop, why soil properties differ,
         and how soils can be managed properly for agriculture.
       </p>
     </div>
-      <p id="progress-text" style="text-align:center; margin-top:20px;"></p>
-<p id="progress-text" style="text-align:center; margin-top:20px; font-weight:bold;"></p>
 
-<div class="nav-buttons">
-  <button onclick="prevSection()">⬅ Previous</button>
-  <button onclick="nextSection()">Next ➡</button>
-</div>
+    <!-- FIX: single progress only -->
+    <p id="progress-text" style="text-align:center; margin-top:20px; font-weight:bold;"></p>
 
-<div style="text-align:center; margin:30px 0;">
-  <a href="review.html" class="back-btn-box">← Back to Review Materials</a>
-</div>
+    <div class="nav-buttons">
+      <button onclick="prevSection()">⬅ Previous</button>
+      <button onclick="nextSection()">Next ➡</button>
+    </div>
+
+    <div style="text-align:center; margin:30px 0;">
+      <a href="review.html" class="back-btn-box">← Back to Review Materials</a>
+    </div>
 
 <script>
 let current = 0;
@@ -182,6 +182,6 @@ function prevSection() {
 
 showSection(current);
 </script>
-</script>
+
 </body>
 </html>
