@@ -16,17 +16,18 @@
 
     h1 {
       margin-bottom: 10px;
+      color: #2e7d32;
     }
 
-    a {
+    .back {
       display: inline-block;
       margin-bottom: 20px;
-      color: #4a148c;
+      color: #2e7d32;
       font-weight: bold;
       text-decoration: none;
     }
 
-    a:hover {
+    .back:hover {
       text-decoration: underline;
     }
 
@@ -60,10 +61,12 @@
 
     .correct {
       color: green;
+      font-weight: bold;
     }
 
     .wrong {
       color: red;
+      font-weight: bold;
     }
 
     #nextBtn, #restartBtn {
@@ -80,10 +83,18 @@
       color: white;
     }
 
+    #nextBtn:hover {
+      background: #1b5e20;
+    }
+
     #restartBtn {
       display: none;
       background: #1565c0;
       color: white;
+    }
+
+    #restartBtn:hover {
+      background: #0d47a1;
     }
 
     #final {
@@ -96,7 +107,7 @@
 <body>
 
   <h1>💼 Agri Economics Practice</h1>
-  <a href="practice.html">⬅ Back to Subjects</a>
+  <a href="practice.html" class="back">⬅ Back to Subjects</a>
 
   <hr>
 
