@@ -925,5 +925,20 @@ nav {
 .back-btn:visited,
 .back-btn:hover,
 .back-btn:active {
+  
   color: #ffffff !important;
+}
+
+/* 🔥 HARD FIX BACK BUTTON */
+.back-btn {
+  display: inline-block !important;
+  padding: 12px 22px !important;
+  background: #2e7d32 !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
 }
