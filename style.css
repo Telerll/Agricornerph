@@ -1,4 +1,4 @@
-html {
+ihtml {
   scroll-behavior: smooth;
 }
 
@@ -862,6 +862,7 @@ nav {
   transform: skewX(-30deg);
 }
 
+
 .options li {
   background: #ececec;
   margin: 10px 0;
@@ -898,4 +899,20 @@ nav {
 .back-btn-box:active {
   color: white !important;
   text-decoration: none !important;
+}
+/* 🔥 upgrade existing back button (SAFE) */
+.back-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #2e7d32;
+  color: white !important;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none !important;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
 }
