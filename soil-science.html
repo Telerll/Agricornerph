@@ -12,22 +12,17 @@
       margin: 0;
       padding: 20px;
       background: #f4f8f3;
+      color: #222;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: auto;
     }
 
     h1 {
       margin-bottom: 10px;
-    }
-
-    a {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: #4a148c;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      color: #2e7d32;
     }
 
     #score {
@@ -43,6 +38,15 @@
       max-width: 700px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    #question {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 0;
     }
 
     li {
@@ -52,6 +56,7 @@
       border: 1px solid #ccc;
       border-radius: 8px;
       cursor: pointer;
+      background: #ececec;
     }
 
     li:hover {
@@ -59,11 +64,13 @@
     }
 
     .correct {
-      color: green;
+      background: #a5d6a7 !important;
+      font-weight: bold;
     }
 
     .wrong {
-      color: red;
+      background: #ffcdd2 !important;
+      font-weight: bold;
     }
 
     #nextBtn, #restartBtn {
@@ -78,6 +85,10 @@
     #nextBtn {
       background: #2e7d32;
       color: white;
+    }
+
+    #nextBtn:hover {
+      background: #1b5e20;
     }
 
     #restartBtn {
@@ -95,79 +106,88 @@
 </head>
 <body>
 
-  <h1>🧪 Soil Science Practice</h1>
-  <a href="practice.html">⬅ Back to Subjects</a>
+  <div class="page">
 
-  <hr>
+    <h1>🧪 Soil Science Practice</h1>
 
-  <p id="score">Score: 0</p>
+    <p id="score">Score: 0</p>
 
-  <div class="question-box">
-    <h3 id="question"></h3>
-    <ul id="choices"></ul>
+    <div class="question-box">
+      <h3 id="question"></h3>
+      <ul id="choices"></ul>
+    </div>
+
+    <button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
+    <button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a href="practice.html"
+         style="display:inline-block;
+                padding:10px 18px;
+                background:#2e7d32;
+                color:#ffffff;
+                border-radius:8px;
+                text-decoration:none;
+                font-weight:bold;">
+         ⬅ Back to Subjects
+      </a>
+    </div>
+
+    <h2 id="final"></h2>
+
   </div>
-
-  <button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
-  <button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
-
-  <h2 id="final"></h2>
 
   <script>
     const quiz = [
       {
-        q: "1. What does CLORPT stand for in soil formation?",
-        choices: [
-          "Climate, Land, Organism, Relief, Parent Material",
-          "Climate, Organisms, Relief, Parent Material, Time",
-          "Climate, Location, Rock, Plant, Temperature",
-          "Climate, Landform, Organic matter, Rock, Time"
-        ],
-        answer: 1
-      },
-      {
-        q: "2. Which soil-forming factor refers to topography?",
-        choices: ["Climate", "Organisms", "Relief", "Time"],
+        q: "1. Soil is composed of mineral matter, organic matter, water, and ____.",
+        choices: ["sand", "clay", "air", "gravel"],
         answer: 2
       },
       {
-        q: "3. What is the study of soil formation called?",
-        choices: ["Edaphology", "Pedology", "Geology", "Agronomy"],
-        answer: 1
-      },
-      {
-        q: "4. Which soil horizon is richest in organic matter?",
-        choices: ["O horizon", "A horizon", "B horizon", "C horizon"],
+        q: "2. The uppermost soil horizon rich in organic matter is the ____ horizon.",
+        choices: ["A", "B", "C", "R"],
         answer: 0
       },
       {
-        q: "5. Which soil horizon is known as subsoil?",
-        choices: ["O", "A", "B", "C"],
-        answer: 2
-      },
-      {
-        q: "6. Which soil property refers to particle size distribution?",
-        choices: ["Structure", "Texture", "Color", "Consistency"],
+        q: "3. The process of breaking down rocks into smaller particles is called ____.",
+        choices: ["erosion", "weathering", "leaching", "deposition"],
         answer: 1
       },
       {
-        q: "7. What soil texture has the highest water-holding capacity?",
-        choices: ["Sand", "Silt", "Clay", "Loam"],
+        q: "4. Which soil particle is the smallest?",
+        choices: ["sand", "silt", "clay", "gravel"],
         answer: 2
       },
       {
-        q: "8. Which soil pH is considered neutral?",
-        choices: ["5", "6", "7", "8"],
+        q: "5. Which soil texture has the best balance of drainage and water-holding capacity?",
+        choices: ["sand", "loam", "clay", "silt"],
+        answer: 1
+      },
+      {
+        q: "6. Soil pH below 7 is considered ____.",
+        choices: ["alkaline", "neutral", "acidic", "saline"],
         answer: 2
       },
       {
-        q: "9. Which factor affects soil color?",
-        choices: ["Organic matter", "Moisture", "Iron content", "All of the above"],
-        answer: 3
+        q: "7. The movement of dissolved nutrients downward through the soil is called ____.",
+        choices: ["erosion", "leaching", "weathering", "humification"],
+        answer: 1
       },
       {
-        q: "10. Which soil type drains water the fastest?",
-        choices: ["Clay", "Loam", "Sandy soil", "Silty soil"],
-        answer: 2
+        q: "8. Organic matter that is well decomposed in soil is called ____.",
+        choices: ["mulch", "humus", "manure", "peat"],
+        answer: 1
+      },
+      {
+        q: "9. Which soil property refers to the arrangement of soil particles into aggregates?",
+        choices: ["texture", "structure", "consistency", "porosity"],
+        answer: 1
+      },
+      {
+        q: "10. The ability of soil to hold positively charged ions is called ____.",
+        choices: ["field capacity", "cation exchange capacity", "soil aeration", "bulk density"],
+        answer: 1
       }
     ];
 
@@ -178,33 +198,33 @@
     function loadQuestion() {
       document.getElementById("question").textContent = quiz[current].q;
 
-      let choicesHTML = "";
-      quiz[current].choices.forEach((choice, i) => {
-        choicesHTML += `<li onclick="checkAnswer(${i}, this)">${choice}</li>`;
+      let html = "";
+      quiz[current].choices.forEach((c, i) => {
+        html += `<li onclick="check(${i}, this)">${c}</li>`;
       });
 
-      document.getElementById("choices").innerHTML = choicesHTML;
+      document.getElementById("choices").innerHTML = html;
       answered = false;
     }
 
-    function checkAnswer(i, element) {
+    function check(i, el) {
       if (answered) return;
 
       const correct = quiz[current].answer;
-      const allChoices = document.querySelectorAll("#choices li");
+      const all = document.querySelectorAll("#choices li");
 
       if (i === correct) {
-        element.classList.add("correct");
+        el.classList.add("correct");
         score++;
       } else {
-        element.classList.add("wrong");
-        allChoices[correct].classList.add("correct");
+        el.classList.add("wrong");
+        all[correct].classList.add("correct");
       }
 
       document.getElementById("score").textContent = "Score: " + score;
       answered = true;
 
-      allChoices.forEach(li => li.onclick = null);
+      all.forEach(li => li.onclick = null);
     }
 
     function nextQuestion() {
