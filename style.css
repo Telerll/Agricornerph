@@ -267,7 +267,31 @@ nav {
 .topic-box h5 {
   color: #2e7d32;
 }
+/* BACK HOME ONLY UPDATE */
+.back-btn {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none !important;
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(46, 125, 50, 0.38);
+  text-decoration: none !important;
+}
+
+.back-btn:visited,
+.back-btn:active {
+  color: white !important;
+  text-decoration: none !important;
+}
 .topic-box:hover {
   background: #e8f5e9;
   transform: translateY(-3px);
