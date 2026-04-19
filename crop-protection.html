@@ -7,20 +7,22 @@
 
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       text-align: center;
       background: #f4f8f3;
       padding: 20px;
+      margin: 0;
+      color: #222;
     }
 
-    h1 { margin-bottom: 10px; }
+    .page {
+      max-width: 800px;
+      margin: auto;
+    }
 
-    a {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: #4a148c;
-      font-weight: bold;
-      text-decoration: none;
+    h1 {
+      margin-bottom: 10px;
+      color: #2e7d32;
     }
 
     #score {
@@ -32,25 +34,44 @@
     .question-box {
       background: white;
       padding: 20px;
-      margin: auto;
+      margin: 20px auto;
       max-width: 700px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    #question {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 0;
     }
 
     li {
       list-style: none;
       padding: 12px;
-      margin: 8px;
+      margin: 8px 0;
       border: 1px solid #ccc;
       border-radius: 8px;
       cursor: pointer;
+      background: #ececec;
     }
 
-    li:hover { background: #eee; }
+    li:hover {
+      background: #eee;
+    }
 
-    .correct { color: green; }
-    .wrong { color: red; }
+    .correct {
+      background: #a5d6a7 !important;
+      font-weight: bold;
+    }
+
+    .wrong {
+      background: #ffcdd2 !important;
+      font-weight: bold;
+    }
 
     button {
       padding: 12px 24px;
@@ -58,10 +79,23 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      font-size: 16px;
     }
 
-    #nextBtn { background: #2e7d32; color: white; }
-    #restartBtn { background: #1565c0; color: white; display: none; }
+    #nextBtn {
+      background: #2e7d32;
+      color: white;
+    }
+
+    #nextBtn:hover {
+      background: #1b5e20;
+    }
+
+    #restartBtn {
+      background: #1565c0;
+      color: white;
+      display: none;
+    }
 
     #final {
       font-size: 22px;
@@ -73,183 +107,123 @@
 
 <body>
 
-<h1>🛡 Crop Protection Practice</h1>
-<a href="practice.html">⬅ Back to Subjects</a>
+  <div class="page">
 
-<p id="score">Score: 0</p>
+    <h1>🛡 Crop Protection Practice</h1>
 
-<div class="question-box">
-  <h3 id="question"></h3>
-  <ul id="choices"></ul>
-</div>
+    <p id="score">Score: 0</p>
 
-<button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
-<button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
+    <div class="question-box">
+      <h3 id="question"></h3>
+      <ul id="choices"></ul>
+    </div>
 
-<h2 id="final"></h2>
+    <button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
+    <button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
 
-<script>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="practice.html"
+         style="display:inline-block;
+                padding:10px 18px;
+                background:#2e7d32;
+                color:#ffffff;
+                border-radius:8px;
+                text-decoration:none;
+                font-weight:bold;">
+         ⬅ Back to Subjects
+      </a>
+    </div>
 
-const quiz = [
-{
-q: "1. What is pest?",
-choices: [
-"Any organism beneficial to crops",
-"Any organism that causes damage to crops",
-"Only insects",
-"Only weeds"
-],
-answer: 1
-},
-{
-q: "2. Which is an example of biological control?",
-choices: [
-"Using pesticides",
-"Using natural predators",
-"Burning crops",
-"Plowing soil"
-],
-answer: 1
-},
-{
-q: "3. Which pest type feeds on plant sap?",
-choices: ["Chewing insects","Sucking insects","Boring insects","Soil pests"],
-answer: 1
-},
-{
-q: "4. What does IPM stand for?",
-choices: [
-"Integrated Pest Management",
-"International Plant Method",
-"Internal Pest Mechanism",
-"Integrated Plant Method"
-],
-answer: 0
-},
-{
-q: "5. Which is a chemical control method?",
-choices: [
-"Crop rotation",
-"Hand picking",
-"Applying insecticides",
-"Using predators"
-],
-answer: 2
-},
-{
-q: "6. Which disease is caused by fungi?",
-choices: ["Bacterial wilt","Rust","Virus disease","Nematode infection"],
-answer: 1
-},
-{
-q: "7. What is a weed?",
-choices: [
-"A useful plant",
-"A plant growing where it is not wanted",
-"A pest insect",
-"A disease"
-],
-answer: 1
-},
-{
-q: "8. Which method reduces pest population without chemicals?",
-choices: [
-"Chemical control",
-"Cultural control",
-"Herbicide use",
-"Pesticide spraying"
-],
-answer: 1
-},
-{
-q: "9. Which pest damages roots underground?",
-choices: ["Leaf miner","Stem borer","Root nematode","Aphids"],
-answer: 2
-},
-{
-q: "10. Which is a preventive control method?",
-choices: [
-"Spraying pesticide after damage",
-"Planting resistant varieties",
-"Destroying crops",
-"Using chemicals only"
-],
-answer: 1
-}
-];
+    <h2 id="final"></h2>
 
-let current = 0;
-let score = 0;
-let answered = false;
+  </div>
 
-function loadQuestion(){
-  document.getElementById("question").textContent = quiz[current].q;
+  <script>
+    const quiz = [
+      {
+        q: "1. What is pest?",
+        choices: [
+          "Any organism beneficial to crops",
+          "Any organism that causes damage to crops",
+          "Only insects",
+          "Only weeds"
+        ],
+        answer: 1
+      }
+    ];
 
-  let html = "";
-  quiz[current].choices.forEach((c,i)=>{
-    html += `<li onclick="check(${i}, this)">${c}</li>`;
-  });
+    let current = 0;
+    let score = 0;
+    let answered = false;
 
-  document.getElementById("choices").innerHTML = html;
-  answered = false;
-}
+    function loadQuestion() {
+      document.getElementById("question").textContent = quiz[current].q;
 
-function check(i, el){
-  if(answered) return;
+      let html = "";
+      quiz[current].choices.forEach((c, i) => {
+        html += `<li onclick="check(${i}, this)">${c}</li>`;
+      });
 
-  const correct = quiz[current].answer;
-  const all = document.querySelectorAll("#choices li");
+      document.getElementById("choices").innerHTML = html;
+      answered = false;
+    }
 
-  if(i === correct){
-    el.classList.add("correct");
-    score++;
-  } else {
-    el.classList.add("wrong");
-    all[correct].classList.add("correct");
-  }
+    function check(i, el) {
+      if (answered) return;
 
-  document.getElementById("score").textContent = "Score: " + score;
-  answered = true;
+      const correct = quiz[current].answer;
+      const all = document.querySelectorAll("#choices li");
 
-  all.forEach(li => li.onclick = null);
-}
+      if (i === correct) {
+        el.classList.add("correct");
+        score++;
+      } else {
+        el.classList.add("wrong");
+        all[correct].classList.add("correct");
+      }
 
-function nextQuestion(){
-  if(!answered){
-    alert("Answer first!");
-    return;
-  }
+      document.getElementById("score").textContent = "Score: " + score;
+      answered = true;
 
-  current++;
+      all.forEach(li => li.onclick = null);
+    }
 
-  if(current >= quiz.length){
-    document.querySelector(".question-box").style.display = "none";
-    document.getElementById("nextBtn").style.display = "none";
-    document.getElementById("restartBtn").style.display = "inline-block";
-    document.getElementById("final").textContent =
-      "🎉 Final Score: " + score + "/" + quiz.length;
-    return;
-  }
+    function nextQuestion() {
+      if (!answered) {
+        alert("Answer first!");
+        return;
+      }
 
-  loadQuestion();
-}
+      current++;
 
-function restartQuiz(){
-  current = 0;
-  score = 0;
+      if (current >= quiz.length) {
+        document.querySelector(".question-box").style.display = "none";
+        document.getElementById("nextBtn").style.display = "none";
+        document.getElementById("restartBtn").style.display = "inline-block";
+        document.getElementById("final").textContent =
+          "🎉 Final Score: " + score + "/" + quiz.length;
+        return;
+      }
 
-  document.getElementById("score").textContent = "Score: 0";
-  document.getElementById("final").textContent = "";
-  document.querySelector(".question-box").style.display = "block";
-  document.getElementById("nextBtn").style.display = "inline-block";
-  document.getElementById("restartBtn").style.display = "none";
+      loadQuestion();
+    }
 
-  loadQuestion();
-}
+    function restartQuiz() {
+      current = 0;
+      score = 0;
+      answered = false;
 
-loadQuestion();
+      document.getElementById("score").textContent = "Score: 0";
+      document.getElementById("final").textContent = "";
+      document.querySelector(".question-box").style.display = "block";
+      document.getElementById("nextBtn").style.display = "inline-block";
+      document.getElementById("restartBtn").style.display = "none";
 
-</script>
+      loadQuestion();
+    }
+
+    loadQuestion();
+  </script>
 
 </body>
 </html>
