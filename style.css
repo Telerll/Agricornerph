@@ -917,3 +917,13 @@ nav {
   background: #1b5e20;
   transform: translateY(-2px);
 }
+/* 🔥 FORCE BACK BUTTON TEXT VISIBLE */
+.back-btn {
+  color: #ffffff !important;
+}
+
+.back-btn:visited,
+.back-btn:hover,
+.back-btn:active {
+  color: #ffffff !important;
+}
