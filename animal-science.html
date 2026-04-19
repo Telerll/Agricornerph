@@ -12,22 +12,17 @@
       margin: 0;
       padding: 20px;
       background: #f4f8f3;
+      color: #222;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: auto;
     }
 
     h1 {
       margin-bottom: 10px;
-    }
-
-    a {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: #4a148c;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      color: #2e7d32;
     }
 
     #score {
@@ -43,6 +38,15 @@
       max-width: 700px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    #question {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 0;
     }
 
     li {
@@ -52,6 +56,7 @@
       border: 1px solid #ccc;
       border-radius: 8px;
       cursor: pointer;
+      background: #ececec;
     }
 
     li:hover {
@@ -59,12 +64,12 @@
     }
 
     .correct {
-      color: green;
+      background: #a5d6a7 !important;
       font-weight: bold;
     }
 
     .wrong {
-      color: red;
+      background: #ffcdd2 !important;
       font-weight: bold;
     }
 
@@ -82,6 +87,10 @@
       color: white;
     }
 
+    #nextBtn:hover {
+      background: #1b5e20;
+    }
+
     #restartBtn {
       display: none;
       background: #1565c0;
@@ -97,22 +106,36 @@
 </head>
 <body>
 
-  <h1>🐄 Animal Science Practice</h1>
-  <a href="practice.html">⬅ Back to Subjects</a>
+  <div class="page">
 
-  <hr>
+    <h1>🐄 Animal Science Practice</h1>
 
-  <p id="score">Score: 0</p>
+    <p id="score">Score: 0</p>
 
-  <div class="question-box">
-    <h3 id="question"></h3>
-    <ul id="choices"></ul>
+    <div class="question-box">
+      <h3 id="question"></h3>
+      <ul id="choices"></ul>
+    </div>
+
+    <button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
+    <button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a href="practice.html"
+         style="display:inline-block;
+                padding:10px 18px;
+                background:#2e7d32;
+                color:#ffffff;
+                border-radius:8px;
+                text-decoration:none;
+                font-weight:bold;">
+         ⬅ Back to Subjects
+      </a>
+    </div>
+
+    <h2 id="final"></h2>
+
   </div>
-
-  <button id="nextBtn" onclick="nextQuestion()">Next ➡</button>
-  <button id="restartBtn" onclick="restartQuiz()">Restart 🔁</button>
-
-  <h2 id="final"></h2>
 
   <script>
     const quiz = [
@@ -192,241 +215,240 @@
         answer: 2
       },
       {
-  q: "11. What structure is built at the center of ranch operation to minimize the movement of stocks/animals?",
-  choices: ["Fence", "Race", "Corral", "Feedlot"],
-  answer: 2
-},
-{
-  q: "12. Which of the following is correct?",
-  choices: [
-    "Mallards are smaller than Muscovy Ducks and do not have a warty face or a sloping bill",
-    "Mallard is Anas platyrhynchos and Muscovy Duck is Cairina moschata",
-    "Mallard is Itik and Muscovy is bibe",
-    "All of the above"
-  ],
-  answer: 3
-},
-{
-  q: "13. Annual egg production of native chicken is:",
-  choices: ["50-60 eggs", "100-150 eggs", "200-240 eggs", "260-280 eggs"],
-  answer: 1
-},
-{
-  q: "14. What is the main difference between goats and sheep in terms of their feeding behavior?",
-  choices: [
-    "Goats are grazers, while sheep are browsers.",
-    "Goats are browsers, while sheep are grazers.",
-    "Goats and sheep both graze and browse.",
-    "Goats and sheep do not differ in their feeding behavior."
-  ],
-  answer: 1
-},
-{
-    q: "15. Which body structure is the basic functional unit of the lungs?",
-  choices: [
-    "Alveoli",
-    "Neurons",
-    "Nephrons",
-    "Villi"
-  ],
-  answer: 0
-},
-{
-  q: "16. Based on the average annual per capita consumption of selected agricultural products in 2018, the most consumed animal product is:",
-  choices: ["pork", "chicken meat", "beef", "Chevon"],
-  answer: 1
-},
-{
-  q: "17. The animal’s most important contribution to human welfare is:",
-  choices: ["Companionship", "Clothing", "Traction", "Food"],
-  answer: 3
-},
-{
-  q: "18. Highly Pathogenic Avian Influenza (HPAI) is also known as?",
-  choices: [
-    "avian paramyxovirus Type 1 (APVM-1) virus",
-    "Infectious Bronchitis Virus",
-    "fowlpox virus",
-    "H5N1"
-  ],
-  answer: 3
-},
-{
-  q: "19. Who is the leading broiler producer in the Philippines?",
-  choices: ["CALABARZON", "Western Visayas", "Central Luzon", "Southern Mindanao"],
-  answer: 2
-},
-{
-  q: "20. What province produces the most beef?",
-  choices: ["Bukidnon", "Masbate", "Cebu", "Batangas"],
-  answer: 0
-},
+        q: "11. What structure is built at the center of ranch operation to minimize the movement of stocks/animals?",
+        choices: ["Fence", "Race", "Corral", "Feedlot"],
+        answer: 2
+      },
       {
-  q: "21. Which of the following is not a Southeast Asian Indigenous chicken?",
-  choices: ["Ayam cemani", "Aseel", "Pradhuhangdum", "Ayam Kampong"],
-  answer: 1
-},
-{
-  q: "22. What is one of the Agricultural Training Institute's (ATI) training centers specializing in comprehensive and practice-oriented swine production?",
-  choices: ["ITCPH", "DTRI", "NSPRDC", "TESDA"],
-  answer: 0
-},
-{
-  q: "23. Livestock production for human consumption accounts for around 15% of total global greenhouse gas emissions; which animal is responsible for the majority of these emissions?",
-  choices: ["Ovis aries", "Gallus gallus domesticus", "Bos taurus", "Sus scrofa domesticus"],
-  answer: 2
-},
-{
-  q: "24. Kopi luwak, also known as civet coffee, consists of partially metabolized coffee cherries that the Asian Forest Civet has consumed and defecated. What is the scientific name of this animal?",
-  choices: ["Oreochromis niloticus", "Equus asinus", "Bubalus mindorensis", "Paradoxurus hermaphroditus"],
-  answer: 3
-},
-{
-  q: "25. The offspring of a stallion horse and a female donkey is called:",
-  choices: ["Molly", "Jenny", "Mule", "Hinny"],
-  answer: 3
-},
-{
-  q: "26. This indigenous pig strain was developed in the early 1900s and is now presumed to be extinct.",
-  choices: ["Libtong", "Diani", "Berkjala", "Kaman"],
-  answer: 2
-},
-{
-  q: "27. Which of the following is not correct?",
-  choices: [
-    "Sus cebifrons : Cebu",
-    "Sus ahoenobarbus : Palawan",
-    "Sus oliveri : Mindoro",
-    "Sus philippensis philippensis : Bukidnon"
-  ],
-  answer: 3
-},
-{
-  q: "28. What is antimicrobial resistance (AMR)?",
-  choices: [
-    "The ability of animals to tolerate higher doses of antibiotics without adverse effects.",
-    "The ability of animals to develop immunity against bacterial infections.",
-    "The ability of bacteria to survive and multiply despite the presence of antibiotics.",
-    "The ability of animals to resist viral infections."
-  ],
-  answer: 2
-},
-{
-  q: "29. This is the only genetically modified animal authorized for human consumption by the US Food and Drug Administration. It was genetically modified to grow quicker and reach market size faster than conventional varieties.",
-  choices: ["GM Pig", "GM Salmon", "GM Sheep", "GM Cattle"],
-  answer: 1
-},
-{
-  q: "30. What is the number of chickens under the smallholder layer or native chicken farm?",
-  choices: ["Above 5000 birds", "2500-5000 birds", "Less than 500 birds", "250 birds and below"],
-  answer: 3
-},
-{
-  q: "31. Which is the common name of Capra hircus?",
-  choices: ["Domestic goat", "Domestic sheep", "Domestic buck", "Domestic buffalo"],
-  answer: 0
+        q: "12. Which of the following is correct?",
+        choices: [
+          "Mallards are smaller than Muscovy Ducks and do not have a warty face or a sloping bill",
+          "Mallard is Anas platyrhynchos and Muscovy Duck is Cairina moschata",
+          "Mallard is Itik and Muscovy is bibe",
+          "All of the above"
+        ],
+        answer: 3
+      },
+      {
+        q: "13. Annual egg production of native chicken is:",
+        choices: ["50-60 eggs", "100-150 eggs", "200-240 eggs", "260-280 eggs"],
+        answer: 1
+      },
+      {
+        q: "14. What is the main difference between goats and sheep in terms of their feeding behavior?",
+        choices: [
+          "Goats are grazers, while sheep are browsers.",
+          "Goats are browsers, while sheep are grazers.",
+          "Goats and sheep both graze and browse.",
+          "Goats and sheep do not differ in their feeding behavior."
+        ],
+        answer: 1
+      },
+      {
+        q: "15. Which body structure is the basic functional unit of the lungs?",
+        choices: [
+          "Alveoli",
+          "Neurons",
+          "Nephrons",
+          "Villi"
+        ],
+        answer: 0
+      },
+      {
+        q: "16. Based on the average annual per capita consumption of selected agricultural products in 2018, the most consumed animal product is:",
+        choices: ["pork", "chicken meat", "beef", "Chevon"],
+        answer: 1
+      },
+      {
+        q: "17. The animal’s most important contribution to human welfare is:",
+        choices: ["Companionship", "Clothing", "Traction", "Food"],
+        answer: 3
+      },
+      {
+        q: "18. Highly Pathogenic Avian Influenza (HPAI) is also known as?",
+        choices: [
+          "avian paramyxovirus Type 1 (APVM-1) virus",
+          "Infectious Bronchitis Virus",
+          "fowlpox virus",
+          "H5N1"
+        ],
+        answer: 3
+      },
+      {
+        q: "19. Who is the leading broiler producer in the Philippines?",
+        choices: ["CALABARZON", "Western Visayas", "Central Luzon", "Southern Mindanao"],
+        answer: 2
+      },
+      {
+        q: "20. What province produces the most beef?",
+        choices: ["Bukidnon", "Masbate", "Cebu", "Batangas"],
+        answer: 0
+      },
+      {
+        q: "21. Which of the following is not a Southeast Asian Indigenous chicken?",
+        choices: ["Ayam cemani", "Aseel", "Pradhuhangdum", "Ayam Kampong"],
+        answer: 1
+      },
+      {
+        q: "22. What is one of the Agricultural Training Institute's (ATI) training centers specializing in comprehensive and practice-oriented swine production?",
+        choices: ["ITCPH", "DTRI", "NSPRDC", "TESDA"],
+        answer: 0
+      },
+      {
+        q: "23. Livestock production for human consumption accounts for around 15% of total global greenhouse gas emissions; which animal is responsible for the majority of these emissions?",
+        choices: ["Ovis aries", "Gallus gallus domesticus", "Bos taurus", "Sus scrofa domesticus"],
+        answer: 2
+      },
+      {
+        q: "24. Kopi luwak, also known as civet coffee, consists of partially metabolized coffee cherries that the Asian Forest Civet has consumed and defecated. What is the scientific name of this animal?",
+        choices: ["Oreochromis niloticus", "Equus asinus", "Bubalus mindorensis", "Paradoxurus hermaphroditus"],
+        answer: 3
+      },
+      {
+        q: "25. The offspring of a stallion horse and a female donkey is called:",
+        choices: ["Molly", "Jenny", "Mule", "Hinny"],
+        answer: 3
+      },
+      {
+        q: "26. This indigenous pig strain was developed in the early 1900s and is now presumed to be extinct.",
+        choices: ["Libtong", "Diani", "Berkjala", "Kaman"],
+        answer: 2
+      },
+      {
+        q: "27. Which of the following is not correct?",
+        choices: [
+          "Sus cebifrons : Cebu",
+          "Sus ahoenobarbus : Palawan",
+          "Sus oliveri : Mindoro",
+          "Sus philippensis philippensis : Bukidnon"
+        ],
+        answer: 3
+      },
+      {
+        q: "28. What is antimicrobial resistance (AMR)?",
+        choices: [
+          "The ability of animals to tolerate higher doses of antibiotics without adverse effects.",
+          "The ability of animals to develop immunity against bacterial infections.",
+          "The ability of bacteria to survive and multiply despite the presence of antibiotics.",
+          "The ability of animals to resist viral infections."
+        ],
+        answer: 2
+      },
+      {
+        q: "29. This is the only genetically modified animal authorized for human consumption by the US Food and Drug Administration. It was genetically modified to grow quicker and reach market size faster than conventional varieties.",
+        choices: ["GM Pig", "GM Salmon", "GM Sheep", "GM Cattle"],
+        answer: 1
+      },
+      {
+        q: "30. What is the number of chickens under the smallholder layer or native chicken farm?",
+        choices: ["Above 5000 birds", "2500-5000 birds", "Less than 500 birds", "250 birds and below"],
+        answer: 3
+      },
+      {
+        q: "31. Which is the common name of Capra hircus?",
+        choices: ["Domestic goat", "Domestic sheep", "Domestic buck", "Domestic buffalo"],
+        answer: 0
+      },
+      {
+        q: "32. Which livestock is referred to as the “poor man’s cow”?",
+        choices: ["Sheep", "Horse", "Goat", "Carabao"],
+        answer: 2
+      },
+      {
+        q: "33. In commercial duck hatcheries, when is sex determination of ducklings done?",
+        choices: ["1–2 days", "2–3 days", "3–4 days", "4–5 days"],
+        answer: 1
+      },
+      {
+        q: "34. How many times a day should ducklings over 2 weeks old be fed?",
+        choices: ["2–3 times", "3–4 times", "4–5 times", "5–6 times"],
+        answer: 2
+      },
+      {
+        q: "35. Which breed of chicken is NOT under the fighting class?",
+        choices: ["Ruble", "Hulsay", "Claret", "Rhode Island Red"],
+        answer: 3
+      },
+      {
+        q: "36. Which term is applied to a group of organisms with specific characteristics that distinguish them within a species?",
+        choices: ["Inbreed", "Cross-breed", "Breed", "Hybrid"],
+        answer: 2
+      },
+      {
+        q: "37. Which is the collective term for domestic birds raised for meat or eggs?",
+        choices: ["Flock", "Fowl", "Bird", "Poultry"],
+        answer: 3
+      },
+      {
+        q: "38. At what age does improved breed of swine reach puberty?",
+        choices: ["5–7 months", "6–8 months", "4–6 months", "8–10 months"],
+        answer: 1
+      },
+      {
+        q: "39. Which of the following is NOT required for successful egg incubation?",
+        choices: ["Temperature", "Humidity", "Turning of eggs", "Salinity"],
+        answer: 3
+      },
+      {
+        q: "40. Which kind of animals have bulk foods as their basic diet?",
+        choices: ["Fowl", "Aquatic", "Ruminant", "Swine"],
+        answer: 2
+      },
+      {
+        q: "41. The best age to allow a gilt to breed is:",
+        choices: ["5 months", "6 months", "7 months", "8 months"],
+        answer: 3
+      },
+      {
+        q: "42. Which chicken disease is caused by a virus and has no known treatment?",
+        choices: ["Avian malaria", "Newcastle disease", "Brucellosis", "Coccidiosis"],
+        answer: 1
+      },
+      {
+        q: "43. Which cattle disease is characterized by septicemia and sudden death and is transmitted through inhalation or insects?",
+        choices: ["Foot and Mouth Disease", "Hemorrhagic Septicemia", "Pneumonia Complex", "Anthrax"],
+        answer: 3
+      },
+      {
+        q: "44. Which bacterial disease of swine causes abortion and sterility?",
+        choices: ["Anthrax", "Mastitis", "Brucellosis", "Trypanosomiasis"],
+        answer: 2
+      },
+      {
+        q: "45. Which pest sucks blood and causes skin irritation in animals?",
+        choices: ["Lung worms", "Mange", "Lice", "Sand fleas"],
+        answer: 2
+      },
+      {
+        q: "46. Which avian disease causes leg weakness and paralysis?",
+        choices: ["Avian malaria", "Coccidiosis", "Marek’s disease", "Newcastle disease"],
+        answer: 2
+      },
+      {
+        q: "47. Which chicken disease produces foul-smelling discharge and pseudo-membranes?",
+        choices: ["Simple colds", "Bronchitis", "Roup", "Fowl pox"],
+        answer: 2
+      },
+      {
+        q: "48. Which avian disease usually appears during hot months?",
+        choices: ["Fowl cholera", "Tuberculosis", "Fowl typhoid", "Fowl pox"],
+        answer: 2
+      },
+      {
+        q: "49. What are the larval stage of heel flies called?",
+        choices: ["Cattle grubs", "Cattle lice", "Mange mites", "Sarcoptic mange"],
+        answer: 0
+      },
+      {
+        q: "50. Which avian disease is caused by mycoplasma?",
+        choices: ["Coccidiosis", "Marek’s disease", "Avian malaria", "Chronic respiratory disease"],
+        answer: 3
+      }
+    ];
 
-},
-{
-  q: "32. Which livestock is referred to as the “poor man’s cow”?",
-  choices: ["Sheep", "Horse", "Goat", "Carabao"],
-  answer: 2
-},
-{
-  q: "33. In commercial duck hatcheries, when is sex determination of ducklings done?",
-  choices: ["1–2 days", "2–3 days", "3–4 days", "4–5 days"],
-  answer: 1
-},
-{
-  q: "34. How many times a day should ducklings over 2 weeks old be fed?",
-  choices: ["2–3 times", "3–4 times", "4–5 times", "5–6 times"],
-  answer: 2
-},
-{
-  q: "35. Which breed of chicken is NOT under the fighting class?",
-  choices: ["Ruble", "Hulsay", "Claret", "Rhode Island Red"],
-  answer: 3
-},
-{
-  q: "36. Which term is applied to a group of organisms with specific characteristics that distinguish them within a species?",
-  choices: ["Inbreed", "Cross-breed", "Breed", "Hybrid"],
-  answer: 2
-},
-{
-  q: "37. Which is the collective term for domestic birds raised for meat or eggs?",
-  choices: ["Flock", "Fowl", "Bird", "Poultry"],
-  answer: 3
-},
-{
-  q: "38. At what age does improved breed of swine reach puberty?",
-  choices: ["5–7 months", "6–8 months", "4–6 months", "8–10 months"],
-  answer: 1
-},
-{
-  q: "39. Which of the following is NOT required for successful egg incubation?",
-  choices: ["Temperature", "Humidity", "Turning of eggs", "Salinity"],
-  answer: 3
-},
-{
-  q: "40. Which kind of animals have bulk foods as their basic diet?",
-  choices: ["Fowl", "Aquatic", "Ruminant", "Swine"],
-  answer: 2
-},
-{
-  q: "41. The best age to allow a gilt to breed is:",
-  choices: ["5 months", "6 months", "7 months", "8 months"],
-  answer: 3
-},
-{
-  q: "42. Which chicken disease is caused by a virus and has no known treatment?",
-  choices: ["Avian malaria", "Newcastle disease", "Brucellosis", "Coccidiosis"],
-  answer: 1
-},
-{
-  q: "43. Which cattle disease is characterized by septicemia and sudden death and is transmitted through inhalation or insects?",
-  choices: ["Foot and Mouth Disease", "Hemorrhagic Septicemia", "Pneumonia Complex", "Anthrax"],
-  answer: 3
-},
-{
-  q: "44. Which bacterial disease of swine causes abortion and sterility?",
-  choices: ["Anthrax", "Mastitis", "Brucellosis", "Trypanosomiasis"],
-  answer: 2
-},
-{
-  q: "45. Which pest sucks blood and causes skin irritation in animals?",
-  choices: ["Lung worms", "Mange", "Lice", "Sand fleas"],
-  answer: 2
-},
-{
-  q: "46. Which avian disease causes leg weakness and paralysis?",
-  choices: ["Avian malaria", "Coccidiosis", "Marek’s disease", "Newcastle disease"],
-  answer: 2
-},
-{
-  q: "47. Which chicken disease produces foul-smelling discharge and pseudo-membranes?",
-  choices: ["Simple colds", "Bronchitis", "Roup", "Fowl pox"],
-  answer: 2
-},
-{
-  q: "48. Which avian disease usually appears during hot months?",
-  choices: ["Fowl cholera", "Tuberculosis", "Fowl typhoid", "Fowl pox"],
-  answer: 2
-},
-{
-  q: "49. What are the larval stage of heel flies called?",
-  choices: ["Cattle grubs", "Cattle lice", "Mange mites", "Sarcoptic mange"],
-  answer: 0
-},
-{
-  q: "50. Which avian disease is caused by mycoplasma?",
-  choices: ["Coccidiosis", "Marek’s disease", "Avian malaria", "Chronic respiratory disease"],
-  answer: 3
-}
-];
-
-let current = 0;
-let score = 0;
-let answered = false;
+    let current = 0;
+    let score = 0;
+    let answered = false;
 
     function loadQuestion() {
       document.getElementById("question").textContent = quiz[current].q;
