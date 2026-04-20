@@ -8,62 +8,59 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f8f3;
+      background: #eef2ee;
+      text-align: center;
       padding: 20px;
       color: #1f2937;
     }
 
     h1 {
-      text-align: center;
       color: #2e7d32;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
     }
 
-    .container {
-      max-width: 900px;
+    p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 700px;
       margin: auto;
     }
 
-    .topic {
-      background: white;
-      padding: 20px;
-      margin-bottom: 15px;
-      border-radius: 12px;
+    .review-card {
+      background: #ffffff;
+      padding: 18px;
+      border-radius: 14px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .topic h2 {
-      color: #2e7d32;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 6px;
-      line-height: 1.6;
-    }
-
-    .highlight {
-      background: #e8f5e9;
-      padding: 10px;
-      border-radius: 8px;
-      margin-top: 10px;
+      text-align: left;
       font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .review-card:hover {
+      transform: scale(1.02);
+      background: #e8f5e9;
+    }
+
+    .review-card a {
+      text-decoration: none;
+      color: black;
+      display: block;
     }
 
     .back-btn {
-      display: block;
-      width: fit-content;
-      margin: 30px auto;
+      display: inline-block;
+      margin-top: 30px;
       padding: 12px 20px;
       background: #2e7d32;
       color: white;
       border-radius: 8px;
       text-decoration: none;
-      text-align: center;
       font-weight: bold;
     }
 
@@ -72,130 +69,64 @@
     }
   </style>
 </head>
-
 <body>
 
-<h1>🫀 Part 2: Anatomy & Physiology</h1>
+  <h1>🫀 Part 2: Anatomy & Physiology</h1>
+  <p>Select a system or topic to review</p>
 
-<div class="container">
+  <div class="review-grid">
 
-<!-- CELL -->
-<div class="topic">
-  <h2>🔬 Cell & Cell Division</h2>
-  <p><b>Cell</b> – basic unit of life.</p>
-  <ul>
-    <li><b>Nucleus</b> – control center</li>
-    <li><b>Mitochondria</b> – energy production</li>
-    <li><b>Ribosomes</b> – protein synthesis</li>
-  </ul>
+    <div class="review-card">
+      <a href="animal-part2-cell.html">🔬 Cell and Cell Division</a>
+    </div>
 
-  <div class="highlight">
-    Mitosis = growth (2 cells) <br>
-    Meiosis = reproduction (4 cells)
+    <div class="review-card">
+      <a href="animal-part2-skeletal.html">🦴 Skeletal System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-muscular.html">💪 Muscular System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-digestive.html">🍽 Digestive System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-circulatory.html">❤️ Circulatory System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-respiratory.html">🌬 Respiratory System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-excretory.html">🚽 Excretory System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-nervous.html">🧠 Nervous System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-endocrine.html">🧪 Endocrine System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-reproductive.html">🧬 Reproductive System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-lymphatic.html">🧫 Lymphatic System</a>
+    </div>
+
+    <div class="review-card">
+      <a href="animal-part2-homeostasis.html">🌡 Thermoregulation and Homeostasis</a>
+    </div>
+
   </div>
-</div>
 
-<!-- SKELETAL -->
-<div class="topic">
-  <h2>🦴 Skeletal System</h2>
-  <p><b>Skeletal system</b> – supports and protects the body.</p>
-  <ul>
-    <li>Support and structure</li>
-    <li>Protects organs</li>
-    <li>Produces blood cells</li>
-  </ul>
-</div>
-
-<!-- MUSCULAR -->
-<div class="topic">
-  <h2>💪 Muscular System</h2>
-  <p><b>Muscular system</b> – enables movement.</p>
-  <ul>
-    <li>Skeletal – voluntary</li>
-    <li>Smooth – involuntary</li>
-    <li>Cardiac – heart muscle</li>
-  </ul>
-</div>
-
-<!-- DIGESTIVE -->
-<div class="topic">
-  <h2>🍽 Digestive System</h2>
-  <p><b>Digestive system</b> – breaks down food.</p>
-  <ul>
-    <li>Mouth → Stomach → Intestines</li>
-    <li>Absorption occurs in small intestine</li>
-  </ul>
-</div>
-
-<!-- CIRCULATORY -->
-<div class="topic">
-  <h2>❤️ Circulatory System</h2>
-  <p><b>Circulatory system</b> – transports nutrients and oxygen.</p>
-  <ul>
-    <li>Heart pumps blood</li>
-    <li>Blood carries oxygen</li>
-  </ul>
-</div>
-
-<!-- RESPIRATORY -->
-<div class="topic">
-  <h2>🌬 Respiratory System</h2>
-  <p><b>Respiratory system</b> – gas exchange.</p>
-  <ul>
-    <li>Oxygen in</li>
-    <li>Carbon dioxide out</li>
-  </ul>
-</div>
-
-<!-- EXCRETORY -->
-<div class="topic">
-  <h2>🚽 Excretory System</h2>
-  <p><b>Excretory system</b> – removes waste.</p>
-  <ul>
-    <li>Kidneys filter blood</li>
-  </ul>
-</div>
-
-<!-- NERVOUS -->
-<div class="topic">
-  <h2>🧠 Nervous System</h2>
-  <p><b>Nervous system</b> – controls body activities.</p>
-  <ul>
-    <li>Brain and spinal cord</li>
-  </ul>
-</div>
-
-<!-- ENDOCRINE -->
-<div class="topic">
-  <h2>🧪 Endocrine System</h2>
-  <p><b>Endocrine system</b> – produces hormones.</p>
-  <ul>
-    <li>Pituitary – master gland</li>
-    <li>Thyroid – metabolism</li>
-  </ul>
-</div>
-
-<!-- REPRODUCTIVE -->
-<div class="topic">
-  <h2>🧬 Reproductive System</h2>
-  <p><b>Reproductive system</b> – produces offspring.</p>
-</div>
-
-<!-- LYMPHATIC -->
-<div class="topic">
-  <h2>🧫 Lymphatic System</h2>
-  <p><b>Lymphatic system</b> – immunity and fluid balance.</p>
-</div>
-
-<!-- HOMEOSTASIS -->
-<div class="topic">
-  <h2>🌡 Homeostasis</h2>
-  <p><b>Homeostasis</b> – maintaining stable internal environment.</p>
-</div>
-
-</div>
-
-<a href="../animal.html" class="back-btn">← Back to Parts</a>
+  <a href="../animal.html" class="back-btn">← Back to Parts</a>
 
 </body>
 </html>
