@@ -1,249 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css?v=3">
-  
-  <title>Soil Science Review - AgricornerPh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soil Science Review</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #222;
-    }
-
-    .page {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
-
-    .hero {
+      background: #eef2ee;
       text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #555;
       margin-bottom: 30px;
     }
 
-    .hero h1 {
-      font-size: 44px;
-      color: #2e7d32;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .section-box {
-      background: white;
-      border-radius: 16px;
-      padding: 25px;
-      margin: 20px auto;
-      max-width: 800px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    }
-
-    .section-box h2 {
-      margin-top: 0;
-      color: #1b5e20;
-      font-size: 28px;
-    }
-
-    .section-box p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .review-img {
-      width: 100%;
+    /* GRID */
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
       max-width: 700px;
+      margin: auto;
+    }
+
+    /* CARD */
+    .review-card {
+      background: #ffffff;
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .review-card:hover {
+      transform: scale(1.02);
+      background: #e8f5e9;
+    }
+
+    .review-card a {
+      text-decoration: none;
+      color: black;
       display: block;
-      margin: 20px auto;
-      border-radius: 12px;
-      height: auto;
     }
 
-    .highlight {
-      background: #f5f5f5;
-      padding: 12px 16px;
-      border-left: 5px solid #2e7d32;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-    .back-link {
+    /* BACK BUTTON */
+    .back-btn {
       display: inline-block;
-      margin-top: 20px;
-      font-size: 20px;
-      color: #4a148c;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      max-width: 800px;
-      margin: 30px auto 0;
-      gap: 15px;
-    }
-
-    .nav-buttons button {
-      padding: 12px 20px;
-      border: none;
-      border-radius: 10px;
-      background: #2e7d32;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .nav-buttons button:hover {
-      background: #1b5e20;
-    }
-
-    .back-btn-box {
-      display: inline-block;
+      margin-top: 30px;
       padding: 12px 20px;
       background: #2e7d32;
       color: white;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 10px;
       font-weight: bold;
     }
 
-    .back-btn-box:hover {
+    .back-btn:hover {
       background: #1b5e20;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero p,
-      .section-box p {
-        font-size: 16px;
-      }
-
-      .section-box h2 {
-        font-size: 24px;
-      }
-
-      .nav-buttons {
-        flex-direction: column;
-      }
-
-      .nav-buttons button {
-        width: 100%;
-      }
     }
   </style>
 </head>
+
 <body>
-  <div class="page">
 
-    <div class="hero">
-      <h1>🧪 Soil Science Review</h1>
-      <p>
-        Review the core concepts of soil science including soil formation,
-        horizons, texture, structure, pH, and soil genesis.
-      </p>
+  <h1>🌱 Soil Science Review</h1>
+  <p>Select a topic to start reviewing</p>
+
+  <div class="review-grid">
+
+    <div class="review-card">
+      <a href="soil-part1.html">🌱 Part 1: Concept of Soil</a>
     </div>
 
-    <div class="section-box">
-      <h2>1. Soil Genesis</h2>
-
-      <img src="1- SOIL GENEISIS- SOIL CONCEPT.png" class="review-img" alt="Soil Genesis Soil Concept">
-      <img src="2- HISTORY OF SOIL GEN.png" class="review-img" alt="History of Soil Genesis">
-      <img src="3- SOIL FORMING PROCESS.png" class="review-img" alt="Soil Forming Process">
-
-      <p>
-        Soil is formed through the interaction of five major factors known as
-        <strong>CLORPT</strong>.
-      </p>
-
-      <div class="highlight">
-        <strong>CLORPT</strong> stands for Climate, Organisms, Relief, Parent Material, and Time.
-      </div>
+    <div class="review-card">
+      <a href="soil-part2.html">🌧 Part 2: Weathering & Soil Formation</a>
     </div>
 
-    <div class="section-box">
-      <h2>2. CLORPT Factors</h2>
-
-      <img src="4-CLORPT.png" class="review-img" alt="CLORPT Overview">
-      <img src="5- CLORPT1.png.png" class="review-img" alt="CLORPT Factor 1">
-      <img src="6. CLORPT2.png.png" class="review-img" alt="CLORPT Factor 2">
-      <img src="7. CLORPT3.png.png" class="review-img" alt="CLORPT Factor 3">
-
-      <p>
-        The five soil-forming factors influence how soils develop over time.
-      </p>
+    <div class="review-card">
+      <a href="soil-part3.html">🧱 Part 3: Soil Profile & Horizons</a>
     </div>
 
-    <div class="section-box">
-      <h2>3. Importance of Soil Genesis</h2>
-
-      <img src="8-IMPORTANCE OF SOIL GENESIS.png" class="review-img" alt="Importance of Soil Genesis">
-
-      <p>
-        Soil genesis helps explain how soils develop, why soil properties differ,
-        and how soils can be managed properly for agriculture.
-      </p>
+    <div class="review-card">
+      <a href="soil-part4.html">🏗 Part 4: Soil Texture & Structure</a>
     </div>
 
-    <p id="progress-text" style="text-align:center; margin-top:20px; font-weight:bold;"></p>
-
-    <div class="nav-buttons">
-      <button onclick="prevSection()">⬅ Previous</button>
-      <button onclick="nextSection()">Next ➡</button>
+    <div class="review-card">
+      <a href="soil-part5.html">⚙️ Part 5: Advanced Physical Properties</a>
     </div>
 
-    <div style="text-align:center; margin:30px 0;">
-      <a href="review.html" class="back-btn-box">← Back to Review Materials</a>
+    <div class="review-card">
+      <a href="soil-part6.html">💧 Part 6: Soil Water</a>
+    </div>
+
+    <div class="review-card">
+      <a href="soil-part7.html">⚡ Part 7: Chemical Properties</a>
+    </div>
+
+    <div class="review-card">
+      <a href="soil-part8.html">🌿 Part 8: Organic Matter & Microbiology</a>
+    </div>
+
+    <div class="review-card">
+      <a href="soil-part9.html">🌾 Part 9: Soil Fertility & Nutrition</a>
+    </div>
+
+    <div class="review-card">
+      <a href="soil-part10.html">🌍 Part 10: Soil Management & Classification</a>
     </div>
 
   </div>
 
-  <script>
-    let current = 0;
-    const sections = document.querySelectorAll(".section-box");
-    const progressText = document.getElementById("progress-text");
-
-    function showSection(index) {
-      sections.forEach((sec, i) => {
-        sec.style.display = i === index ? "block" : "none";
-      });
-
-      if (progressText) {
-        progressText.textContent = "Slide " + (index + 1) + " of " + sections.length;
-      }
-    }
-
-    function nextSection() {
-      if (current < sections.length - 1) {
-        current++;
-        showSection(current);
-      }
-    }
-
-    function prevSection() {
-      if (current > 0) {
-        current--;
-        showSection(current);
-      }
-    }
-
-    showSection(current);
-  </script>
+  <a href="index.html" class="back-btn">← Back to Review Materials</a>
 
 </body>
 </html>
