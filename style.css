@@ -784,3 +784,17 @@ a.back-btn:active {
     white-space: nowrap !important;
   }
 }.
+/* 🔥 FORCE REMOVE GREEN SHADE */
+body {
+  background: #ffffff !important;
+}
+
+/* alisin lahat ng green tint na ginagamit globally */
+.section.practice,
+.highlight,
+.home-card:hover,
+.news-card:hover,
+.review-card:hover,
+.topic-box:hover {
+  background: #ffffff !important;
+}
