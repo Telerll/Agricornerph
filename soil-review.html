@@ -97,31 +97,32 @@
 
     .nav-buttons button {
       padding: 12px 20px;
-      border: none;
+      border: 1px solid #cfcfcf;
       border-radius: 10px;
-      background: #2e7d32;
-      color: white;
+      background: #ffffff;
+      color: #222;
       font-size: 16px;
       cursor: pointer;
       font-weight: bold;
     }
 
     .nav-buttons button:hover {
-      background: #1b5e20;
+      background: #f0f0f0;
     }
 
     .back-btn-box {
       display: inline-block;
       padding: 12px 20px;
-      background: #2e7d32;
-      color: white;
+      background: #ffffff;
+      color: #222;
       text-decoration: none;
       border-radius: 10px;
       font-weight: bold;
+      border: 1px solid #cfcfcf;
     }
 
     .back-btn-box:hover {
-      background: #1b5e20;
+      background: #f0f0f0;
     }
 
     @media (max-width: 768px) {
@@ -211,37 +212,39 @@
       <a href="review.html" class="back-btn-box">← Back to Review Materials</a>
     </div>
 
-    <script>
-      let current = 0;
-      const sections = document.querySelectorAll(".section-box");
-      const progressText = document.getElementById("progress-text");
+  </div>
 
-      function showSection(index) {
-        sections.forEach((sec, i) => {
-          sec.style.display = i === index ? "block" : "none";
-        });
+  <script>
+    let current = 0;
+    const sections = document.querySelectorAll(".section-box");
+    const progressText = document.getElementById("progress-text");
 
-        if (progressText) {
-          progressText.textContent = "Slide " + (index + 1) + " of " + sections.length;
-        }
+    function showSection(index) {
+      sections.forEach((sec, i) => {
+        sec.style.display = i === index ? "block" : "none";
+      });
+
+      if (progressText) {
+        progressText.textContent = "Slide " + (index + 1) + " of " + sections.length;
       }
+    }
 
-      function nextSection() {
-        if (current < sections.length - 1) {
-          current++;
-          showSection(current);
-        }
+    function nextSection() {
+      if (current < sections.length - 1) {
+        current++;
+        showSection(current);
       }
+    }
 
-      function prevSection() {
-        if (current > 0) {
-          current--;
-          showSection(current);
-        }
+    function prevSection() {
+      if (current > 0) {
+        current--;
+        showSection(current);
       }
+    }
 
-      showSection(current);
-    </script>
+    showSection(current);
+  </script>
 
 </body>
 </html>
