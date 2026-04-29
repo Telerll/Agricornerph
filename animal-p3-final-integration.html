@@ -1,1 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Science Part 3 - Final Integration</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8f3;
+      padding: 20px;
+      color: #1f2937;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .topic {
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .topic h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .topic h3 {
+      color: #1b5e20;
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      line-height: 1.7;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 12px 20px;
+      background: #2e7d32;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Part 3 Final Integration</h1>
+
+  <div class="container">
+
+    <div class="topic">
+      <h2>The Master Concept</h2>
+      <p>Animal Nutrition is not just feeding animals.</p>
+      <p>It is the science of converting feed into:</p>
+
+      <ul>
+        <li>Growth</li>
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Reproduction</li>
+        <li>Profit</li>
+      </ul>
+
+      <div class="highlight">
+        Animal nutrition converts feed into performance and profit.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>The Golden Rule</h2>
+      <p>Animals will always follow this priority:</p>
+
+      <div class="highlight">
+        Maintenance → Production
+      </div>
+
+      <p>Animals will always:</p>
+      <ul>
+        <li>Survive first</li>
+        <li>Produce second</li>
+      </ul>
+
+      <p>If nutrients are not enough:</p>
+      <ul>
+        <li>No growth</li>
+        <li>No milk</li>
+        <li>No eggs</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h2>The Nutrition Flow</h2>
+
+      <div class="highlight">
+        Feed → Digestion → Absorption → Metabolism → Production
+      </div>
+
+      <h3>Step 1: Feed</h3>
+      <p>Feed contains nutrients:</p>
+      <ul>
+        <li>Energy</li>
+        <li>Protein</li>
+        <li>Vitamins</li>
+        <li>Minerals</li>
+        <li>Water</li>
+      </ul>
+
+      <h3>Step 2: Digestion</h3>
+      <p>Feed is broken down by enzymes such as:</p>
+      <ul>
+        <li>Amylase</li>
+        <li>Pepsin</li>
+        <li>Lipase</li>
+      </ul>
+
+      <h3>Step 3: Absorption</h3>
+      <p>Nutrients are absorbed mainly in the small intestine through villi and microvilli.</p>
+
+      <h3>Step 4: Metabolism</h3>
+      <p>Absorbed nutrients are converted into energy, body tissues, or production outputs.</p>
+
+      <h3>Step 5: Production</h3>
+      <ul>
+        <li>Growth</li>
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Reproduction</li>
+      </ul>
+
+      <div class="highlight">
+        If one step fails, production drops.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>The 6 Essential Nutrients</h2>
+      <p>Animals need six essential nutrients:</p>
+
+      <ul>
+        <li>Water</li>
+        <li>Carbohydrates</li>
+        <li>Fats</li>
+        <li>Protein</li>
+        <li>Vitamins</li>
+        <li>Minerals</li>
+      </ul>
+
+      <div class="highlight">
+        Lack of one nutrient reduces performance.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Energy is the #1 Limiting Factor</h2>
+      <p>Energy controls:</p>
+
+      <ul>
+        <li>Growth</li>
+        <li>Milk yield</li>
+        <li>Egg production</li>
+      </ul>
+
+      <p>Main sources:</p>
+      <ul>
+        <li>Carbohydrates</li>
+        <li>Fats (2.25× more energy)</li>
+      </ul>
+
+      <div class="highlight">
+        No energy = no production.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Protein = Growth Builder</h2>
+      <p>Protein is needed for:</p>
+
+      <ul>
+        <li>Muscle</li>
+        <li>Enzymes</li>
+        <li>Hormones</li>
+      </ul>
+
+      <p>Key board concept:</p>
+      <ul>
+        <li>Limiting amino acids = Lysine and Methionine</li>
+      </ul>
+
+      <div class="highlight">
+        If one essential amino acid is lacking, the rest cannot be fully used.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Minerals and Vitamins = Regulators</h2>
+      <p>They regulate:</p>
+
+      <ul>
+        <li>Bone formation</li>
+        <li>Metabolism</li>
+        <li>Immunity</li>
+        <li>Reproduction</li>
+      </ul>
+
+      <p>Key board facts:</p>
+      <ul>
+        <li>Calcium : Phosphorus = 2 : 1</li>
+        <li>Fat-soluble vitamins = KADE</li>
+      </ul>
+
+      <div class="highlight">
+        Vitamins and minerals regulate body function.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Water = The Master Nutrient</h2>
+      <p>Water controls:</p>
+
+      <ul>
+        <li>Intake</li>
+        <li>Digestion</li>
+        <li>Temperature</li>
+        <li>Production</li>
+      </ul>
+
+      <div class="highlight">
+        Animals die faster without water than without feed.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Digestion Type Matters</h2>
+
+      <h3>Monogastric</h3>
+      <ul>
+        <li>Simple stomach</li>
+        <li>Relies mainly on enzymes</li>
+      </ul>
+
+      <h3>Ruminant</h3>
+      <ul>
+        <li>Four stomach compartments</li>
+        <li>Uses microbial fermentation</li>
+        <li>Can use NPN such as urea</li>
+      </ul>
+
+      <h3>Hindgut Fermenter</h3>
+      <ul>
+        <li>Fermentation occurs in cecum</li>
+        <li>Example: rabbit</li>
+        <li>Coprophagy occurs</li>
+      </ul>
+
+      <div class="highlight">
+        Digestion system determines feeding strategy.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Feed Classification</h2>
+
+      <h3>Roughage</h3>
+      <ul>
+        <li>High fiber</li>
+        <li>Low energy</li>
+      </ul>
+
+      <h3>Concentrates</h3>
+      <ul>
+        <li>High energy or protein</li>
+        <li>Low fiber</li>
+      </ul>
+
+      <div class="highlight">
+        Proper balance between roughage and concentrates is essential.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Ration Formulation</h2>
+      <p>The goal of ration formulation is to meet nutrient requirements at the lowest possible cost.</p>
+
+      <p>Common tools:</p>
+      <ul>
+        <li>Pearson Square</li>
+        <li>Trial and Error</li>
+      </ul>
+
+      <p>Feeding systems:</p>
+      <ul>
+        <li>Ad libitum = free choice feeding</li>
+        <li>Restricted feeding = controlled intake</li>
+      </ul>
+
+      <div class="highlight">
+        Good ration formulation balances nutrition and cost.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Feeding Standards</h2>
+      <p>Animals need nutrients for:</p>
+
+      <ul>
+        <li>Maintenance</li>
+        <li>Growth</li>
+        <li>Reproduction</li>
+        <li>Lactation</li>
+        <li>Work</li>
+      </ul>
+
+      <p>Requirements change depending on:</p>
+      <ul>
+        <li>Age</li>
+        <li>Species</li>
+        <li>Environment</li>
+        <li>Production stage</li>
+      </ul>
+
+      <div class="highlight">
+        Feeding must match the animal’s requirement.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Feed Additives and Supplements</h2>
+
+      <h3>Additives</h3>
+      <p>Improve feed performance.</p>
+      <ul>
+        <li>Enzymes</li>
+        <li>Probiotics</li>
+      </ul>
+
+      <h3>Supplements</h3>
+      <p>Supply nutrients.</p>
+      <ul>
+        <li>Vitamins</li>
+        <li>Minerals</li>
+      </ul>
+
+      <div class="highlight">
+        Additives optimize feed, supplements correct nutrition.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Water and Production Link</h2>
+
+      <div class="highlight">
+        Less water → Less feed → Less growth → Less production
+      </div>
+
+      <p>Water shortage is one of the fastest causes of production decline.</p>
+    </div>
+
+    <div class="topic">
+      <h2>Board Exam High-Yield Concepts</h2>
+      <ul>
+        <li>Fats = 2.25× more energy</li>
+        <li>Lysine and Methionine = limiting amino acids</li>
+        <li>Calcium : Phosphorus = 2 : 1</li>
+        <li>Urea = ruminants only</li>
+        <li>Silage = lactic acid fermentation</li>
+        <li>Probiotics vs Prebiotics</li>
+        <li>Phase feeding</li>
+        <li>Negative energy balance</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h2>The Business Mindset</h2>
+      <p>Feed accounts for about 60–70% of total production cost.</p>
+
+      <p>If you master nutrition, you can:</p>
+      <ul>
+        <li>Control cost</li>
+        <li>Improve efficiency</li>
+        <li>Maximize profit</li>
+      </ul>
+
+      <div class="highlight">
+        Right nutrition = maximum performance + maximum profit.
+      </div>
+    </div>
+
+    <div class="topic">
+      <h2>Final Ultra Master Summary</h2>
+      <div class="highlight">
+        Feed → Digest → Absorb → Metabolize → Produce <br><br>
+
+        Maintenance first <br>
+        Production second <br><br>
+
+        Energy = driver <br>
+        Protein = builder <br>
+        Vitamins and Minerals = regulators <br>
+        Water = life <br><br>
+
+        Less water → less feed → less growth → less production <br><br>
+
+        Right nutrition = maximum performance + maximum profit
+      </div>
+    </div>
+
+  </div>
+
+  <a href="animal-part3.html" class="back-btn">← Back to Animal Nutrition</a>
+
+</body>
+</html>
