@@ -63,6 +63,9 @@
     }
 
     .topic-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
       background: #f9fdf8;
       border: 1px solid #d8ead6;
       border-radius: 14px;
@@ -85,43 +88,7 @@
     .topic-card p {
       font-size: 15px;
       line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    .topic-card a {
-      display: inline-block;
-      padding: 10px 14px;
-      background: #2e7d32;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .topic-card a:hover {
-      background: #1b5e20;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      background: #2e7d32;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-
-    .nav-links a:hover {
-      background: #1b5e20;
+      margin: 0;
     }
   </style>
 </head>
@@ -133,24 +100,22 @@
       <h1>Animal Breeding and Genetics</h1>
       <p>
         Animal Breeding and Genetics focuses on heredity, inheritance, genetic improvement,
-        breeding systems, and the scientific principles used to improve livestock productivity,
-        performance, and profitability across generations.
+        and breeding systems used to improve livestock productivity, performance,
+        and profitability across generations.
       </p>
     </div>
 
     <div class="section-box">
       <h2>Overview</h2>
       <p>
-        This section covers the genetic foundation of animal improvement and the practical
-        breeding systems used in livestock production. It explains how traits are inherited,
-        how animals differ, how breeders select superior animals, and how breeding decisions
-        improve future generations.
+        This section explains the scientific foundation of animal improvement.
+        It covers how traits are inherited, why animals differ, how superior animals
+        are selected, and how breeding systems improve future generations.
       </p>
       <p>
-        The first topic focuses on <b>Animal Genetics</b>, which explains heredity, genes,
-        chromosomes, inheritance, and variation. The second topic focuses on <b>Animal Breeding</b>,
-        which applies genetic principles in practical livestock improvement through selection,
-        mating systems, and breeding methods.
+        <b>Animal Genetics</b> focuses on heredity, genes, chromosomes, inheritance,
+        and variation. <b>Animal Breeding</b> focuses on selection, culling,
+        mating systems, and practical genetic improvement in livestock production.
       </p>
     </div>
 
@@ -159,32 +124,25 @@
 
       <div class="topic-grid">
 
-        <div class="topic-card">
+        <a href="animal-genetics.html" class="topic-card">
           <h3>Animal Genetics</h3>
           <p>
-            Covers heredity, variation, genes, DNA, chromosomes, Mendelian and non-Mendelian
-            inheritance, sex determination, chromosome numbers, gene action, mutation,
-            heritability, and genetic principles used in animal science.
+            Covers heredity, variation, genes, DNA, chromosomes, Mendelian and
+            non-Mendelian inheritance, sex determination, chromosome numbers,
+            gene action, mutation, heritability, and genetic principles used in animal science.
           </p>
-          <a href="animal-genetics.html">Open Topic</a>
-        </div>
+        </a>
 
-        <div class="topic-card">
+        <a href="animal-breeding.html" class="topic-card">
           <h3>Animal Breeding</h3>
           <p>
-            Covers breeding principles, selection, culling, breeding systems, inbreeding,
-            crossbreeding, heterosis, pedigree, progeny testing, breeding value,
-            selection methods, and modern breeding technologies.
+            Covers breeding principles, selection, culling, breeding systems,
+            inbreeding, crossbreeding, heterosis, pedigree, progeny testing,
+            breeding value, selection methods, and modern breeding technologies.
           </p>
-          <a href="animal-breeding.html">Open Topic</a>
-        </div>
+        </a>
 
       </div>
-    </div>
-
-    <div class="nav-links">
-      <a href="animal-science.html">← Back to Animal Science</a>
-      <a href="beef-cattle-production.html">Next Part →</a>
     </div>
 
   </div>
