@@ -1,1 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Science Part 9 - Goat and Sheep Production Integration</title>
 
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      background:#f4f8f3;
+      color:#1f2937;
+      padding:20px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .header{
+      background:linear-gradient(135deg,#2e7d32,#1b5e20);
+      color:white;
+      padding:25px;
+      border-radius:16px;
+      margin-bottom:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      text-align:center;
+    }
+
+    .header h1{
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .header p{
+      opacity:0.95;
+      line-height:1.7;
+    }
+
+    .section{
+      background:white;
+      border-radius:14px;
+      padding:20px;
+      margin-bottom:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .section h2{
+      color:#2e7d32;
+      margin-bottom:14px;
+      border-bottom:2px solid #e5e7eb;
+      padding-bottom:8px;
+    }
+
+    .topic{
+      background:#f9fafb;
+      padding:14px;
+      border-radius:10px;
+      margin-bottom:12px;
+      border-left:5px solid #2e7d32;
+    }
+
+    .topic h3{
+      color:#166534;
+      margin-bottom:8px;
+    }
+
+    p,li{
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    ul{
+      padding-left:22px;
+      margin-top:8px;
+    }
+
+    .highlight{
+      margin-top:10px;
+      background:#e8f5e9;
+      padding:10px;
+      border-radius:8px;
+      font-weight:bold;
+      line-height:1.6;
+    }
+
+    .summary{
+      background:#111827;
+      color:#f9fafb;
+      padding:20px;
+      border-radius:14px;
+      line-height:1.9;
+      overflow:auto;
+      margin-top:20px;
+      font-size:15px;
+    }
+
+    .nav-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:15px;
+      margin-top:25px;
+    }
+
+    .nav-card{
+      background:white;
+      border-radius:14px;
+      padding:18px;
+      text-decoration:none;
+      color:#1f2937;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition:0.3s;
+      border-top:5px solid #2e7d32;
+    }
+
+    .nav-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .nav-card h3{
+      color:#166534;
+      margin-bottom:10px;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:12px 20px;
+      background:#2e7d32;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+    }
+
+    .back-btn:hover{
+      background:#1b5e20;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Goat and Sheep Production</h1>
+    <p>
+      Ultra Master Integration Reviewer for Animal Science Board Examination
+      covering goat and sheep breeds, breeding practices, feeding management,
+      health management, diseases, reproduction, and general management systems.
+    </p>
+  </div>
+
+  <div class="section">
+
+    <h2>Introduction to Goat and Sheep Production</h2>
+
+    <div class="topic">
+      <h3>Goat</h3>
+      <p>
+        Goat is scientifically known as <b>Capra hircus</b>.
+        Goats are small ruminants raised for meat, milk, skin, manure, and livelihood.
+      </p>
+
+      <div class="highlight">
+        Goat scientific name = Capra hircus
+      </div>
+    </div>
+
+    <div class="topic">
+      <h3>Sheep</h3>
+      <p>
+        Sheep is scientifically known as <b>Ovis aries</b>.
+        Sheep are raised for meat, wool, milk, and skin production.
+      </p>
+
+      <div class="highlight">
+        Sheep scientific name = Ovis aries
+      </div>
+    </div>
+
+    <div class="topic">
+      <h3>Feeding Behavior</h3>
+
+      <ul>
+        <li>Goat = browser</li>
+        <li>Sheep = grazer</li>
+        <li>Goat = biological herbicide</li>
+      </ul>
+
+      <div class="highlight">
+        Goat feeds on shrubs and leaves while sheep mainly graze on grasses.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>Major Goat Breeds</h2>
+
+    <div class="topic">
+      <h3>Anglo-Nubian</h3>
+      <ul>
+        <li>Roman nose</li>
+        <li>Pendulous ears</li>
+        <li>Meat and milk producer</li>
+      </ul>
+
+      <div class="highlight">
+        Anglo-Nubian = Roman nose + pendulous ears
+      </div>
+    </div>
+
+    <div class="topic">
+      <h3>Boer Goat</h3>
+
+      <ul>
+        <li>Meat-type goat</li>
+        <li>Fast growing</li>
+        <li>Heavy muscling</li>
+      </ul>
+
+      <div class="highlight">
+        Boer = meat-type goat
+      </div>
+    </div>
+
+    <div class="topic">
+      <h3>Saanen</h3>
+
+      <ul>
+        <li>Dairy goat</li>
+        <li>White color</li>
+        <li>High milk production</li>
+      </ul>
+
+      <div class="highlight">
+        Saanen = white dairy goat
+      </div>
+    </div>
+
+    <div class="topic">
+      <h3>La Mancha</h3>
+
+      <ul>
+        <li>Very small ears</li>
+        <li>Dairy goat breed</li>
+      </ul>
+
+      <div class="highlight">
+        La Mancha = small ears
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>Breeding and Reproduction</h2>
+
+    <div class="topic">
+      <h3>Important Terms</h3>
+
+      <ul>
+        <li>Buck = mature male goat</li>
+        <li>Doe = mature female goat</li>
+        <li>Kid = young goat</li>
+        <li>Ram = mature male sheep</li>
+        <li>Ewe = mature female sheep</li>
+        <li>Lamb = young sheep</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Reproductive Terms</h3>
+
+      <ul>
+        <li>Estrus = heat period</li>
+        <li>Ovulation = release of egg</li>
+        <li>Puberty = sexual maturity</li>
+        <li>Flushing = increased feeding before breeding</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Gestation Period</h3>
+
+      <ul>
+        <li>Goat = about 150 days</li>
+        <li>Sheep = about 147–150 days</li>
+      </ul>
+
+      <div class="highlight">
+        Kidding = goat parturition <br>
+        Lambing = sheep parturition
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>Feed Resources and Feeding Management</h2>
+
+    <div class="topic">
+      <h3>Feed Resources</h3>
+
+      <ul>
+        <li>Roughages = bulky high-fiber feeds</li>
+        <li>Concentrates = nutrient-rich feeds</li>
+        <li>Forages = edible plant materials</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Feed Preservation</h3>
+
+      <ul>
+        <li>Hay = dried forage</li>
+        <li>Silage = fermented forage</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Important Nutrients</h3>
+
+      <ul>
+        <li>Water = most essential nutrient</li>
+        <li>Protein = body-building nutrient</li>
+        <li>Carbohydrates = energy source</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Special Feeding Practices</h3>
+
+      <ul>
+        <li>Colostrum = first milk rich in antibodies</li>
+        <li>Creep feeding = supplemental feeding for young animals</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>Health Management</h2>
+
+    <div class="topic">
+      <h3>Common Diseases</h3>
+
+      <ul>
+        <li>Anthrax = Bacillus anthracis</li>
+        <li>Mastitis = udder inflammation</li>
+        <li>Foot rot = hoof infection</li>
+        <li>Pneumonia = lung inflammation</li>
+        <li>Rabies = nervous system disease</li>
+        <li>FMD = highly contagious viral disease</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Parasitic Diseases</h3>
+
+      <ul>
+        <li>Liver fluke = liver parasite</li>
+        <li>Mange = mite infestation</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Metabolic Disorders</h3>
+
+      <ul>
+        <li>Bloat = gas accumulation in rumen</li>
+        <li>Ketosis = energy deficiency disorder</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Disease Prevention</h3>
+
+      <ul>
+        <li>Vaccination = immunity stimulation</li>
+        <li>Deworming = parasite control</li>
+        <li>Quarantine = isolation</li>
+        <li>Biosecurity = disease prevention</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>General Management Practices</h2>
+
+    <div class="topic">
+      <ul>
+        <li>Castration = removal of testes</li>
+        <li>Dehorning = horn removal</li>
+        <li>Docking = tail shortening</li>
+        <li>Weaning = separation from mother</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Housing Management</h3>
+
+      <p>
+        Good housing should be:
+      </p>
+
+      <ul>
+        <li>clean</li>
+        <li>dry</li>
+        <li>well ventilated</li>
+        <li>elevated</li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h3>Zoonotic Diseases</h3>
+
+      <p>
+        Zoonotic diseases are transmissible from animals to humans.
+      </p>
+
+      <ul>
+        <li>Anthrax</li>
+        <li>Rabies</li>
+      </ul>
+
+      <div class="highlight">
+        Zoonotic diseases infect humans.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>Final Ultra Master Board Recall Summary</h2>
+
+    <div class="summary">
+
+Goat = Capra hircus <br>
+Sheep = Ovis aries <br><br>
+
+Goat = browser <br>
+Sheep = grazer <br>
+Goat = biological herbicide <br><br>
+
+Buck = mature male goat <br>
+Doe = mature female goat <br>
+Kid = young goat <br><br>
+
+Ram = mature male sheep <br>
+Ewe = mature female sheep <br>
+Lamb = young sheep <br><br>
+
+Estrus = heat period <br>
+Ovulation = release of egg <br>
+Gestation = pregnancy period <br><br>
+
+Goat gestation = about 150 days <br>
+Sheep gestation = about 147–150 days <br><br>
+
+Kidding = goat parturition <br>
+Lambing = sheep parturition <br><br>
+
+Flushing = increased feeding before breeding <br>
+Culling = removal of inferior animals <br><br>
+
+Boer = meat-type goat <br>
+Saanen = white dairy goat <br>
+La Mancha = small ears <br>
+Anglo-Nubian = Roman nose + pendulous ears <br><br>
+
+Roughages = bulky high-fiber feeds <br>
+Concentrates = nutrient-rich feeds <br>
+Hay = dried forage <br>
+Silage = fermented forage <br><br>
+
+Water = most essential nutrient <br>
+Protein = body-building nutrient <br>
+Carbohydrates = energy source <br><br>
+
+Colostrum = first milk rich in antibodies <br>
+Creep feeding = supplemental feeding for young animals <br><br>
+
+Anthrax = Bacillus anthracis <br>
+Mastitis = udder inflammation <br>
+Foot rot = hoof infection <br>
+Pneumonia = lung inflammation <br>
+Rabies = nervous system disease <br>
+FMD = highly contagious viral disease <br><br>
+
+Liver fluke = liver parasite <br>
+Mange = mite infestation <br>
+Bloat = gas accumulation in rumen <br>
+Ketosis = energy deficiency disorder <br><br>
+
+Vaccination = immunity stimulation <br>
+Deworming = parasite control <br>
+Quarantine = isolation <br>
+Biosecurity = disease prevention <br><br>
+
+Castration = removal of testes <br>
+Dehorning = horn removal <br>
+Docking = tail shortening <br>
+Weaning = separation from mother <br><br>
+
+Zoonotic diseases = transmissible to humans
+
+    </div>
+
+  </div>
+
+  <div class="nav-grid">
+
+    <a href="animal-part9-sheep-breeds.html" class="nav-card">
+      <h3>Sheep Breeds</h3>
+      <p>Major sheep breeds and characteristics.</p>
+    </a>
+
+    <a href="animal-part9-goat-breeds.html" class="nav-card">
+      <h3>Goat Breeds</h3>
+      <p>Important goat breeds and identifiers.</p>
+    </a>
+
+    <a href="animal-part9-breeding-and-management-practices.html" class="nav-card">
+      <h3>Breeding and Management</h3>
+      <p>Breeding terms, reproduction, and management systems.</p>
+    </a>
+
+    <a href="animal-part9-feed-resources-and-feeding-management.html" class="nav-card">
+      <h3>Feed Resources</h3>
+      <p>Feeds, nutrients, and feeding systems.</p>
+    </a>
+
+    <a href="animal-part9-health-management.html" class="nav-card">
+      <h3>Health Management</h3>
+      <p>Diseases, prevention, parasites, and biosecurity.</p>
+    </a>
+
+  </div>
+
+  <a href="animal-science.html" class="back-btn">
+    ← Back to Animal Science
+  </a>
+
+</div>
+
+</body>
+</html>
