@@ -1,1 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Science Part 10 - Beef Cattle Production Final Integration</title>
 
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      font-family:Arial,sans-serif;
+      background:#f4f8f3;
+      color:#1f2937;
+      padding:20px;
+    }
+
+    .container{max-width:1000px;margin:auto}
+
+    .header{
+      background:linear-gradient(135deg,#7f1d1d,#991b1b);
+      color:white;
+      padding:25px;
+      border-radius:16px;
+      margin-bottom:20px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .header h1{font-size:34px;margin-bottom:10px}
+    .header p{line-height:1.7;opacity:.95}
+
+    .section{
+      background:white;
+      border-radius:14px;
+      padding:20px;
+      margin-bottom:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .section h2{
+      color:#991b1b;
+      margin-bottom:14px;
+      border-bottom:2px solid #e5e7eb;
+      padding-bottom:8px;
+    }
+
+    .topic{
+      background:#f9fafb;
+      padding:15px;
+      border-radius:10px;
+      margin-bottom:14px;
+      border-left:5px solid #991b1b;
+    }
+
+    .topic h3{color:#7f1d1d;margin-bottom:8px}
+
+    p,li{line-height:1.8;font-size:15px}
+    ul{padding-left:22px;margin-top:8px}
+
+    .highlight{
+      background:#fee2e2;
+      padding:10px;
+      border-radius:8px;
+      margin-top:10px;
+      font-weight:bold;
+      line-height:1.6;
+    }
+
+    .summary{
+      background:#111827;
+      color:white;
+      padding:20px;
+      border-radius:14px;
+      line-height:1.9;
+      margin-top:20px;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:12px 20px;
+      background:#991b1b;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+    }
+
+    .back-btn:hover{background:#7f1d1d}
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Beef Cattle Production Final Integration</h1>
+    <p>
+      Ultra Master Final Board Summary for Beef Cattle Production covering
+      importance, characteristics, breeds, parts, production systems, feeding,
+      breeding, health, diseases, and general management practices.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Beef Cattle Production Final Integration</h2>
+
+    <div class="topic">
+      <h3>Introduction</h3>
+      <p>
+        Beef cattle production refers to the raising and management of cattle
+        primarily for meat production.
+      </p>
+      <div class="highlight">Beef cattle are raised mainly for meat production.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Importance of Beef Cattle</h3>
+      <ul>
+        <li>Food supply</li>
+        <li>Nutrition</li>
+        <li>Livelihood</li>
+        <li>Agricultural economy</li>
+        <li>Leather and hide</li>
+        <li>Manure</li>
+      </ul>
+      <div class="highlight">Beef cattle contribute to food security and economy.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Characteristics of Beef Cattle</h3>
+      <ul>
+        <li>Large body size</li>
+        <li>Fast growth</li>
+        <li>Muscular body</li>
+        <li>Efficient feed conversion</li>
+        <li>Good carcass traits</li>
+      </ul>
+      <div class="highlight">Beef cattle are selected for meat production traits.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Parts of Beef Cattle</h3>
+      <ul>
+        <li>Muzzle</li>
+        <li>Forehead</li>
+        <li>Horn</li>
+        <li>Neck</li>
+        <li>Withers</li>
+        <li>Brisket</li>
+        <li>Back</li>
+        <li>Loin</li>
+        <li>Rump</li>
+        <li>Flank</li>
+        <li>Udder</li>
+        <li>Tail</li>
+        <li>Hoof</li>
+      </ul>
+      <div class="highlight">Knowledge of body parts is important in cattle evaluation.</div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Major Beef Cattle Breeds</h2>
+
+    <div class="topic">
+      <h3>Hereford</h3>
+      <p>Red body with white face; known as a hardy beef breed.</p>
+      <div class="highlight">Hereford = white face breed.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Angus</h3>
+      <p>Naturally polled; commonly black or red; known for excellent meat quality.</p>
+      <div class="highlight">Angus = naturally hornless breed.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Brahman</h3>
+      <p>Has hump over shoulder, loose skin, and strong heat tolerance.</p>
+      <div class="highlight">Brahman = hump + heat tolerance.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Shorthorn</h3>
+      <p>Dual-purpose breed; may be red, white, or roan.</p>
+      <div class="highlight">Shorthorn = dual-purpose breed.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Charolais</h3>
+      <p>White or cream colored breed with large muscular body.</p>
+      <div class="highlight">Charolais = large white breed.</div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Production Systems</h2>
+
+    <div class="topic">
+      <h3>Extensive System</h3>
+      <p>Animals graze over large pasture areas with minimal inputs.</p>
+      <div class="highlight">Extensive system uses large grazing land.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Semi-Intensive System</h3>
+      <p>Combination of grazing and supplemental feeding.</p>
+      <div class="highlight">Semi-intensive combines grazing and feeding.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Intensive System</h3>
+      <p>Animals are confined and provided with complete feeds.</p>
+      <div class="highlight">Intensive system uses confinement feeding.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Feedlot System</h3>
+      <p>Uses high-energy rations for rapid fattening.</p>
+      <div class="highlight">Feedlot system improves weight gain.</div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Feeding and Nutrition</h2>
+
+    <div class="topic">
+      <h3>Major Nutrients</h3>
+      <ul>
+        <li>Water</li>
+        <li>Carbohydrates</li>
+        <li>Protein</li>
+        <li>Fats</li>
+        <li>Minerals</li>
+        <li>Vitamins</li>
+      </ul>
+      <div class="highlight">Nutrients support growth and production.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Water</h3>
+      <p>Water is the most essential nutrient.</p>
+      <div class="highlight">Water is essential for life.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Roughages</h3>
+      <p>Bulky feeds high in fiber such as grasses, hay, and silage.</p>
+      <div class="highlight">Roughages are high-fiber feeds.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Concentrates</h3>
+      <p>Feeds rich in digestible nutrients such as corn, rice bran, and soybean meal.</p>
+      <div class="highlight">Concentrates are nutrient-dense feeds.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Hay and Silage</h3>
+      <ul>
+        <li>Hay = dried preserved forage</li>
+        <li>Silage = fermented forage preserved under anaerobic conditions</li>
+      </ul>
+      <div class="highlight">Hay = dried forage; Silage = fermented forage.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Grazing and Rotational Grazing</h3>
+      <p>
+        Grazing allows cattle to feed directly on pasture, while rotational grazing
+        moves cattle from one pasture area to another to prevent overgrazing.
+      </p>
+      <div class="highlight">Rotational grazing prevents overgrazing.</div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Breeding and Reproduction</h2>
+
+    <div class="topic">
+      <h3>Cattle Terms</h3>
+      <ul>
+        <li>Bull = mature intact male cattle</li>
+        <li>Cow = mature female cattle</li>
+        <li>Heifer = young female cattle</li>
+        <li>Steer = castrated male cattle</li>
+        <li>Calf = young cattle</li>
+      </ul>
+      <div class="highlight">Proper terminology is important in boards.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Reproductive Terms</h3>
+      <ul>
+        <li>Estrus = heat period</li>
+        <li>Estrous cycle = about 21 days</li>
+        <li>Ovulation = release of egg</li>
+        <li>Gestation period = about 283 days</li>
+        <li>Calving = parturition in cattle</li>
+      </ul>
+      <div class="highlight">Gestation period in cattle = 283 days.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Artificial Insemination</h3>
+      <p>Artificial introduction of semen into the female reproductive tract.</p>
+      <div class="highlight">AI improves genetics.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Pregnancy Diagnosis</h3>
+      <ul>
+        <li>Rectal palpation</li>
+        <li>Ultrasound</li>
+      </ul>
+      <div class="highlight">Pregnancy diagnosis confirms conception.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Colostrum and Weaning</h3>
+      <ul>
+        <li>Colostrum = first milk rich in antibodies</li>
+        <li>Weaning = separation of calf from dam</li>
+      </ul>
+      <div class="highlight">Colostrum provides passive immunity.</div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Health Management and Common Diseases</h2>
+
+    <div class="topic">
+      <h3>Health Management</h3>
+      <ul>
+        <li>Vaccination</li>
+        <li>Deworming</li>
+        <li>Biosecurity</li>
+        <li>Quarantine</li>
+        <li>Sanitation</li>
+      </ul>
+      <div class="highlight">Proper health management improves productivity.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Common Diseases</h3>
+      <ul>
+        <li>Anthrax = caused by <i>Bacillus anthracis</i></li>
+        <li>Foot-and-mouth disease = highly contagious viral disease</li>
+        <li>Rabies = viral disease affecting nervous system</li>
+        <li>Mastitis = inflammation of udder</li>
+        <li>Bloat = gas accumulation in rumen</li>
+        <li>Foot rot = infectious hoof disease</li>
+        <li>Liver fluke = internal parasite affecting liver</li>
+        <li>Mange = skin disease caused by mites</li>
+      </ul>
+      <div class="highlight">Disease control reduces economic loss.</div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>General Management Practices</h2>
+
+    <div class="topic">
+      <h3>Identification Methods</h3>
+      <ul>
+        <li>Ear tagging</li>
+        <li>Branding</li>
+        <li>Tattooing</li>
+      </ul>
+      <div class="highlight">Identification improves record keeping.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Common Management Practices</h3>
+      <ul>
+        <li>Castration = removal of testes</li>
+        <li>Dehorning = removal of horns</li>
+        <li>Sanitation = cleanliness of facilities</li>
+        <li>Record keeping = breeding, health, and feeding records</li>
+        <li>Animal welfare = humane treatment and proper care</li>
+      </ul>
+      <div class="highlight">Good management increases profitability.</div>
+    </div>
+
+    <div class="topic">
+      <h3>Housing</h3>
+      <p>Good housing should be clean, dry, ventilated, and spacious.</p>
+      <div class="highlight">Proper housing improves welfare.</div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Board Exam Trap Terms</h2>
+
+    <div class="topic">
+      <ul>
+        <li>Bull = mature intact male</li>
+        <li>Cow = mature female</li>
+        <li>Heifer = young female</li>
+        <li>Steer = castrated male</li>
+        <li>Calf = young cattle</li>
+        <li>Estrus = heat period</li>
+        <li>Estrous cycle = 21 days</li>
+        <li>Gestation period = 283 days</li>
+        <li>Calving = parturition</li>
+        <li>AI = artificial insemination</li>
+        <li>Roughages = high-fiber feeds</li>
+        <li>Concentrates = nutrient-dense feeds</li>
+        <li>Hay = dried forage</li>
+        <li>Silage = fermented forage</li>
+        <li>Vaccination = immunity stimulation</li>
+        <li>Deworming = parasite control</li>
+        <li>Anthrax = Bacillus anthracis</li>
+        <li>Bloat = gas accumulation in rumen</li>
+        <li>Mange = mite infestation</li>
+        <li>Castration = removal of testes</li>
+        <li>Dehorning = horn removal</li>
+      </ul>
+
+      <div class="highlight">
+        These are common board recall terms in beef cattle production.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Final Ultra Master Board Summary</h2>
+
+    <div class="summary">
+Beef cattle are raised mainly for meat production. <br><br>
+
+Importance: <br>
+- food supply <br>
+- livelihood <br>
+- economy <br><br>
+
+Characteristics: <br>
+- muscular <br>
+- fast growing <br>
+- efficient feed conversion <br><br>
+
+Major breeds: <br>
+- Hereford = white face <br>
+- Angus = naturally polled <br>
+- Brahman = hump + heat tolerant <br>
+- Shorthorn = dual-purpose <br>
+- Charolais = large white breed <br><br>
+
+Production systems: <br>
+- extensive <br>
+- semi-intensive <br>
+- intensive <br>
+- feedlot <br><br>
+
+Major nutrients: <br>
+- water <br>
+- carbohydrates <br>
+- protein <br>
+- fats <br>
+- minerals <br>
+- vitamins <br><br>
+
+Water = most essential nutrient <br><br>
+
+Roughages = high-fiber feeds <br>
+Concentrates = nutrient-dense feeds <br><br>
+
+Hay = dried forage <br>
+Silage = fermented forage <br><br>
+
+Rotational grazing prevents overgrazing. <br><br>
+
+Bull = mature intact male <br>
+Cow = mature female <br>
+Heifer = young female <br>
+Steer = castrated male <br>
+Calf = young cattle <br><br>
+
+Estrus = heat period <br>
+Estrous cycle = 21 days <br>
+Ovulation = release of egg <br><br>
+
+Gestation period = 283 days <br>
+Calving = parturition <br><br>
+
+AI = artificial insemination <br><br>
+
+Colostrum = first milk rich in antibodies <br>
+Weaning = separation from dam <br><br>
+
+Vaccination prevents disease. <br>
+Deworming controls parasites. <br><br>
+
+Biosecurity prevents disease spread. <br>
+Quarantine = isolation <br><br>
+
+Anthrax = Bacillus anthracis <br>
+FMD = highly contagious viral disease <br>
+Rabies = nervous system disease <br>
+Mastitis = udder inflammation <br>
+Bloat = gas accumulation in rumen <br>
+Foot rot = hoof infection <br>
+Liver fluke = liver parasite <br>
+Mange = mite infestation <br><br>
+
+Identification methods: <br>
+- ear tagging <br>
+- branding <br>
+- tattooing <br><br>
+
+Castration = removal of testes <br>
+Dehorning = horn removal <br><br>
+
+Good housing: <br>
+- clean <br>
+- dry <br>
+- ventilated <br><br>
+
+Record keeping improves management. <br><br>
+
+Animal welfare improves productivity. <br><br>
+
+Proper management improves: <br>
+- growth <br>
+- reproduction <br>
+- profitability
+    </div>
+  </div>
+
+  <a href="animal-part10.html" class="back-btn">
+    ← Back to Beef Cattle Production
+  </a>
+
+</div>
+
+</body>
+</html>
