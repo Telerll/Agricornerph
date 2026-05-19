@@ -1,0 +1,132 @@
+/* =========================
+   MARKETING MODULE ONLY
+========================= */
+
+.marketing-page{
+  font-family: Arial, sans-serif;
+  background: #eef2ee;
+  min-height: 100vh;
+  padding: 20px;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.marketing-page h1{
+  color: #2e7d32;
+  margin-bottom: 8px;
+  font-size: 36px;
+}
+
+.marketing-page p{
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.marketing-page .review-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.marketing-page .review-card{
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  font-weight: bold;
+  transition: 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.marketing-page .review-card:hover{
+  transform: scale(1.02);
+  background: #e8f5e9;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.marketing-page .review-card a{
+  text-decoration: none;
+  color: #1f2937;
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* =========================
+   CARD NUMBER
+========================= */
+
+.marketing-page .card-number{
+  color: #2e7d32;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* =========================
+   FINAL CARD
+========================= */
+
+.marketing-page .final-card{
+  background: #e8f5e9;
+  border: 2px solid #2e7d32;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.marketing-page .back-btn{
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: #2e7d32;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.marketing-page .back-btn:hover{
+  background: #1b5e20;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .marketing-page{
+    padding: 16px;
+  }
+
+  .marketing-page h1{
+    font-size: 28px;
+  }
+
+  .marketing-page .review-card{
+    padding: 16px;
+  }
+
+}
