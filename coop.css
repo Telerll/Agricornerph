@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2ee;
+  text-align: center;
+  padding: 20px;
+  color: #1f2937;
+}
+
+h1 {
+  color: #2e7d32;
+  margin-bottom: 6px;
+}
+
+p {
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* GRID */
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* CARD */
+.review-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  font-weight: bold;
+  transition: 0.2s ease;
+  border-left: 6px solid #2e7d32;
+}
+
+.review-card:hover {
+  transform: scale(1.02);
+  background: #e8f5e9;
+  cursor: pointer;
+}
+
+.review-card a {
+  text-decoration: none;
+  color: #1f2937;
+  display: block;
+  font-size: 16px;
+}
+
+.card-number {
+  color: #2e7d32;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: #2e7d32;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #1b5e20;
+}
