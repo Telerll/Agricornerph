@@ -4,8 +4,10 @@ body {
   text-align: center;
   padding: 20px;
   color: #1f2937;
+  margin: 0;
 }
 
+/* TITLE */
 h1 {
   color: #2e7d32;
   margin-bottom: 6px;
@@ -22,7 +24,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
 }
 
@@ -31,33 +33,40 @@ p {
   background: #ffffff;
   padding: 18px;
   border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   text-align: left;
-  font-weight: bold;
-  transition: 0.2s ease;
+  font-weight: 600;
+  transition: all 0.2s ease;
   border-left: 6px solid #2e7d32;
+  display: flex;
+  align-items: center;
 }
 
+/* HOVER */
 .review-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-3px);
   background: #e8f5e9;
   cursor: pointer;
 }
 
+/* LINK */
 .review-card a {
   text-decoration: none;
   color: #1f2937;
   display: block;
   font-size: 16px;
+  width: 100%;
 }
 
+/* NUMBER */
 .card-number {
   color: #2e7d32;
   font-weight: bold;
-  margin-right: 8px;
+  margin-right: 10px;
+  min-width: 35px;
 }
 
-/* BACK BUTTON */
+/* BACK BUTTON FIXED (IMPORTANT PART) */
 .back-btn {
   display: inline-block;
   margin-top: 30px;
@@ -67,8 +76,13 @@ p {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* BACK BUTTON HOVER */
 .back-btn:hover {
   background: #1b5e20;
 }
