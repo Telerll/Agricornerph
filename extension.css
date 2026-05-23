@@ -149,3 +149,42 @@ body {
     justify-content: center;
   }
 }
+.topic-box {
+  background: #ffffff;
+  border: 1px solid rgba(16,185,129,.18);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(6,95,70,.08);
+}
+
+.topic-box h2 {
+  font-size: 24px;
+  color: #065f46;
+  margin-bottom: 14px;
+  border-left: 6px solid #10b981;
+  padding-left: 12px;
+}
+
+.topic-box h3 {
+  font-size: 18px;
+  color: #047857;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.topic-box p {
+  margin-bottom: 14px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.topic-box ul {
+  padding-left: 24px;
+  margin-top: 10px;
+}
+
+.topic-box li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
