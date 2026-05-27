@@ -3,75 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Introduction to Plant Pathology</title>
 
   <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     body{
-      font-family: Arial, sans-serif;
-      background:#eef2ee;
-      padding:20px;
-      color:#222;
+      font-family:Arial, sans-serif;
+      background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      linear-gradient(135deg,#1b4332,#2d6a4f,#40916c);
+      min-height:100vh;
+      padding:25px;
+      color:white;
     }
 
     .container{
-      max-width:900px;
+      max-width:1000px;
       margin:auto;
     }
 
+    /* HEADER */
+
     .header{
-      background:#2e7d32;
-      color:white;
-      padding:25px;
-      border-radius:14px;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.15);
+      padding:35px 25px;
+      border-radius:24px;
       text-align:center;
       margin-bottom:25px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      box-shadow:0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    .header small{
+      letter-spacing:2px;
+      opacity:0.85;
+      font-size:12px;
     }
 
     .header h1{
-      margin:0;
-      font-size:32px;
+      font-size:38px;
+      margin-top:12px;
+      margin-bottom:10px;
     }
 
     .header p{
-      margin-top:10px;
       opacity:0.9;
+      font-size:17px;
     }
+
+    /* CONTENT */
 
     .content{
-      background:white;
-      padding:25px;
-      border-radius:14px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    .content h2{
+      color:#d8f3dc;
+      margin-top:28px;
+      margin-bottom:15px;
+      font-size:28px;
+      border-left:6px solid #95d5b2;
+      padding-left:14px;
+    }
+
+    .content h3{
+      margin-top:20px;
+      margin-bottom:10px;
+      color:#b7efc5;
+      font-size:22px;
+    }
+
+    .content p{
+      line-height:1.8;
+      margin-bottom:14px;
+      color:#f1f1f1;
+    }
+
+    .content ul{
+      margin-left:20px;
+      margin-bottom:18px;
+    }
+
+    .content li{
+      margin-bottom:10px;
       line-height:1.7;
+      color:#f8f9fa;
     }
 
-    h2{
-      color:#2e7d32;
-      margin-top:25px;
+    /* HIGHLIGHT BOX */
+
+    .info-box{
+      background:rgba(255,255,255,0.08);
+      border-left:6px solid #95d5b2;
+      padding:18px;
+      border-radius:14px;
+      margin-top:18px;
+      margin-bottom:18px;
     }
 
-    ul{
-      padding-left:20px;
-    }
-
-    li{
-      margin-bottom:8px;
-    }
+    /* BACK BUTTON */
 
     .back-btn{
-      display:inline-block;
-      margin-top:25px;
-      padding:12px 20px;
-      background:#2e7d32;
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:14px 24px;
+      background:linear-gradient(135deg,#52b788,#2d6a4f);
       color:white;
-      border-radius:8px;
       text-decoration:none;
+      border-radius:12px;
       font-weight:bold;
+      transition:0.3s ease;
+      box-shadow:0 5px 15px rgba(0,0,0,0.25);
     }
 
     .back-btn:hover{
-      background:#1b5e20;
+      transform:translateY(-3px);
+      background:linear-gradient(135deg,#74c69d,#40916c);
     }
 
   </style>
@@ -79,109 +140,130 @@
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <div class="header">
-    <h1>🦠 Introduction to Plant Pathology</h1>
-    <p>Crop Protection Reviewer</p>
+    <!-- HEADER -->
+
+    <div class="header">
+      <small>AgLE REVIEWER MODULE</small>
+      <h1>🦠 Introduction to Plant Pathology</h1>
+      <p>Crop Protection Reviewer</p>
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <h2>1. Etymology</h2>
+
+      <div class="info-box">
+        <ul>
+          <li><strong>Pathos</strong> = suffering</li>
+          <li><strong>Logos</strong> = study</li>
+        </ul>
+      </div>
+
+      <p>
+        Plant Pathology literally means the study of plant suffering
+        or plant diseases.
+      </p>
+
+      <h2>2. Definition of Plant Pathology</h2>
+
+      <p>
+        Plant pathology or phytopathology is the branch of science
+        that studies plant diseases, their causes, development,
+        spread, prevention, and control.
+      </p>
+
+      <div class="info-box">
+        <ul>
+          <li>Study of plant diseases</li>
+          <li>Causes of diseases</li>
+          <li>Development of diseases</li>
+          <li>Methods of prevention and control</li>
+          <li>Reduction of crop losses</li>
+        </ul>
+      </div>
+
+      <h2>3. Science and Art of Plant Pathology</h2>
+
+      <h3>As a Science</h3>
+
+      <ul>
+        <li>Study of pathogens and diseases</li>
+        <li>Plant-pathogen interaction</li>
+        <li>Disease development</li>
+        <li>Disease control principles</li>
+      </ul>
+
+      <h3>As an Art</h3>
+
+      <ul>
+        <li>Disease diagnosis</li>
+        <li>Disease assessment</li>
+        <li>Disease forecasting</li>
+        <li>Application of disease control methods</li>
+      </ul>
+
+      <h2>4. Objectives of Plant Pathology</h2>
+
+      <div class="info-box">
+        <ul>
+          <li>Prevent plant diseases</li>
+          <li>Reduce crop losses</li>
+          <li>Increase food production</li>
+          <li>Maintain crop quality</li>
+          <li>Protect food supply and farmer income</li>
+        </ul>
+      </div>
+
+      <h2>5. Economic Importance of Plant Diseases</h2>
+
+      <p>
+        Plant diseases cause serious economic losses worldwide.
+        They affect crop yield, crop quality, food supply,
+        and farmer income.
+      </p>
+
+      <h3>Examples of Major Plant Diseases</h3>
+
+      <ul>
+        <li><strong>Potato Late Blight</strong> – caused famine in Ireland</li>
+        <li><strong>Coffee Rust</strong> – destroyed coffee plantations</li>
+        <li><strong>Cadang-cadang Disease</strong> – affected coconut industry</li>
+        <li><strong>Rice Tungro Disease</strong> – caused severe rice losses</li>
+      </ul>
+
+      <h2>6. Types of Crop Losses</h2>
+
+      <ul>
+        <li>Reduction in yield</li>
+        <li>Reduction in crop quality</li>
+        <li>Storage and transport losses</li>
+        <li>Losses due to toxins produced by pathogens</li>
+        <li>Increase in production costs</li>
+      </ul>
+
+      <h3>Examples of Pathogenic Toxins</h3>
+
+      <div class="info-box">
+        <ul>
+          <li><strong>Aflatoxin</strong></li>
+          <li><strong>Ochratoxin</strong></li>
+          <li><strong>Fumonisins</strong></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BACK BUTTON -->
+
+    <a href="crop-protection-review.html" class="back-btn">
+      ← Back to Crop Protection Review
+    </a>
+
   </div>
-
-  <div class="content">
-
-    <h2>1. Etymology</h2>
-    <ul>
-      <li><strong>Pathos</strong> = suffering</li>
-      <li><strong>Logos</strong> = study</li>
-    </ul>
-
-    <p>
-      Plant Pathology literally means the study of plant suffering or plant diseases.
-    </p>
-
-    <h2>2. Definition of Plant Pathology</h2>
-
-    <p>
-      Plant pathology or phytopathology is the branch of science that studies:
-    </p>
-
-    <ul>
-      <li>Plant diseases</li>
-      <li>Causes of plant diseases</li>
-      <li>Development of diseases</li>
-      <li>Methods of prevention and control</li>
-      <li>Reduction of crop damage and losses</li>
-    </ul>
-
-    <h2>3. Science and Art of Plant Pathology</h2>
-
-    <h3>As a Science</h3>
-
-    <ul>
-      <li>Study of pathogens and diseases</li>
-      <li>Plant-pathogen interaction</li>
-      <li>Disease development</li>
-      <li>Disease control principles</li>
-    </ul>
-
-    <h3>As an Art</h3>
-
-    <ul>
-      <li>Disease diagnosis</li>
-      <li>Disease assessment</li>
-      <li>Disease forecasting</li>
-      <li>Application of disease control methods</li>
-    </ul>
-
-    <h2>4. Objectives of Plant Pathology</h2>
-
-    <ul>
-      <li>Prevent plant diseases</li>
-      <li>Reduce crop losses</li>
-      <li>Increase food production</li>
-      <li>Maintain quality of agricultural products</li>
-      <li>Protect food supply and farmer income</li>
-    </ul>
-
-    <h2>5. Economic Importance of Plant Diseases</h2>
-
-    <p>
-      Plant diseases cause major economic losses worldwide.
-    </p>
-
-    <h3>Examples:</h3>
-
-    <ul>
-      <li><strong>Potato Late Blight</strong> – caused famine in Ireland</li>
-      <li><strong>Coffee Rust</strong> – destroyed coffee plantations</li>
-      <li><strong>Cadang-cadang Disease</strong> – affected coconut industry in the Philippines</li>
-      <li><strong>Rice Tungro Disease</strong> – caused severe rice yield losses</li>
-    </ul>
-
-    <h2>6. Types of Crop Losses</h2>
-
-    <ul>
-      <li>Reduction in yield</li>
-      <li>Reduction in crop quality</li>
-      <li>Storage and transport losses</li>
-      <li>Losses due to toxins produced by pathogens</li>
-      <li>Increase in production costs</li>
-    </ul>
-
-    <h3>Examples of Toxins:</h3>
-
-    <ul>
-      <li>Aflatoxin</li>
-      <li>Ochratoxin</li>
-      <li>Fumonisins</li>
-    </ul>
-
-  </div>
-
-  <a href="crop-protection-review.html" class="back-btn">
-    ← Back to Crop Protection Review
-  </a>
-
-</div>
 
 </body>
 </html>
