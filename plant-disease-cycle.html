@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Disease Cycle</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#eef2ee;
+      min-height:100vh;
+      padding:25px;
+      color:#222;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .header{
+      background:#2e7d32;
+      color:white;
+      padding:35px 25px;
+      border-radius:24px;
+      text-align:center;
+      margin-bottom:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .header small{
+      letter-spacing:2px;
+      opacity:0.9;
+      font-size:12px;
+    }
+
+    .header h1{
+      font-size:38px;
+      margin-top:12px;
+      margin-bottom:10px;
+    }
+
+    .header p{
+      opacity:0.95;
+      font-size:17px;
+    }
+
+    .content{
+      background:white;
+      border:1px solid #dfe7df;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .content h2{
+      color:#2e7d32;
+      margin-top:34px;
+      margin-bottom:15px;
+      font-size:28px;
+      border-left:6px solid #2e7d32;
+      padding-left:14px;
+    }
+
+    .content h3{
+      margin-top:22px;
+      margin-bottom:12px;
+      color:#1b5e20;
+      font-size:22px;
+    }
+
+    .content h4{
+      margin-top:18px;
+      margin-bottom:10px;
+      color:#2d6a4f;
+      font-size:19px;
+    }
+
+    .content p{
+      line-height:1.8;
+      margin-bottom:14px;
+      color:#333;
+    }
+
+    .content ul,
+    .content ol{
+      margin-left:24px;
+      margin-bottom:18px;
+    }
+
+    .content li{
+      margin-bottom:10px;
+      line-height:1.7;
+      color:#333;
+    }
+
+    .info-box{
+      background:#f1f8f2;
+      border-left:6px solid #2e7d32;
+      padding:18px;
+      border-radius:14px;
+      margin-top:18px;
+      margin-bottom:18px;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:14px 24px;
+      background:#2e7d32;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s ease;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .back-btn:hover{
+      transform:translateY(-3px);
+      background:#1b5e20;
+    }
+
+    @media(max-width:700px){
+      body{
+        padding:16px;
+      }
+
+      .header{
+        padding:28px 18px;
+      }
+
+      .header h1{
+        font-size:28px;
+      }
+
+      .content{
+        padding:24px 20px;
+      }
+
+      .content h2{
+        font-size:24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <small>AgLE REVIEWER MODULE</small>
+      <h1>🔁 Disease Cycle</h1>
+      <p>Crop Protection Reviewer</p>
+    </div>
+
+    <div class="content">
+
+      <h2>Definition of Disease Cycle</h2>
+
+      <p>
+        The disease cycle refers to the sequence of events involved in the
+        development, spread, reproduction, and survival of a plant pathogen
+        within the host plant and the environment.
+      </p>
+
+      <p>
+        It explains how a disease starts, develops, spreads, survives, and
+        repeats from one season or plant generation to another.
+      </p>
+
+      <div class="info-box">
+        <ul>
+          <li>Production of inoculum</li>
+          <li>Dissemination or spread</li>
+          <li>Inoculation</li>
+          <li>Penetration</li>
+          <li>Infection</li>
+          <li>Colonization</li>
+          <li>Symptom development</li>
+          <li>Survival</li>
+        </ul>
+      </div>
+
+      <h2>Importance of Disease Cycle</h2>
+
+      <p>
+        Understanding the disease cycle helps explain when and how plant
+        diseases occur. It also helps identify the best point where disease
+        control can interrupt the cycle.
+      </p>
+
+      <ul>
+        <li>Helps predict disease outbreaks</li>
+        <li>Guides timing of control measures</li>
+        <li>Helps reduce crop losses</li>
+        <li>Improves disease forecasting</li>
+        <li>Improves timing of fungicide or pesticide application</li>
+      </ul>
+
+      <h2>1. Production of Inoculum</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Inoculum refers to any part of a pathogen capable of causing infection.
+        It is the infectious material that initiates disease.
+      </p>
+
+      <h3>Examples of Inoculum</h3>
+
+      <h4>Fungi</h4>
+      <ul>
+        <li>Spores</li>
+        <li>Mycelia</li>
+        <li>Sclerotia</li>
+        <li>Rhizomorphs</li>
+      </ul>
+
+      <h4>Bacteria</h4>
+      <ul>
+        <li>Bacterial cells</li>
+      </ul>
+
+      <h4>Viruses</h4>
+      <ul>
+        <li>Virus particles</li>
+      </ul>
+
+      <h4>Nematodes</h4>
+      <ul>
+        <li>Eggs</li>
+        <li>Larvae or juveniles</li>
+        <li>Adults</li>
+      </ul>
+
+      <h4>Parasitic Higher Plants</h4>
+      <ul>
+        <li>Seeds</li>
+      </ul>
+
+      <h2>Sources of Inoculum</h2>
+
+      <div class="info-box">
+        <ul>
+          <li>Infected living plants</li>
+          <li>Plant debris</li>
+          <li>Infested soil</li>
+          <li>Infected seeds and vegetative propagating materials</li>
+          <li>Contaminated tools, containers, storage areas, and equipment</li>
+          <li>Insects, nematodes, and other living agents that carry inocula</li>
+          <li>Alternate hosts and weeds</li>
+        </ul>
+      </div>
+
+      <h2>Survival of Pathogens</h2>
+
+      <p>
+        Pathogens survive unfavorable environmental conditions through special
+        structures or survival strategies.
+      </p>
+
+      <h3>Common Survival Mechanisms</h3>
+
+      <ul>
+        <li>Surviving as saprophytes in dead plant debris or soil</li>
+        <li>Forming thick-walled resistant structures</li>
+        <li>Surviving in weeds and alternate hosts</li>
+        <li>Surviving inside insect vectors</li>
+        <li>Surviving in seeds or planting materials</li>
+      </ul>
+
+      <h3>Examples by Pathogen Group</h3>
+
+      <h4>Fungi</h4>
+      <ul>
+        <li>Sclerotia</li>
+        <li>Chlamydospores</li>
+        <li>Dormant mycelia</li>
+      </ul>
+
+      <h4>Bacteria</h4>
+      <ul>
+        <li>Plant debris</li>
+        <li>Seeds</li>
+        <li>Biofilms</li>
+      </ul>
+
+      <h4>Viruses</h4>
+      <ul>
+        <li>Vectors</li>
+        <li>Perennial infected hosts</li>
+        <li>Infected planting materials</li>
+      </ul>
+
+      <h4>Nematodes</h4>
+      <ul>
+        <li>Dormant eggs</li>
+        <li>Cysts</li>
+      </ul>
+
+      <h2>2. Dissemination of Inocula</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Dissemination is the spread or movement of inoculum from one place to
+        another. It allows pathogens to reach healthy host plants.
+      </p>
+
+      <p>
+        After symptoms have advanced, pathogen structures may be formed on the
+        colonized surface of the host. These structures can serve as inoculum
+        and may be spread by wind, rain, insects, humans, and other agents.
+      </p>
+
+      <h3>Dissemination by Wind</h3>
+
+      <p>
+        Wind is one of the major means of spreading airborne pathogens,
+        especially fungal spores.
+      </p>
+
+      <h4>Stages of Wind Dissemination</h4>
+      <ul>
+        <li><strong>Take-off:</strong> inoculum gets into the air.</li>
+        <li><strong>Flight:</strong> inoculum moves with the wind.</li>
+        <li><strong>Deposition:</strong> inoculum settles from the atmosphere.</li>
+      </ul>
+
+      <div class="info-box">
+        <p>
+          Viruses, viroids, mycoplasmas, nematodes, and bacteria are generally
+          not commonly disseminated by wind, except under special conditions
+          such as soil particles or occasional movement.
+        </p>
+      </div>
+
+      <h3>Dissemination by Rain</h3>
+
+      <p>
+        Rain spreads fungal spores and bacterial cells mainly through rain splash
+        and water movement. This usually spreads pathogens over short distances.
+      </p>
+
+      <h3>Dissemination by Insects</h3>
+
+      <p>
+        Insects can transmit pathogens from diseased plants to healthy plants
+        while feeding.
+      </p>
+
+      <ul>
+        <li>Viruses</li>
+        <li>Bacteria</li>
+        <li>Fungi</li>
+        <li>Mollicutes</li>
+      </ul>
+
+      <h3>Dissemination by Seeds and Planting Materials</h3>
+
+      <p>
+        Infected or infested planting materials can carry pathogens externally
+        or internally.
+      </p>
+
+      <ul>
+        <li>Viruses</li>
+        <li>Viroids</li>
+        <li>Mycoplasmas</li>
+        <li>Bacteria</li>
+        <li>Fungal spores</li>
+        <li>Nematodes</li>
+      </ul>
+
+      <h3>Dissemination by Humans</h3>
+
+      <p>
+        Humans are major long-distance disseminators of plant pathogens.
+      </p>
+
+      <ul>
+        <li>Transport of infected seeds and planting materials</li>
+        <li>Contaminated tools and machinery</li>
+        <li>Shipping crates and agricultural equipment</li>
+        <li>Movement of infected products</li>
+      </ul>
+
+      <h2>3. Inoculation</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Inoculation is the contact of a pathogen with the host. It occurs when
+        inoculum is deposited onto or into an infection court.
+      </p>
+
+      <h3>Infection Court</h3>
+
+      <p>
+        The infection court is the susceptible part of the plant where infection
+        may occur.
+      </p>
+
+      <div class="info-box">
+        <ul>
+          <li>Natural openings</li>
+          <li>Wounds</li>
+          <li>Intact plant surfaces</li>
+          <li>Root surfaces</li>
+        </ul>
+      </div>
+
+      <h3>Types of Inoculum</h3>
+
+      <h4>Fungi</h4>
+      <ul>
+        <li>Asexual or sexual spores</li>
+        <li>Mycelial fragments</li>
+        <li>Sclerotial bodies</li>
+        <li>Rhizomorphs</li>
+        <li>Dormant mycelia in seeds</li>
+      </ul>
+
+      <h4>Nematodes</h4>
+      <ul>
+        <li>Eggs</li>
+        <li>Larvae or juveniles</li>
+        <li>Adults</li>
+      </ul>
+
+      <h4>Bacteria</h4>
+      <ul>
+        <li>Bacterial cells</li>
+        <li>Phytoplasma cells</li>
+        <li>Protozoan cells</li>
+      </ul>
+
+      <h4>Others</h4>
+      <ul>
+        <li>Virus particles</li>
+        <li>Viroid entities</li>
+        <li>Seeds of parasitic flowering plants</li>
+      </ul>
+
+      <h2>4. Penetration or Ingress</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Penetration or ingress is the entrance of the pathogen into the host plant.
+        It is completed when the pathogen has passed through the initial cell wall
+        or has entered the intercellular spaces.
+      </p>
+
+      <h3>Entry Points</h3>
+
+      <h4>1. Natural Openings</h4>
+      <ul>
+        <li>Stomata</li>
+        <li>Lenticels</li>
+        <li>Hydathodes</li>
+        <li>Nectarthodes</li>
+      </ul>
+
+      <h4>2. Intact Host Surface</h4>
+      <p>
+        Some pathogens, especially fungi, can penetrate directly through the
+        intact epidermis.
+      </p>
+
+      <h4>3. Wounds</h4>
+      <p>
+        Wounds caused by insects, tools, wind, pruning, or mechanical injury
+        can serve as entry points.
+      </p>
+
+      <h3>Types of Penetration</h3>
+
+      <h4>1. Passive Penetration</h4>
+      <p>
+        The pathogen does not actively participate in penetration. For example,
+        bacteria may be carried by a film of water through stomata into host tissues.
+      </p>
+
+      <h4>2. Active Penetration</h4>
+      <p>
+        The pathogen directly participates in penetration. For example, fungal
+        spores germinate, form germ tubes and appressoria, then penetrate the
+        intact host surface using infection hyphae or penetration pegs.
+      </p>
+
+      <h2>5. Infection</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Infection occurs when the pathogen becomes established in the plant
+        tissues after penetration and begins obtaining nutrients from the host.
+      </p>
+
+      <h3>Latent Infection</h3>
+
+      <p>
+        Latent infection is the state in which the host is infected with the
+        pathogen but does not show visible symptoms.
+      </p>
+
+      <div class="info-box">
+        <p>
+          Latent infection is important because infected plants may appear healthy
+          while already carrying the pathogen.
+        </p>
+      </div>
+
+      <h2>6. Colonization or Invasion</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Colonization or invasion is the growth or movement of the pathogen
+        through host tissues.
+      </p>
+
+      <h3>Active and Passive Colonization</h3>
+
+      <h4>Active Colonization</h4>
+      <p>
+        The pathogen actively grows or moves from cell to cell.
+      </p>
+
+      <h4>Passive Colonization</h4>
+      <p>
+        The pathogen is carried through the plant system, such as through
+        the transpiration stream.
+      </p>
+
+      <h3>Effects of Colonization</h3>
+
+      <p>
+        Pathogens may produce harmful chemicals that damage plant tissues.
+      </p>
+
+      <ul>
+        <li>Enzymes</li>
+        <li>Toxins</li>
+        <li>Hormones</li>
+      </ul>
+
+      <h3>Colonization by Viruses, Viroids, and Mollicutes</h3>
+
+      <p>
+        These pathogens are intracellular parasites. They colonize cells and may
+        spread through epidermal cells, palisade cells, spongy mesophyll, and
+        vascular tissues.
+      </p>
+
+      <h3>Colonization by Bacteria</h3>
+
+      <ul>
+        <li>Intracellular colonization in xylem and phloem vessels</li>
+        <li>Intercellular colonization between plant cells</li>
+        <li>May cause gall formation, vascular wilting, and soft rots</li>
+      </ul>
+
+      <h3>Colonization by Nematodes</h3>
+
+      <ul>
+        <li>Sedentary endoparasites</li>
+        <li>Migratory endoparasites</li>
+      </ul>
+
+      <h3>Colonization by Phytoplasma</h3>
+
+      <p>
+        Phytoplasmas multiply by binary fission and budding, producing more cells
+        in the phloem tissues.
+      </p>
+
+      <h3>Colonization by Fungi</h3>
+
+      <ul>
+        <li>Colonization on the host surface</li>
+        <li>External colonization with haustoria inside host cells</li>
+        <li>Intercellular colonization without haustoria</li>
+        <li>Intercellular colonization with intracellular haustoria</li>
+        <li>Intracellular colonization</li>
+      </ul>
+
+      <h2>7. Incubation</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        The incubation period is the time from inoculation to the appearance
+        of visible symptoms.
+      </p>
+
+      <p>
+        It may also refer to the time from the first response of the plant to
+        the formation of visible symptoms.
+      </p>
+
+      <h3>Importance of Incubation Period</h3>
+
+      <ul>
+        <li>Helps in disease diagnosis</li>
+        <li>Helps in disease forecasting</li>
+        <li>Guides timing of control measures</li>
+      </ul>
+
+      <h3>Factors Affecting Incubation Period</h3>
+
+      <ul>
+        <li>Temperature</li>
+        <li>Humidity</li>
+        <li>Host susceptibility</li>
+        <li>Pathogen virulence</li>
+        <li>Plant age</li>
+      </ul>
+
+      <h2>8. Symptom Development</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Symptom development is the stage when visible signs of disease appear
+        on the plant as a result of pathogen activity.
+      </p>
+
+      <h3>Common Symptoms</h3>
+
+      <ul>
+        <li>Chlorosis</li>
+        <li>Wilting</li>
+        <li>Leaf spots</li>
+        <li>Blights</li>
+        <li>Rotting</li>
+        <li>Galls</li>
+        <li>Cankers</li>
+        <li>Mosaic</li>
+        <li>Necrosis</li>
+      </ul>
+
+      <h2>9. Secondary Inoculum and Secondary Cycles</h2>
+
+      <p>
+        After symptom development, pathogens may produce secondary inoculum.
+        This secondary inoculum can initiate new infections within the same
+        growing season.
+      </p>
+
+      <h3>Primary Disease Cycle</h3>
+
+      <p>
+        The primary cycle is initiated by primary inoculum that survived from
+        previous seasons.
+      </p>
+
+      <h3>Secondary Disease Cycle</h3>
+
+      <p>
+        Secondary cycles occur when new inoculum produced during the current
+        season causes repeated infections.
+      </p>
+
+      <h3>Monocyclic Diseases</h3>
+
+      <p>
+        Monocyclic diseases usually have one major disease cycle per growing
+        season.
+      </p>
+
+      <h3>Polycyclic Diseases</h3>
+
+      <p>
+        Polycyclic diseases have repeated cycles in one season and can cause
+        rapid epidemics.
+      </p>
+
+      <h2>10. Survival Stage</h2>
+
+      <h3>Definition</h3>
+
+      <p>
+        Survival is the ability of a pathogen to remain alive during unfavorable
+        conditions or when no susceptible host is available.
+      </p>
+
+      <p>
+        Some pathogen structures may not land on a susceptible plant, and
+        environmental conditions may not favor continued growth and development.
+        In such cases, the pathogen must survive until conditions become favorable.
+      </p>
+
+      <h2>Disease Cycle and Disease Management</h2>
+
+      <p>
+        Understanding each stage of the disease cycle helps identify where the
+        cycle can be interrupted.
+      </p>
+
+      <h3>Control Strategies</h3>
+
+      <h4>During Dissemination</h4>
+      <ul>
+        <li>Quarantine</li>
+        <li>Sanitation</li>
+        <li>Control movement of infected materials</li>
+      </ul>
+
+      <h4>During Inoculation</h4>
+      <ul>
+        <li>Remove infected plants</li>
+        <li>Use clean seeds and planting materials</li>
+        <li>Disinfect tools and equipment</li>
+      </ul>
+
+      <h4>During Penetration</h4>
+      <ul>
+        <li>Protect wounds</li>
+        <li>Avoid unnecessary injury to plants</li>
+        <li>Apply protective fungicides when needed</li>
+      </ul>
+
+      <h4>During Colonization</h4>
+      <ul>
+        <li>Use resistant varieties</li>
+        <li>Apply systemic fungicides where appropriate</li>
+        <li>Improve plant health and nutrition</li>
+      </ul>
+
+      <h4>During Survival</h4>
+      <ul>
+        <li>Crop rotation</li>
+        <li>Field sanitation</li>
+        <li>Destroy crop residues</li>
+        <li>Remove volunteer plants and weeds</li>
+      </ul>
+
+      <h2>Summary</h2>
+
+      <div class="info-box">
+        <ol>
+          <li>Survival</li>
+          <li>Production of inoculum</li>
+          <li>Dissemination</li>
+          <li>Inoculation</li>
+          <li>Penetration</li>
+          <li>Infection</li>
+          <li>Colonization</li>
+          <li>Incubation</li>
+          <li>Symptom development</li>
+          <li>Production of secondary inoculum</li>
+          <li>Survival again</li>
+        </ol>
+      </div>
+
+    </div>
+
+    <a href="crop-plant-pathology.html" class="back-btn">
+      ← Back to Plant Pathology Review
+    </a>
+
+  </div>
+
+</body>
+</html>
