@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Plant Disease Diagnosis</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#eef2ee;
+      min-height:100vh;
+      padding:25px;
+      color:#222;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .header{
+      background:#2e7d32;
+      color:white;
+      padding:35px 25px;
+      border-radius:24px;
+      text-align:center;
+      margin-bottom:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .header small{
+      letter-spacing:2px;
+      opacity:0.9;
+      font-size:12px;
+    }
+
+    .header h1{
+      font-size:38px;
+      margin-top:12px;
+      margin-bottom:10px;
+    }
+
+    .header p{
+      opacity:0.95;
+      font-size:17px;
+    }
+
+    .content{
+      background:white;
+      border:1px solid #dfe7df;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .content h2{
+      color:#2e7d32;
+      margin-top:30px;
+      margin-bottom:15px;
+      font-size:28px;
+      border-left:6px solid #2e7d32;
+      padding-left:14px;
+    }
+
+    .content h3{
+      margin-top:22px;
+      margin-bottom:12px;
+      color:#1b5e20;
+      font-size:22px;
+    }
+
+    .content p{
+      line-height:1.8;
+      margin-bottom:14px;
+      color:#333;
+    }
+
+    .content ul{
+      margin-left:22px;
+      margin-bottom:18px;
+    }
+
+    .content li{
+      margin-bottom:10px;
+      line-height:1.7;
+      color:#333;
+    }
+
+    .info-box{
+      background:#f1f8f2;
+      border-left:6px solid #2e7d32;
+      padding:18px;
+      border-radius:14px;
+      margin-top:18px;
+      margin-bottom:18px;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:14px 24px;
+      background:#2e7d32;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s ease;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .back-btn:hover{
+      transform:translateY(-3px);
+      background:#1b5e20;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <small>AgLE REVIEWER MODULE</small>
+      <h1>🩺 Plant Disease Diagnosis</h1>
+      <p>Crop Protection Reviewer</p>
+    </div>
+
+    <div class="content">
+
+      <h2>Plant Disease Diagnosis</h2>
+
+      <p>
+        Plant disease diagnosis is the process of identifying a plant disease by
+        observing symptoms, signs, environmental conditions, and the possible
+        causal organism involved.
+      </p>
+
+      <div class="info-box">
+        <ul>
+          <li>Correct diagnosis helps determine the proper control method.</li>
+          <li>Symptoms alone may not be reliable because different pathogens may produce similar symptoms.</li>
+          <li>The presence of signs increases the accuracy of diagnosis.</li>
+          <li>Secondary invaders may be mistaken as the primary pathogen.</li>
+        </ul>
+      </div>
+
+      <h2>Symptoms of Plant Diseases</h2>
+
+      <p>
+        Symptoms are the visible reactions or expressions of the host plant to
+        infection or disease.
+      </p>
+
+      <h3>Primary vs. Secondary Symptoms</h3>
+      <ul>
+        <li><strong>Primary symptoms</strong> are direct and immediate effects on infected tissues.</li>
+        <li><strong>Secondary symptoms</strong> are indirect effects appearing on distant or uninfected plant parts.</li>
+      </ul>
+
+      <h3>Localized vs. Systemic Symptoms</h3>
+      <ul>
+        <li><strong>Localized symptoms</strong> are limited to a small area, such as leaf spots, cankers, and galls.</li>
+        <li><strong>Systemic symptoms</strong> affect the whole plant system, such as mosaic, mottling, and wilting.</li>
+      </ul>
+
+      <h3>Histological vs. Morphological Symptoms</h3>
+      <ul>
+        <li><strong>Histological symptoms</strong> are internal changes seen under the microscope.</li>
+        <li><strong>Morphological symptoms</strong> are external visible abnormalities.</li>
+      </ul>
+
+      <h2>General Classification of Symptoms</h2>
+
+      <h3>Plesionecrotic Symptoms</h3>
+      <p>
+        These are symptoms that appear before the actual death of plant cells.
+      </p>
+      <div class="info-box">
+        <ul>
+          <li>Yellowing</li>
+          <li>Wilting</li>
+          <li>Silvering</li>
+        </ul>
+      </div>
+
+      <h3>Necrotic Symptoms</h3>
+      <p>
+        These involve the death of protoplasts, cells, or tissues.
+      </p>
+      <ul>
+        <li>Spot</li>
+        <li>Blight</li>
+        <li>Scorch</li>
+        <li>Canker</li>
+        <li>Die-back</li>
+      </ul>
+
+      <h3>Hypoplastic Symptoms</h3>
+      <p>
+        These involve underdevelopment, inhibition, or failure of normal plant growth.
+      </p>
+      <ul>
+        <li>Stunting</li>
+        <li>Chlorosis</li>
+        <li>Mosaic</li>
+        <li>Curling</li>
+        <li>Rosetting</li>
+      </ul>
+
+      <h3>Hyperplastic Symptoms</h3>
+      <p>
+        These involve excessive multiplication, enlargement, or overdevelopment
+        of plant organs.
+      </p>
+      <ul>
+        <li>Gall formation</li>
+        <li>Fasciation</li>
+        <li>Scab</li>
+        <li>Premature greening</li>
+      </ul>
+
+      <div class="info-box">
+        <ul>
+          <li><strong>Hypertrophy</strong> means increase in cell size.</li>
+          <li><strong>Hyperplasia</strong> means increase in number of cells.</li>
+        </ul>
+      </div>
+
+      <h2>Important Plant Disease Symptoms</h2>
+
+      <h3>Abscission</h3>
+      <p>Premature falling of leaves, flowers, or fruits.</p>
+
+      <h3>Blast</h3>
+      <p>Sudden death of young buds, inflorescence, or young fruits.</p>
+
+      <h3>Bleeding</h3>
+      <p>Flow of plant sap from wounds.</p>
+
+      <h3>Blight</h3>
+      <p>Extensive and usually sudden death of host tissue.</p>
+
+      <h3>Blotch</h3>
+      <p>Large irregular necrotic spots on leaves or fruits.</p>
+
+      <h3>Callus</h3>
+      <p>Overgrowth of tissue formed in response to injury.</p>
+
+      <h3>Canker</h3>
+      <p>Sunken necrotic area with cracked borders on leaves, fruits, stems, or branches.</p>
+
+      <h3>Chlorosis</h3>
+      <p>Yellowing caused by factors other than light, such as infection or nutrient problems.</p>
+
+      <h3>Curling</h3>
+      <p>Abnormal bending or curling of leaves.</p>
+
+      <h3>Damping-Off</h3>
+      <p>Rotting of seedlings before or after emergence.</p>
+
+      <h3>Die-Back</h3>
+      <p>Drying backward from the tip of twigs or branches.</p>
+
+      <h3>Etiolation</h3>
+      <p>Yellowing of normally green tissues caused by inadequate light.</p>
+
+      <h3>Fasciation</h3>
+      <p>Abnormal clustering or flattening of roots, flowers, fruits, or twigs.</p>
+
+      <h3>Flecks</h3>
+      <p>Extremely tiny spots on leaves, fruits, or stems.</p>
+
+      <h3>Gumming or Gummosis</h3>
+      <p>Oozing of viscous gum from wounds in the bark.</p>
+
+      <h3>Leak</h3>
+      <p>Exudation of host juices from soft-rotted portions.</p>
+
+      <h3>Mosaic</h3>
+      <p>Sharply defined variegated patterns of green and yellow areas on leaves.</p>
+
+      <h3>Mottling</h3>
+      <p>Less defined variegation with more diffused boundaries.</p>
+
+      <h3>Mummification</h3>
+      <p>Conversion of infected fruit into a hard, dry, shriveled mummy.</p>
+
+      <h3>Phyllody</h3>
+      <p>Transformation of floral parts into leaf-like structures.</p>
+
+      <h3>Pitting</h3>
+      <p>Depressions or pits on the surface of fruits, tubers, or fleshy organs.</p>
+
+      <h3>Rosetting</h3>
+      <p>Shortened internodes causing leaves to crowd into a rosette.</p>
+
+      <h3>Rotting</h3>
+      <p>Disintegration and decomposition of host tissue.</p>
+
+      <h3>Russeting</h3>
+      <p>Superficial brownish roughening of fruit or tuber skin.</p>
+
+      <h3>Sarcody</h3>
+      <p>Abnormal swelling of bark above wounds due to accumulated food materials.</p>
+
+      <h3>Savoying</h3>
+      <p>Cupping, pocketing, curling, or puckering of leaf parts.</p>
+
+      <h3>Scab</h3>
+      <p>Raised, rough, ulcer-like lesions caused by overgrowth of surface tissues.</p>
+
+      <h3>Shot-Hole</h3>
+      <p>Perforated leaf appearance when dead lesion areas drop out.</p>
+
+      <h3>Spot</h3>
+      <p>Localized necrotic lesion, usually circular, angular, or irregular.</p>
+
+      <h3>Streak or Stripe</h3>
+      <p>Long narrow necrotic lesions on leaves or stems.</p>
+
+      <h3>Vein Clearing</h3>
+      <p>Leaf veins become translucent or pale while the rest of the leaf remains normal.</p>
+
+      <h3>Virescence or Greening</h3>
+      <p>Development of chlorophyll in tissues or organs where it is normally absent.</p>
+
+      <h3>Wilting</h3>
+      <p>Drooping caused by lack of water or infection affecting water movement.</p>
+
+      <h2>Signs of Plant Diseases</h2>
+
+      <p>
+        Signs are the actual structures or products of the pathogen found on
+        infected plant parts.
+      </p>
+
+      <div class="info-box">
+        <ul>
+          <li>Signs represent the pathogen itself.</li>
+          <li>They may not always be visible because formation depends on environmental conditions.</li>
+          <li>Many signs are best seen under the microscope.</li>
+        </ul>
+      </div>
+
+      <h2>General Categories of Signs</h2>
+
+      <h3>Vegetative Structures</h3>
+      <ul>
+        <li><strong>Felt</strong> – densely woven mat of mycelium.</li>
+        <li><strong>Haustorium</strong> – absorbing organ of a fungus.</li>
+        <li><strong>Mycelium</strong> – mass of fungal threads or hyphae.</li>
+        <li><strong>Pathogen cells</strong> – masses of bacterial cells.</li>
+        <li><strong>Plasmodium</strong> – naked mass of protoplasm.</li>
+        <li><strong>Rhizomorph</strong> – cord-like strand of fungal hyphae.</li>
+        <li><strong>Sclerotium</strong> – hard resting body made of fungal hyphae.</li>
+      </ul>
+
+      <h3>Reproductive Structures</h3>
+      <ul>
+        <li><strong>Acervulus</strong> – mat of hyphae forming eruptive lesions.</li>
+        <li><strong>Apothecium</strong> – open cup-like fruiting body.</li>
+        <li><strong>Ascus</strong> – sac-like structure containing ascospores.</li>
+        <li><strong>Basidium</strong> – club-shaped structure producing basidiospores.</li>
+        <li><strong>Conidiophore</strong> – branch that produces conidia.</li>
+        <li><strong>Mildew</strong> – cobwebby or powdery growth on leaves.</li>
+        <li><strong>Mold</strong> – woolly or furry mycelial growth.</li>
+        <li><strong>Mushroom</strong> – umbrella-shaped fruiting body.</li>
+        <li><strong>Pycnidium</strong> – hollow fruiting body containing conidia.</li>
+        <li><strong>Sporangium</strong> – structure bearing sporangiospores.</li>
+        <li><strong>Spore</strong> – reproductive propagule of fungi.</li>
+        <li><strong>Stroma</strong> – compact mass of fungal hyphae.</li>
+      </ul>
+
+      <h3>Disease Products</h3>
+      <ul>
+        <li><strong>Odor</strong> – characteristic smell associated with infection.</li>
+        <li><strong>Ooze</strong> – viscous mass made of plant juices and pathogen cells.</li>
+      </ul>
+
+      <h2>Signs According to Pathogen</h2>
+
+      <ul>
+        <li><strong>Fungal diseases:</strong> mycelia, spores, fruiting bodies.</li>
+        <li><strong>Bacterial diseases:</strong> bacterial cells and bacterial ooze.</li>
+        <li><strong>Nematode diseases:</strong> eggs, juveniles, adult nematodes.</li>
+        <li><strong>Virus diseases:</strong> virus particles and inclusion bodies.</li>
+        <li><strong>Viroid diseases:</strong> RNA fragments.</li>
+        <li><strong>Parasitic flowering plants:</strong> seeds and the plant itself.</li>
+      </ul>
+
+      <h2>Koch’s Rules of Proof of Pathogenicity</h2>
+
+      <p>
+        Koch’s postulates are rules used to prove that a suspected organism
+        is the actual cause of a disease.
+      </p>
+
+      <div class="info-box">
+        <ul>
+          <li>The suspected pathogen must always be present in diseased plants.</li>
+          <li>The organism must be isolated and grown in pure culture.</li>
+          <li>The pure culture must produce the same disease when inoculated into a healthy plant.</li>
+          <li>The organism must be re-isolated and proven identical to the original pathogen.</li>
+        </ul>
+      </div>
+
+      <p>
+        Koch’s rules may need modification when dealing with obligate parasites,
+        viruses, nematodes, abiotic factors, or non-living agents.
+      </p>
+
+    </div>
+
+    <a href="crop-protection-review.html" class="back-btn">
+      ← Back to Crop Protection Review
+    </a>
+
+  </div>
+
+</body>
+</html>
