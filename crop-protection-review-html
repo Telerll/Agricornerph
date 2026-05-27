@@ -1,0 +1,66 @@
+<section class="major-cards">
+
+  <div class="major-card">
+    <div class="card-number">01</div>
+    <h2>Plant Pathology</h2>
+    <p>
+      Study of plant diseases, their causes, symptoms, diagnosis, development,
+      spread, resistance, and control.
+    </p>
+
+    <ul>
+      <li>Plant diseases and diagnosis</li>
+      <li>Symptoms and signs</li>
+      <li>Viruses, bacteria, fungi, nematodes</li>
+      <li>Disease cycle and epidemiology</li>
+      <li>Disease resistance and control</li>
+    </ul>
+
+    <a href="crop-plant-pathology.html" class="card-btn">
+      Open Module →
+    </a>
+  </div>
+
+  <div class="major-card">
+    <div class="card-number">02</div>
+    <h2>Entomology & Pest Management</h2>
+    <p>
+      Covers insect structure, insect orders, pest concepts, IPM, rodents,
+      mollusks, insecticides, pesticide application, and calibration.
+    </p>
+
+    <ul>
+      <li>Rodents and mollusks</li>
+      <li>Insect anatomy and orders</li>
+      <li>Metamorphosis and reproduction</li>
+      <li>IPM and insecticides</li>
+      <li>Pesticide calculation and calibration</li>
+    </ul>
+
+    <a href="crop-entomology-pest-management.html" class="card-btn">
+      Open Module →
+    </a>
+  </div>
+
+  <div class="major-card">
+    <div class="card-number">03</div>
+    <h2>Weed Science</h2>
+    <p>
+      Focuses on weeds, weed classification, dormancy, germination,
+      crop-weed competition, allelopathy, herbicides, and weed control.
+    </p>
+
+    <ul>
+      <li>Weed definition and classification</li>
+      <li>Weed dormancy and germination</li>
+      <li>Crop-weed competition</li>
+      <li>Allelopathy</li>
+      <li>Weed management and herbicides</li>
+    </ul>
+
+    <a href="crop-weed-science.html" class="card-btn">
+      Open Module →
+    </a>
+  </div>
+
+</section>
