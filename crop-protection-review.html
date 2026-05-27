@@ -1,90 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Protection Review</title>
 
-  <title>Crop Protection Reviewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2ee;
+      text-align: center;
+      padding: 20px;
+    }
 
-  <link rel="stylesheet" href="extension.css" />
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .review-card {
+      background: #ffffff;
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .review-card:hover {
+      transform: scale(1.02);
+      background: #e8f5e9;
+    }
+
+    .review-card a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      background: #2e7d32;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: #1b5e20;
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <h1>🌿 Crop Protection Review</h1>
+  <p>Select a major topic to start reviewing</p>
 
-    <div class="header">
-      <small>AgLE REVIEWER MODULE</small>
-      <h1>Crop Protection</h1>
-      <p>Major Reviewer Topics</p>
+  <div class="review-grid">
+
+    <div class="review-card">
+      <a href="crop-plant-pathology.html">🦠 Part 1: Plant Pathology</a>
     </div>
 
-    <div class="reviewer-content">
-
-      <h1>Crop Protection Major Topics</h1>
-
-      <div class="major-cards">
-
-        <!-- PLANT PATHOLOGY -->
-        <a href="crop-plant-pathology.html" class="major-card">
-
-          <div class="card-number">01</div>
-
-          <h2>Plant Pathology</h2>
-
-          <p>
-            Study of plant diseases, pathogens,
-            symptoms, diagnosis, disease cycle,
-            epidemiology, resistance, and control.
-          </p>
-
-        </a>
-
-        <!-- ENTOMOLOGY -->
-        <a href="crop-entomology-pest-management.html" class="major-card">
-
-          <div class="card-number">02</div>
-
-          <h2>Entomology &amp; Pest Management</h2>
-
-          <p>
-            Covers insects, pest organisms,
-            insect anatomy, metamorphosis,
-            IPM, insecticides, calibration,
-            and pesticide application.
-          </p>
-
-        </a>
-
-        <!-- WEED SCIENCE -->
-        <a href="crop-weed-science.html" class="major-card">
-
-          <div class="card-number">03</div>
-
-          <h2>Weed Science</h2>
-
-          <p>
-            Focuses on weeds, dormancy,
-            germination, crop-weed competition,
-            allelopathy, herbicides,
-            and weed management.
-          </p>
-
-        </a>
-
-      </div>
-
+    <div class="review-card">
+      <a href="crop-entomology-pest-management.html">🐛 Part 2: Entomology & Pest Management</a>
     </div>
 
-    <div class="footer-note">
-      <a href="crop-protection-review.html" class="back-btn">
-        ← Back to Crop Protection Review
-      </a>
+    <div class="review-card">
+      <a href="crop-weed-science.html">🌱 Part 3: Weed Science</a>
     </div>
 
   </div>
 
-</body>
+  <a href="crop-protection-review.html" class="back-btn">← Back to Crop Protection Review</a>
 
+</body>
 </html>
