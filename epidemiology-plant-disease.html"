@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Epidemiology of Plant Disease</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#eef2ee;
+      min-height:100vh;
+      padding:25px;
+      color:#222;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .header{
+      background:linear-gradient(135deg,#1b4332,#2d6a4f,#40916c);
+      padding:35px 25px;
+      border-radius:24px;
+      text-align:center;
+      margin-bottom:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      color:white;
+    }
+
+    .header small{
+      letter-spacing:2px;
+      opacity:0.9;
+      font-size:12px;
+    }
+
+    .header h1{
+      font-size:38px;
+      margin-top:12px;
+      margin-bottom:10px;
+    }
+
+    .header p{
+      opacity:0.95;
+      font-size:17px;
+    }
+
+    .content{
+      background:white;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .content h2{
+      color:#1b4332;
+      margin-top:30px;
+      margin-bottom:15px;
+      font-size:30px;
+      border-left:6px solid #40916c;
+      padding-left:14px;
+    }
+
+    .content h3{
+      color:#2d6a4f;
+      margin-top:24px;
+      margin-bottom:12px;
+      font-size:24px;
+    }
+
+    .content h4{
+      color:#40916c;
+      margin-top:20px;
+      margin-bottom:10px;
+      font-size:20px;
+    }
+
+    .content p{
+      line-height:1.9;
+      margin-bottom:16px;
+      color:#333;
+      font-size:16px;
+    }
+
+    .content ul{
+      margin-left:25px;
+      margin-bottom:20px;
+    }
+
+    .content li{
+      line-height:1.8;
+      margin-bottom:10px;
+      color:#333;
+    }
+
+    .info-box{
+      background:#f1f8f4;
+      border-left:6px solid #52b788;
+      padding:18px;
+      border-radius:14px;
+      margin-top:18px;
+      margin-bottom:18px;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:14px 24px;
+      background:#2d6a4f;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s ease;
+    }
+
+    .back-btn:hover{
+      background:#1b4332;
+      transform:translateY(-2px);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+
+  <div class="header">
+    <small>AgLE REVIEWER MODULE</small>
+    <h1>🌍 Epidemiology of Plant Disease</h1>
+    <p>Crop Protection Reviewer</p>
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="content">
+
+    <h2>A. Terminology</h2>
+
+    <h3>Epidemiology</h3>
+
+    <p>
+      Epidemiology is the study of epidemics or the increase,
+      spread, and development of disease within a plant population.
+      It also studies the different factors that influence disease
+      occurrence and severity.
+    </p>
+
+    <div class="info-box">
+      <ul>
+        <li>Studies disease spread</li>
+        <li>Analyzes epidemic development</li>
+        <li>Determines factors affecting outbreaks</li>
+        <li>Helps predict and control epidemics</li>
+      </ul>
+    </div>
+
+    <h3>Epidemic</h3>
+
+    <p>
+      An epidemic refers to any increase of disease within a plant
+      population over a relatively large area and short period of time.
+    </p>
+
+    <h3>Epiphytotics</h3>
+
+    <p>
+      Epiphytotics refers specifically to epidemics of plant diseases.
+    </p>
+
+    <h3>Endemic Disease</h3>
+
+    <p>
+      An endemic disease is a disease naturally occurring or regularly
+      found in a specific area or locality.
+    </p>
+
+    <h3>Exotic Disease</h3>
+
+    <p>
+      An exotic disease is a disease introduced from another region
+      or country where it did not originally exist.
+    </p>
+
+    <h3>Pandemic Disease</h3>
+
+    <p>
+      A pandemic disease is a disease occurring over very large regions,
+      countries, or continents.
+    </p>
+
+    <h3>Sporadic Disease</h3>
+
+    <p>
+      A sporadic disease occurs irregularly and unpredictably.
+    </p>
+
+    <h2>B. Elements of an Epidemic</h2>
+
+    <p>
+      Plant disease epidemics develop due to the timely combination
+      of several important factors.
+    </p>
+
+    <div class="info-box">
+      <ul>
+        <li>Susceptible host</li>
+        <li>Virulent pathogen</li>
+        <li>Favorable environment</li>
+        <li>Intervention by man</li>
+      </ul>
+    </div>
+
+    <h3>1. Susceptible Host</h3>
+
+    <p>
+      The plant host must be vulnerable or lacking resistance to the
+      pathogen for disease to occur.
+    </p>
+
+    <h3>2. Virulent Pathogen</h3>
+
+    <p>
+      The pathogen must possess the ability to infect and cause disease
+      successfully.
+    </p>
+
+    <h3>3. Favorable Environment</h3>
+
+    <p>
+      Environmental conditions such as moisture, humidity, and temperature
+      greatly influence disease development.
+    </p>
+
+    <h3>4. Intervention by Man</h3>
+
+    <p>
+      Human activities may help spread diseases through contaminated
+      tools, infected planting materials, improper cultural practices,
+      and movement of pathogens between areas.
+    </p>
+
+    <h2>C. Factors Affecting the Development of Epidemics</h2>
+
+    <h3>1. Host Factors</h3>
+
+    <h4>A. Genetic Resistance or Susceptibility</h4>
+
+    <p>
+      Plants with resistance genes are less likely to develop epidemics,
+      while highly susceptible plants allow rapid disease spread.
+    </p>
+
+    <h4>B. Uniformity of Host Plants</h4>
+
+    <p>
+      Genetically uniform crops are more vulnerable because the pathogen
+      can easily infect many plants with similar susceptibility.
+    </p>
+
+    <h4>C. Type of Crop</h4>
+
+    <p>
+      Annual crops such as rice, corn, and vegetables generally develop
+      epidemics faster than perennial woody plants.
+    </p>
+
+    <h4>D. Age of Host Plants</h4>
+
+    <p>
+      Young plants are usually more susceptible to diseases than mature
+      plants because their tissues are softer and less developed.
+    </p>
+
+    <h3>2. Pathogen Factors</h3>
+
+    <h4>A. Level of Virulence</h4>
+
+    <p>
+      Highly virulent pathogens infect plants rapidly and produce larger
+      amounts of inoculum.
+    </p>
+
+    <h4>B. Quantity of Inoculum</h4>
+
+    <p>
+      The greater the amount of inoculum near the host plant, the higher
+      the chance of disease development.
+    </p>
+
+    <h4>C. Ecology of the Pathogen</h4>
+
+    <p>
+      The ability of pathogens to survive, reproduce, and adapt to
+      environmental conditions affects epidemic development.
+    </p>
+
+    <h4>D. Mode of Spread</h4>
+
+    <p>
+      Airborne pathogens generally cause more epidemics because they
+      disperse rapidly through wind currents.
+    </p>
+
+    <h3>3. Environmental Factors</h3>
+
+    <h4>A. Moisture</h4>
+
+    <p>
+      Moisture favors spore germination, pathogen growth, and infection.
+    </p>
+
+    <h4>B. Temperature</h4>
+
+    <p>
+      Temperature influences pathogen reproduction, survival, and host
+      susceptibility.
+    </p>
+
+    <h3>4. Human Factors</h3>
+
+    <ul>
+      <li>Site selection and preparation</li>
+      <li>Selection of propagative materials</li>
+      <li>Cultural practices</li>
+      <li>Disease control measures</li>
+      <li>Introduction of new pathogens</li>
+    </ul>
+
+    <h2>D. Analysis of Epidemics</h2>
+
+    <p>
+      Disease increase over time depends on:
+    </p>
+
+    <div class="info-box">
+      <ul>
+        <li>Initial amount of disease or inoculum</li>
+        <li>Rate of disease increase</li>
+        <li>Duration of disease increase</li>
+      </ul>
+    </div>
+
+    <h3>Compound Interest Diseases</h3>
+
+    <p>
+      Compound interest diseases involve repeated cycles of infection
+      within one growing season. Pathogens continuously spread from
+      plant to plant.
+    </p>
+
+    <p>
+      These diseases increase rapidly because several generations of
+      the pathogen are produced during the epidemic.
+    </p>
+
+    <h3>Simple Interest Diseases</h3>
+
+    <p>
+      Simple interest diseases involve only one major infection cycle
+      during the growing season.
+    </p>
+
+    <p>
+      Plant-to-plant spread is limited or absent after the primary cycle.
+    </p>
+
+    <h2>Van der Plank Concept</h2>
+
+    <p>
+      Van der Plank explained that epidemics usually begin with one
+      infected plant and increase logarithmically under favorable
+      conditions.
+    </p>
+
+    <div class="info-box">
+      <ul>
+        <li>Disease starts slowly</li>
+        <li>Rapid increase occurs during favorable conditions</li>
+        <li>Disease eventually levels off</li>
+        <li>Produces a sigmoid or S-shaped curve</li>
+      </ul>
+    </div>
+
+    <h2>Zadoks and Schein (1979)</h2>
+
+    <p>
+      Zadoks and Schein described three major phases of epidemics.
+    </p>
+
+    <h3>1. Exponential or Logarithmic Phase</h3>
+
+    <p>
+      Disease increases rapidly due to abundant susceptible hosts.
+    </p>
+
+    <h3>2. Logistic Phase</h3>
+
+    <p>
+      Disease increase slows gradually as susceptible tissues decrease.
+    </p>
+
+    <h3>3. Terminal Phase</h3>
+
+    <p>
+      Disease development levels off because infection sites are exhausted
+      or environmental conditions become unfavorable.
+    </p>
+
+  </div>
+
+  <!-- BACK BUTTON -->
+
+  <a href="crop-plant-pathology.html" class="back-btn">
+    ← Back to Plant Pathology Review
+  </a>
+
+</div>
+
+</body>
+</html>
