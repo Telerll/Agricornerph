@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Plant Pathology Integration</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#eef2ee;
+      color:#222;
+      padding:25px;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .header{
+      background:linear-gradient(135deg,#1b4332,#2d6a4f,#40916c);
+      color:white;
+      padding:35px 25px;
+      border-radius:24px;
+      text-align:center;
+      margin-bottom:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .header small{
+      letter-spacing:2px;
+      font-size:12px;
+      opacity:0.9;
+    }
+
+    .header h1{
+      margin-top:10px;
+      font-size:38px;
+    }
+
+    .header p{
+      margin-top:8px;
+      font-size:17px;
+    }
+
+    .content{
+      background:white;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .content h2{
+      color:#1b4332;
+      margin-top:28px;
+      margin-bottom:14px;
+      font-size:28px;
+      border-left:6px solid #40916c;
+      padding-left:14px;
+    }
+
+    .content p{
+      line-height:1.9;
+      margin-bottom:15px;
+    }
+
+    .content ul{
+      margin-left:25px;
+      margin-bottom:18px;
+    }
+
+    .content li{
+      line-height:1.8;
+      margin-bottom:10px;
+    }
+
+    .info-box{
+      background:#f1f8f4;
+      border-left:6px solid #52b788;
+      padding:18px;
+      border-radius:14px;
+      margin-top:15px;
+      margin-bottom:18px;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:14px 24px;
+      background:#2d6a4f;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s ease;
+    }
+
+    .back-btn:hover{
+      background:#1b4332;
+      transform:translateY(-2px);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <small>AgLE REVIEWER MODULE</small>
+    <h1>🌱 Plant Pathology Integration</h1>
+    <p>Crop Protection Final Integration Reviewer</p>
+  </div>
+
+  <div class="content">
+
+    <h2>Introduction to Plant Pathology</h2>
+
+    <p>
+      Plant pathology is the study of plant diseases, their causes,
+      development, spread, diagnosis, and control. Plant diseases
+      reduce crop yield, quality, and farmer income.
+    </p>
+
+    <div class="info-box">
+      <ul>
+        <li>Study of plant diseases</li>
+        <li>Study of pathogens</li>
+        <li>Disease prevention and control</li>
+        <li>Protection of food production</li>
+      </ul>
+    </div>
+
+    <h2>Concept of Plant Disease</h2>
+
+    <p>
+      Plant disease is an abnormal condition that interferes with
+      normal plant growth and function.
+    </p>
+
+    <ul>
+      <li><strong>Infectious diseases</strong> – caused by pathogens</li>
+      <li><strong>Non-infectious diseases</strong> – caused by environmental factors</li>
+    </ul>
+
+    <h2>Plant Disease Diagnosis</h2>
+
+    <p>
+      Diagnosis involves identifying diseases using symptoms,
+      signs, and pathogen structures.
+    </p>
+
+    <div class="info-box">
+      <strong>Common Symptoms:</strong>
+      Mosaic, chlorosis, wilting, blight, canker, rot, stunting.
+    </div>
+
+    <h2>Non-Parasitic Diseases</h2>
+
+    <p>
+      Caused by environmental or abiotic factors.
+    </p>
+
+    <ul>
+      <li>High or low temperature</li>
+      <li>Nutrient deficiency</li>
+      <li>Air pollution</li>
+      <li>Improper moisture</li>
+      <li>Pesticide injury</li>
+    </ul>
+
+    <h2>Parasitic or Biotic Agents</h2>
+
+    <ul>
+      <li>Viruses</li>
+      <li>Viroids</li>
+      <li>Bacteria</li>
+      <li>Mollicutes</li>
+      <li>Protists</li>
+      <li>Nematodes</li>
+      <li>Fungi</li>
+      <li>Parasitic plants</li>
+    </ul>
+
+    <h2>Disease Cycle</h2>
+
+    <p>
+      The disease cycle is the sequence of events in disease
+      development.
+    </p>
+
+    <div class="info-box">
+      Dissemination → Inoculation → Penetration → Infection →
+      Colonization → Symptom Development → Survival
+    </div>
+
+    <h2>Variability in Plant Pathogens</h2>
+
+    <p>
+      Pathogens change genetically through mutation,
+      hybridization, recombination, and reproduction.
+    </p>
+
+    <ul>
+      <li>Mutation</li>
+      <li>Transformation</li>
+      <li>Conjugation</li>
+      <li>Sexual reproduction</li>
+    </ul>
+
+    <h2>Mechanisms of Pathogenicity</h2>
+
+    <p>
+      Pathogens damage plants by interfering with normal
+      physiological processes.
+    </p>
+
+    <ul>
+      <li>Interference with water uptake</li>
+      <li>Reduced photosynthesis</li>
+      <li>Increased transpiration</li>
+      <li>Cell and tissue death</li>
+      <li>Toxin and enzyme production</li>
+    </ul>
+
+    <h2>Mechanisms of Disease Resistance</h2>
+
+    <p>
+      Resistance is the ability of plants to suppress
+      pathogen growth.
+    </p>
+
+    <ul>
+      <li>Pre-formed resistance</li>
+      <li>Induced resistance</li>
+      <li>Hypersensitive reaction</li>
+      <li>Phytoalexin production</li>
+    </ul>
+
+    <h2>Epidemiology of Plant Disease</h2>
+
+    <p>
+      Epidemiology studies the development and spread
+      of plant diseases in populations.
+    </p>
+
+    <div class="info-box">
+      <strong>Elements of an Epidemic:</strong>
+      Susceptible host, virulent pathogen,
+      favorable environment, and human activities.
+    </div>
+
+    <h2>Principles of Plant Disease Control</h2>
+
+    <ul>
+      <li><strong>Exclusion</strong> – prevent entry of pathogen</li>
+      <li><strong>Eradication</strong> – eliminate pathogen</li>
+      <li><strong>Protection</strong> – protect host from infection</li>
+      <li><strong>Resistance</strong> – use resistant varieties</li>
+    </ul>
+
+    <h2>Methods of Disease Control</h2>
+
+    <ul>
+      <li>Quarantine</li>
+      <li>Sanitation</li>
+      <li>Crop rotation</li>
+      <li>Biological control</li>
+      <li>Chemical control</li>
+      <li>Use of resistant cultivars</li>
+      <li>Use of disease-free planting materials</li>
+    </ul>
+
+    <div class="info-box">
+      <strong>Key Integration:</strong><br><br>
+      Plant disease develops through the interaction
+      of the host, pathogen, and environment.
+      Understanding pathogens, disease cycles,
+      epidemiology, resistance, and disease control
+      is essential in crop protection and sustainable agriculture.
+    </div>
+
+  </div>
+
+  <a href="crop-plant-pathology.html" class="back-btn">
+    ← Back to Plant Pathology Review
+  </a>
+
+</div>
+
+</body>
+</html>
