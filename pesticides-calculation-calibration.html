@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pesticide Calculation and Calibration of Application Equipment</title>
+
+  <style>
+    *{ margin:0; padding:0; box-sizing:border-box; }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#eef2ee;
+      min-height:100vh;
+      padding:25px;
+      color:#222;
+    }
+
+    .container{ max-width:1000px; margin:auto; }
+
+    .header{
+      background:#2e7d32;
+      color:white;
+      padding:35px 25px;
+      border-radius:24px;
+      text-align:center;
+      margin-bottom:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .header small{ letter-spacing:2px; opacity:0.9; font-size:12px; }
+    .header h1{ font-size:38px; margin-top:12px; margin-bottom:10px; }
+    .header p{ opacity:0.95; font-size:17px; }
+
+    .content{
+      background:white;
+      border:1px solid #dfe7df;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .content h2{
+      color:#2e7d32;
+      margin-top:30px;
+      margin-bottom:15px;
+      font-size:28px;
+      border-left:6px solid #2e7d32;
+      padding-left:14px;
+    }
+
+    .content h3{
+      margin-top:20px;
+      margin-bottom:10px;
+      color:#1b5e20;
+      font-size:22px;
+    }
+
+    .content p{
+      line-height:1.8;
+      margin-bottom:14px;
+      color:#333;
+    }
+
+    .content ul,
+    .content ol{
+      margin-left:20px;
+      margin-bottom:18px;
+    }
+
+    .content li{
+      margin-bottom:10px;
+      line-height:1.7;
+      color:#333;
+    }
+
+    .info-box{
+      background:#f1f8f2;
+      border-left:6px solid #2e7d32;
+      padding:18px;
+      border-radius:14px;
+      margin-top:18px;
+      margin-bottom:18px;
+    }
+
+    .formula-box{
+      background:#f7fff8;
+      border:1px solid #cfe5d1;
+      padding:18px;
+      border-radius:14px;
+      margin:18px 0;
+      font-weight:bold;
+      line-height:1.8;
+      overflow-x:auto;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:14px 24px;
+      background:#2e7d32;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s ease;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .back-btn:hover{
+      transform:translateY(-3px);
+      background:#1b5e20;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <small>AgLE REVIEWER MODULE</small>
+    <h1>🧪 Pesticide Calculation and Calibration of Application Equipment</h1>
+    <p>Entomology and Pest Management Reviewer</p>
+  </div>
+
+  <div class="content">
+
+    <h2>Introduction</h2>
+
+    <p>
+      Pesticide calculation and calibration of application equipment are essential
+      procedures in pesticide application. These activities ensure that the correct
+      amount of pesticide is applied uniformly over a target area.
+    </p>
+
+    <p>
+      Even if the correct pesticide is selected, poor calibration or incorrect
+      calculations may lead to under-application or over-application.
+    </p>
+
+    <div class="info-box">
+      <p>
+        Proper pesticide calculation and calibration help achieve effective pest
+        control while minimizing waste, environmental contamination, crop injury,
+        and unnecessary expenses.
+      </p>
+    </div>
+
+    <h2>Importance of Pesticide Calculation and Calibration</h2>
+
+    <ul>
+      <li>Apply the correct pesticide dosage</li>
+      <li>Achieve uniform crop coverage</li>
+      <li>Prevent pesticide wastage</li>
+      <li>Reduce production costs</li>
+      <li>Improve pest control effectiveness</li>
+      <li>Minimize environmental pollution</li>
+      <li>Prevent crop injury or phytotoxicity</li>
+      <li>Reduce risks to applicators and consumers</li>
+    </ul>
+
+    <h2>Calibration of Application Equipment</h2>
+
+    <h3>Definition of Calibration</h3>
+
+    <p>
+      Calibration is the process of determining the amount of spray solution
+      delivered by a specific application equipment under actual field conditions.
+    </p>
+
+    <h3>Calibration Determines</h3>
+
+    <ul>
+      <li>Spray volume per hectare</li>
+      <li>Sprayer output</li>
+      <li>Area covered</li>
+      <li>Number of sprayer loads needed</li>
+      <li>Amount of pesticide per tank load</li>
+    </ul>
+
+    <h2>Why Calibration is Necessary</h2>
+
+    <ul>
+      <li>Too much pesticide may be applied without calibration.</li>
+      <li>Too little pesticide may be applied without calibration.</li>
+      <li>Pest control may fail.</li>
+      <li>Crops may be injured.</li>
+      <li>Money may be wasted.</li>
+      <li>Environmental contamination may occur.</li>
+    </ul>
+
+    <h2>Objectives of Calibration</h2>
+
+    <ol>
+      <li>Determine actual spray output.</li>
+      <li>Ensure uniform distribution of pesticides.</li>
+      <li>Apply the recommended pesticide rate.</li>
+      <li>Improve efficiency of pesticide application.</li>
+      <li>Reduce pesticide losses.</li>
+      <li>Enhance pest control effectiveness.</li>
+    </ol>
+
+    <h2>Calibration of a Knapsack Sprayer</h2>
+
+    <h3>Step 1: Inspect the Sprayer</h3>
+
+    <p>
+      Before calibration, check the sprayer thoroughly.
+    </p>
+
+    <ul>
+      <li>Tank</li>
+      <li>Hose</li>
+      <li>Nozzle</li>
+      <li>Trigger valve</li>
+      <li>Spray lance</li>
+    </ul>
+
+    <div class="info-box">
+      <p>
+        Make sure there are no leaks, the nozzle is clean, and all parts are
+        functioning properly.
+      </p>
+    </div>
+
+    <h3>Step 2: Establish a Test Area</h3>
+
+    <p>
+      Measure and mark a representative area in the field. The test area should
+      resemble actual field conditions.
+    </p>
+
+    <h3>Step 3: Fill the Sprayer with Water</h3>
+
+    <p>
+      Use clean water only during calibration. Never use pesticide during
+      calibration.
+    </p>
+
+    <h3>Step 4: Determine the Spray Swath</h3>
+
+    <p>
+      Spray swath is the width covered by one pass of the sprayer.
+    </p>
+
+    <div class="info-box">
+      <p>
+        Example: Spray swath = 4 meters
+      </p>
+    </div>
+
+    <h3>Step 5: Conduct a Test Run</h3>
+
+    <p>
+      Operate the sprayer at normal walking speed, normal spraying pressure,
+      and normal nozzle height.
+    </p>
+
+    <h3>Step 6: Measure the Distance Traveled</h3>
+
+    <p>
+      Determine the actual distance sprayed.
+    </p>
+
+    <div class="info-box">
+      <p>
+        Example: Distance traveled = 40 meters
+      </p>
+    </div>
+
+    <h3>Step 7: Measure the Volume Sprayed</h3>
+
+    <p>
+      Determine how much water was used during the test run.
+    </p>
+
+    <div class="info-box">
+      <p>
+        Example: Volume sprayed = 5 liters
+      </p>
+    </div>
+
+    <h2>Calculating Area Sprayed</h2>
+
+    <div class="formula-box">
+      Area Sprayed (ha) = (Swath × Distance) ÷ 10,000
+    </div>
+
+    <p>
+      Where swath and distance are in meters, and 10,000 m² is equal to
+      one hectare.
+    </p>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Swath = 4 m</li>
+      <li>Distance = 40 m</li>
+    </ul>
+
+    <div class="formula-box">
+      Area = (4 × 40) ÷ 10,000<br>
+      Area = 160 ÷ 10,000<br>
+      Area = 0.016 ha
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: Area sprayed = <strong>0.016 hectare</strong>
+      </p>
+    </div>
+
+    <h2>Calculating Application Rate</h2>
+
+    <div class="formula-box">
+      Application Rate = Volume Sprayed ÷ Area Sprayed
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Volume sprayed = 5 liters</li>
+      <li>Area sprayed = 0.016 hectare</li>
+    </ul>
+
+    <div class="formula-box">
+      Application Rate = 5 ÷ 0.016<br>
+      Application Rate = 312.5 L/ha<br>
+      Rounded value = 313 L/ha
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>313 liters per hectare</strong>
+      </p>
+    </div>
+
+    <h2>Interpretation of Application Rate</h2>
+
+    <p>
+      An application rate of 313 L/ha means that the sprayer requires
+      approximately 313 liters of spray solution to cover one hectare.
+    </p>
+
+    <h2>Calculating Number of Sprayer Loads Per Hectare</h2>
+
+    <div class="formula-box">
+      Number of Loads = Spray Volume (L/ha) ÷ Sprayer Capacity
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Spray volume = 313 L/ha</li>
+      <li>Sprayer capacity = 10 liters</li>
+    </ul>
+
+    <div class="formula-box">
+      Number of Loads = 313 ÷ 10<br>
+      Number of Loads = 31.3
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: Approximately <strong>31 sprayer loads per hectare</strong>
+      </p>
+    </div>
+
+    <h2>Calculating Commercial Formulation Required</h2>
+
+    <p>
+      Some pesticide recommendations are expressed as kilograms of active
+      ingredient per hectare. The commercial product contains only a certain
+      percentage of active ingredient.
+    </p>
+
+    <div class="formula-box">
+      Commercial Formulation = Required active ingredient ÷ % active ingredient
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Recommended rate = 0.5 kg a.i./ha</li>
+      <li>Product = 25 EC</li>
+      <li>25 EC means 25% active ingredient</li>
+    </ul>
+
+    <p>
+      Convert percentage to decimal:
+    </p>
+
+    <div class="formula-box">
+      25% = 0.25
+    </div>
+
+    <div class="formula-box">
+      Commercial Formulation = 0.5 ÷ 0.25<br>
+      Commercial Formulation = 2.0 kg
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>2.0 kg commercial formulation per hectare</strong>
+      </p>
+    </div>
+
+    <h2>Calculating Pesticide Per Sprayer Load</h2>
+
+    <div class="formula-box">
+      Pesticide per Load = Commercial Formulation ÷ Number of Loads
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Commercial formulation = 2.0 kg</li>
+      <li>Number of loads = 31</li>
+    </ul>
+
+    <div class="formula-box">
+      Pesticide per Load = 2.0 ÷ 31<br>
+      Pesticide per Load = 0.065 kg
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>0.065 kg or 65 grams per sprayer load</strong>
+      </p>
+    </div>
+
+    <h2>Pesticide Calculations</h2>
+
+    <h3>Definition</h3>
+
+    <p>
+      Pesticide calculation is the determination of the amount of pesticide
+      needed for a given area.
+    </p>
+
+    <div class="info-box">
+      <p>
+        Accurate pesticide calculations ensure proper dosage and effective
+        pest control.
+      </p>
+    </div>
+
+    <h2>Important Conversion Factors</h2>
+
+    <h3>Area</h3>
+    <ul>
+      <li>1 hectare = 10,000 square meters</li>
+    </ul>
+
+    <h3>Weight</h3>
+    <ul>
+      <li>1 kilogram = 1,000 grams</li>
+    </ul>
+
+    <h3>Volume</h3>
+    <ul>
+      <li>1 liter = 1,000 milliliters</li>
+      <li>1 gallon = 3.8 liters</li>
+      <li>1 tablespoon = 10 milliliters</li>
+    </ul>
+
+    <h2>Calculating Spray Volume Per Hectare</h2>
+
+    <div class="formula-box">
+      Spray Volume = (Sprayer Size × Number of Loads) ÷ Area
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Sprayer size = 10 liters</li>
+      <li>Number of loads = 6</li>
+      <li>Area = 0.2 hectare</li>
+    </ul>
+
+    <div class="formula-box">
+      Spray Volume = (10 × 6) ÷ 0.2<br>
+      Spray Volume = 60 ÷ 0.2<br>
+      Spray Volume = 300 L/ha
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>300 liters per hectare</strong>
+      </p>
+    </div>
+
+    <h2>Calculating Number of Loads Needed</h2>
+
+    <div class="formula-box">
+      Loads = (Desired Spray Volume × Area) ÷ Sprayer Capacity
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Desired volume = 250 L/ha</li>
+      <li>Area = 0.4 hectare</li>
+      <li>Sprayer capacity = 10 liters</li>
+    </ul>
+
+    <div class="formula-box">
+      Loads = (250 × 0.4) ÷ 10<br>
+      Loads = 100 ÷ 10<br>
+      Loads = 10
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>10 sprayer loads</strong>
+      </p>
+    </div>
+
+    <h2>Calculations Using Percentage Concentration</h2>
+
+    <p>
+      Some pesticide labels recommend concentrations rather than kilograms
+      active ingredient per hectare.
+    </p>
+
+    <div class="info-box">
+      <p>
+        Example: 0.04% spray concentration
+      </p>
+    </div>
+
+    <div class="formula-box">
+      Commercial Product = (Volume Required × Recommended Concentration) ÷ % a.i. in Product
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Spray volume = 320 L/ha</li>
+      <li>Area = 0.5 ha</li>
+      <li>Product = 45 EC</li>
+      <li>Recommended concentration = 0.04%</li>
+    </ul>
+
+    <h3>Step 1: Determine Total Spray Volume Needed</h3>
+
+    <div class="formula-box">
+      Total Spray Volume = 320 × 0.5<br>
+      Total Spray Volume = 160 L
+    </div>
+
+    <h3>Step 2: Calculate Commercial Product Required</h3>
+
+    <div class="formula-box">
+      Commercial Product = (160 × 0.04) ÷ 45<br>
+      Commercial Product = 0.142 L
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>0.142 liter or 142 mL</strong>
+      </p>
+    </div>
+
+    <h2>Calculating Product Per Sprayer Load</h2>
+
+    <ul>
+      <li>Commercial product = 0.142 L</li>
+      <li>Total spray volume = 160 L</li>
+      <li>Sprayer capacity = 8 L</li>
+    </ul>
+
+    <div class="formula-box">
+      Product per Load = (0.142 × 8) ÷ 160<br>
+      Product per Load = 0.007 L
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>7 mL per sprayer load</strong>
+      </p>
+    </div>
+
+    <h2>Calculations Using kg Active Ingredient Per Hectare</h2>
+
+    <div class="formula-box">
+      Commercial Formulation = (Rate × Area × 100) ÷ % a.i.
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Recommended rate = 0.75 kg ai/ha</li>
+      <li>Product = 70 WP</li>
+      <li>Area = 0.5 ha</li>
+    </ul>
+
+    <div class="formula-box">
+      Commercial Formulation = (0.75 × 0.5 × 100) ÷ 70<br>
+      Commercial Formulation = 0.536 kg
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>0.536 kg commercial product</strong>
+      </p>
+    </div>
+
+    <h2>Spray Volume Required</h2>
+
+    <ul>
+      <li>Spray volume = 320 L/ha</li>
+      <li>Area = 0.5 ha</li>
+    </ul>
+
+    <div class="formula-box">
+      Spray Volume Required = 320 × 0.5<br>
+      Spray Volume Required = 160 L
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>160 liters</strong>
+      </p>
+    </div>
+
+    <h2>Material Required Per Sprayer Load</h2>
+
+    <ul>
+      <li>Commercial product = 0.536 kg</li>
+      <li>Sprayer capacity = 8 L</li>
+      <li>Total spray volume = 160 L</li>
+    </ul>
+
+    <div class="formula-box">
+      Material per Load = (0.536 × 8) ÷ 160<br>
+      Material per Load = 0.027 kg<br>
+      Material per Load = 27 g
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>27 grams per sprayer load</strong>
+      </p>
+    </div>
+
+    <h2>Granular Pesticide Calculations</h2>
+
+    <p>
+      Granular pesticides are commonly applied directly to soil or standing water.
+    </p>
+
+    <div class="formula-box">
+      Commercial Formulation = (Rate × Area × 100) ÷ % a.i.
+    </div>
+
+    <h3>Example</h3>
+
+    <ul>
+      <li>Recommended rate = 0.6 kg ai/ha</li>
+      <li>Area = 2 hectares</li>
+      <li>Granular formulation = 3% ai</li>
+    </ul>
+
+    <div class="formula-box">
+      Commercial Formulation = (0.6 × 2 × 100) ÷ 3<br>
+      Commercial Formulation = 120 ÷ 3<br>
+      Commercial Formulation = 40 kg
+    </div>
+
+    <div class="info-box">
+      <p>
+        Answer: <strong>40 kilograms granules</strong>
+      </p>
+    </div>
+
+    <h2>Benefits of Proper Calibration</h2>
+
+    <ul>
+      <li>Improves pesticide efficiency</li>
+      <li>Saves money</li>
+      <li>Ensures uniform application</li>
+      <li>Improves crop coverage</li>
+      <li>Reduces environmental contamination</li>
+      <li>Reduces pesticide waste</li>
+      <li>Improves pest control effectiveness</li>
+    </ul>
+
+    <h2>Common Board Examination Traps</h2>
+
+    <div class="info-box">
+      <h3>Trap #1</h3>
+      <p>
+        25 EC means 25% active ingredient, not 25 liters active ingredient.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Trap #2</h3>
+      <p>
+        70 WP means 70% active ingredient, not 70 kilograms pesticide.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Trap #3</h3>
+      <p>
+        Always convert percentages to decimals when required.
+      </p>
+
+      <ul>
+        <li>25% = 0.25</li>
+        <li>45% = 0.45</li>
+        <li>70% = 0.70</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <h3>Trap #4</h3>
+      <p>
+        1 hectare = 10,000 square meters.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Trap #5</h3>
+      <p>
+        Calibration should use water only, never pesticide.
+      </p>
+    </div>
+
+    <h2>ALE Quick Facts</h2>
+
+    <div class="info-box">
+      <ul>
+        <li>Calibration determines spray output.</li>
+        <li>Application Rate = Volume Sprayed ÷ Area Sprayed.</li>
+        <li>1 hectare = 10,000 m².</li>
+        <li>1 kg = 1,000 g.</li>
+        <li>1 L = 1,000 mL.</li>
+        <li>25 EC = 25% active ingredient.</li>
+        <li>70 WP = 70% active ingredient.</li>
+        <li>Proper calibration prevents underdosing and overdosing.</li>
+        <li>Calibration improves pest control and saves money.</li>
+        <li>Accurate pesticide calculations ensure correct application rates.</li>
+      </ul>
+    </div>
+
+    <h2>Summary</h2>
+
+    <div class="info-box">
+      <p>
+        Pesticide calculation and calibration of application equipment are critical
+        components of safe and effective pesticide use. Calibration determines
+        the actual spray output of equipment, while pesticide calculations determine
+        the exact amount of pesticide needed for a given area. Proper calculations
+        and calibration ensure uniform application, effective pest control, reduced
+        pesticide waste, minimized environmental contamination, lower production
+        costs, and improved crop protection. Because this topic combines practical
+        field application and mathematical problem-solving, it is one of the most
+        important and frequently tested areas in the AgLE Board Examination.
+      </p>
+    </div>
+
+  </div>
+
+  <a href="crop-entomology-pest-management.html" class="back-btn">
+    ← Back to Entomology & Pest Management
+  </a>
+
+</div>
+
+</body>
+</html>
