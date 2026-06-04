@@ -1,68 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Classification of Weeds</title>
-...
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classification of Weeds</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#eef2ee;
+      min-height:100vh;
+      padding:25px;
+      color:#222;
+    }
+
+    .container{max-width:1000px;margin:auto;}
+
+    .header{
+      background:#2e7d32;
+      color:white;
+      padding:35px 25px;
+      border-radius:24px;
+      text-align:center;
+      margin-bottom:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .header small{letter-spacing:2px;opacity:0.9;font-size:12px;}
+    .header h1{font-size:38px;margin-top:12px;margin-bottom:10px;}
+    .header p{opacity:0.95;font-size:17px;}
+
+    .content{
+      background:white;
+      border:1px solid #dfe7df;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .content h2{
+      color:#2e7d32;
+      margin-top:30px;
+      margin-bottom:15px;
+      font-size:28px;
+      border-left:6px solid #2e7d32;
+      padding-left:14px;
+    }
+
+    .content h3{
+      margin-top:20px;
+      margin-bottom:10px;
+      color:#1b5e20;
+      font-size:22px;
+    }
+
+    .content p{
+      line-height:1.8;
+      margin-bottom:14px;
+      color:#333;
+    }
+
+    .content ul{
+      margin-left:20px;
+      margin-bottom:18px;
+    }
+
+    .content li{
+      margin-bottom:10px;
+      line-height:1.7;
+      color:#333;
+    }
+
+    .info-box{
+      background:#f1f8f2;
+      border-left:6px solid #2e7d32;
+      padding:18px;
+      border-radius:14px;
+      margin-top:18px;
+      margin-bottom:18px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:18px 0;
+    }
+
+    th,td{
+      border:1px solid #dfe7df;
+      padding:12px;
+      text-align:left;
+      line-height:1.6;
+      vertical-align:top;
+    }
+
+    th{
+      background:#2e7d32;
+      color:white;
+    }
+
+    .back-btn{
+      display:block;
+      width:fit-content;
+      margin:35px auto 0;
+      padding:14px 24px;
+      background:#2e7d32;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s ease;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .back-btn:hover{
+      transform:translateY(-3px);
+      background:#1b5e20;
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<div class="header">
-  <small>AgLE REVIEWER MODULE</small>
-  <h1>🌾 Part 2: Classification of Weeds</h1>
-  <p>Comprehensive Weed Science Reviewer</p>
+  <div class="header">
+    <small>AgLE REVIEWER MODULE</small>
+    <h1>🌾 Part 2: Classification of Weeds</h1>
+    <p>Comprehensive Weed Science Reviewer</p>
+  </div>
+
+  <div class="content">
+
+    <h2>Introduction</h2>
+
+    <p>
+      Proper weed management begins with proper weed classification.
+      Classification helps in weed identification, understanding weed biology,
+      selecting appropriate control methods, recommending herbicides, and
+      predicting weed behavior.
+    </p>
+
+    <div class="info-box">
+      <p>
+        Different weed groups differ in growth habit, reproduction, life cycle,
+        habitat, and response to control measures.
+      </p>
+    </div>
+
+    <h2>Definition of Weed Classification</h2>
+
+    <p>
+      Weed classification is the process of grouping weeds according to common
+      characteristics.
+    </p>
+
+    <ul>
+      <li>Life cycle</li>
+      <li>Morphology</li>
+      <li>Habitat</li>
+      <li>Reproduction</li>
+      <li>Origin</li>
+      <li>Growth habit</li>
+    </ul>
+
+    <h2>Importance of Weed Classification</h2>
+
+    <ul>
+      <li>Helps identify weeds correctly.</li>
+      <li>Helps understand weed biology.</li>
+      <li>Improves weed control decisions.</li>
+      <li>Reduces herbicide misuse.</li>
+      <li>Helps determine the best timing of control.</li>
+      <li>Supports effective Integrated Weed Management.</li>
+    </ul>
+
+    <h2>Classification According to Life Cycle</h2>
+
+    <p>
+      Life cycle refers to the length of time required for a weed to complete
+      its growth, reproduction, and death.
+    </p>
+
+    <h3>I. Annual Weeds</h3>
+
+    <p>
+      Annual weeds complete their entire life cycle within one growing season
+      or one year.
+    </p>
+
+    <div class="info-box">
+      <p>
+        <strong>Life Cycle:</strong> Seed → Germination → Growth → Flowering
+        → Seed Production → Death
+      </p>
+    </div>
+
+    <h3>Characteristics</h3>
+
+    <ul>
+      <li>Depend mainly on seeds for reproduction.</li>
+      <li>Grow rapidly.</li>
+      <li>Produce large quantities of seeds.</li>
+      <li>Die after seed production.</li>
+      <li>Usually aggressive during early crop growth.</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Goosegrass — <em>Eleusine indica</em></li>
+      <li>Barnyard grass — <em>Echinochloa crus-galli</em></li>
+      <li>Pigweed — <em>Amaranthus spinosus</em></li>
+      <li>Purslane — <em>Portulaca oleracea</em></li>
+    </ul>
+
+    <div class="info-box">
+      <p>
+        <strong>Board Tip:</strong> Annual weeds survive unfavorable conditions
+        mainly through seeds.
+      </p>
+    </div>
+
+    <h3>II. Biennial Weeds</h3>
+
+    <p>
+      Biennial weeds require two growing seasons to complete their life cycle.
+    </p>
+
+    <h3>First Year</h3>
+
+    <ul>
+      <li>Vegetative growth only</li>
+      <li>Development of roots, leaves, and stems</li>
+      <li>Food storage</li>
+    </ul>
+
+    <h3>Second Year</h3>
+
+    <ul>
+      <li>Flowering</li>
+      <li>Seed production</li>
+      <li>Death after reproduction</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Wild carrot — <em>Daucus carota</em></li>
+      <li>Bull thistle — <em>Cirsium vulgare</em></li>
+    </ul>
+
+    <div class="info-box">
+      <p>
+        <strong>Board Tip:</strong> Biennials complete their life cycle in
+        two years and are less common in tropical agriculture.
+      </p>
+    </div>
+
+    <h3>III. Perennial Weeds</h3>
+
+    <p>
+      Perennial weeds live for more than two years.
+    </p>
+
+    <h3>Characteristics</h3>
+
+    <ul>
+      <li>Long-lived.</li>
+      <li>Difficult to control.</li>
+      <li>May reproduce by seeds and vegetative structures.</li>
+      <li>Can regrow after cutting, cultivation, or burning.</li>
+      <li>Often survive through underground storage organs.</li>
+    </ul>
+
+    <h3>Vegetative Structures</h3>
+
+    <ul>
+      <li>Rhizomes</li>
+      <li>Stolons</li>
+      <li>Tubers</li>
+      <li>Bulbs</li>
+      <li>Rootstocks</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Purple nutsedge — <em>Cyperus rotundus</em></li>
+      <li>Cogon grass — <em>Imperata cylindrica</em></li>
+      <li>Johnson grass — <em>Sorghum halepense</em></li>
+    </ul>
+
+    <div class="info-box">
+      <p>
+        <strong>Board Tip:</strong> Perennial weeds are usually the most
+        difficult to control because they survive through underground
+        vegetative structures.
+      </p>
+    </div>
+
+    <h2>Comparison of Life Cycle Groups</h2>
+
+    <table>
+      <tr>
+        <th>Characteristic</th>
+        <th>Annual</th>
+        <th>Biennial</th>
+        <th>Perennial</th>
+      </tr>
+      <tr>
+        <td>Life Span</td>
+        <td>Less than 1 year</td>
+        <td>2 years</td>
+        <td>More than 2 years</td>
+      </tr>
+      <tr>
+        <td>Main Survival Structure</td>
+        <td>Seed</td>
+        <td>Root and seed</td>
+        <td>Seeds and vegetative parts</td>
+      </tr>
+      <tr>
+        <td>Difficulty of Control</td>
+        <td>Relatively easy</td>
+        <td>Moderate</td>
+        <td>Difficult</td>
+      </tr>
+      <tr>
+        <td>Regrowth Ability</td>
+        <td>Low</td>
+        <td>Moderate</td>
+        <td>High</td>
+      </tr>
+    </table>
+
+    <h2>Classification According to Morphology</h2>
+
+    <p>
+      Morphological classification is one of the most important classification
+      systems in Weed Science because it is used in field identification and
+      herbicide selection.
+    </p>
+
+    <ul>
+      <li>Grasses</li>
+      <li>Sedges</li>
+      <li>Broadleaf weeds</li>
+    </ul>
+
+    <h3>I. Grasses</h3>
+
+    <p>
+      Grasses belong to the family <strong>Poaceae</strong>, formerly called
+      Gramineae.
+    </p>
+
+    <h3>Characteristics</h3>
+
+    <ul>
+      <li>Stem is usually round.</li>
+      <li>Stem is hollow between nodes.</li>
+      <li>Stem is jointed.</li>
+      <li>Leaves are narrow.</li>
+      <li>Leaf veins are parallel.</li>
+      <li>Root system is fibrous.</li>
+      <li>Growth habit is usually tufted.</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Barnyard grass — <em>Echinochloa crus-galli</em></li>
+      <li>Jungle rice — <em>Echinochloa colona</em></li>
+      <li>Goosegrass — <em>Eleusine indica</em></li>
+      <li>Cogon grass — <em>Imperata cylindrica</em></li>
+    </ul>
+
+    <div class="info-box">
+      <p>
+        <strong>Board Tip:</strong> Grasses generally have round stems,
+        hollow internodes, narrow leaves, and parallel venation.
+      </p>
+    </div>
+
+    <h3>II. Sedges</h3>
+
+    <p>
+      Sedges belong to the family <strong>Cyperaceae</strong>.
+    </p>
+
+    <h3>Characteristics</h3>
+
+    <ul>
+      <li>Stem is triangular.</li>
+      <li>Stem is usually solid.</li>
+      <li>Stem has three sides.</li>
+      <li>Leaves are commonly arranged in three rows.</li>
+      <li>Root system is fibrous.</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Purple nutsedge — <em>Cyperus rotundus</em></li>
+      <li>Rice flatsedge — <em>Cyperus iria</em></li>
+      <li>Smallflower umbrella sedge — <em>Cyperus difformis</em></li>
+    </ul>
+
+    <div class="info-box">
+      <p>
+        <strong>Famous Board Exam Rule:</strong> “Sedges have edges.”
+        This means sedges have triangular stems.
+      </p>
+    </div>
+
+    <h3>III. Broadleaf Weeds</h3>
+
+    <p>
+      Broadleaf weeds are weeds with broad leaves and net-like venation.
+    </p>
+
+    <h3>Characteristics</h3>
+
+    <ul>
+      <li>Leaves are broad.</li>
+      <li>Leaf venation is reticulate or net-like.</li>
+      <li>Stem is usually solid.</li>
+      <li>Root system is usually taproot.</li>
+      <li>Many belong to dicotyledonous plants.</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Pigweed — <em>Amaranthus spinosus</em></li>
+      <li>Purslane — <em>Portulaca oleracea</em></li>
+      <li>Coat buttons — <em>Tridax procumbens</em></li>
+    </ul>
+
+    <div class="info-box">
+      <p>
+        <strong>Board Tip:</strong> Broadleaf weeds usually have broad leaves,
+        reticulate venation, and taproot system.
+      </p>
+    </div>
+
+    <h2>Comparison of Grasses, Sedges, and Broadleaves</h2>
+
+    <table>
+      <tr>
+        <th>Characteristic</th>
+        <th>Grasses</th>
+        <th>Sedges</th>
+        <th>Broadleaves</th>
+      </tr>
+      <tr>
+        <td>Stem Shape</td>
+        <td>Round</td>
+        <td>Triangular</td>
+        <td>Usually round or solid</td>
+      </tr>
+      <tr>
+        <td>Internodes</td>
+        <td>Hollow</td>
+        <td>Solid</td>
+        <td>Solid</td>
+      </tr>
+      <tr>
+        <td>Leaf Veins</td>
+        <td>Parallel</td>
+        <td>Parallel</td>
+        <td>Reticulate</td>
+      </tr>
+      <tr>
+        <td>Root System</td>
+        <td>Fibrous</td>
+        <td>Fibrous</td>
+        <td>Usually taproot</td>
+      </tr>
+      <tr>
+        <td>Example</td>
+        <td>Goosegrass</td>
+        <td>Purple nutsedge</td>
+        <td>Pigweed</td>
+      </tr>
+    </table>
+
+    <h2>Classification According to Habitat</h2>
+
+    <p>
+      Habitat refers to the place or environment where weeds grow.
+    </p>
+
+    <h3>I. Terrestrial Weeds</h3>
+
+    <p>
+      Terrestrial weeds grow on land.
+    </p>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Cogon grass</li>
+      <li>Goosegrass</li>
+      <li>Pigweed</li>
+      <li>Purple nutsedge</li>
+    </ul>
+
+    <h3>II. Aquatic Weeds</h3>
+
+    <p>
+      Aquatic weeds grow in water or saturated areas.
+    </p>
+
+    <h3>Examples</h3>
+
+    <ul>
+      <li>Water hyacinth — <em>Eichhornia crassipes</em></li>
+      <li>Water lettuce — <em>Pistia stratiotes</em></li>
+      <li>Duckweed — <em>Lemna</em> spp.</li>
+    </ul>
+
+    <h3>Importance of Aquatic Weeds</h3>
+
+    <ul>
+      <li>Interfere with irrigation canals.</li>
+      <li>Block waterways.</li>
+      <li>Affect fisheries.</li>
+      <li>Interfere with rice production.</li>
+      <li>Reduce water flow and oxygen levels.</li>
+    </ul>
+
+    <h2>Classification According to Origin</h2>
+
+    <h3>I. Native Weeds</h3>
+
+    <p>
+      Native weeds are weeds naturally occurring in a region.
+    </p>
+
+    <h3>II. Introduced Weeds</h3>
+
+    <p>
+      Introduced weeds are weeds brought from other countries or regions.
+      Some introduced weeds become invasive because they lack natural enemies
+      in the new area.
+    </p>
+
+    <div class="info-box">
+      <p>
+        <strong>Example:</strong> Water hyacinth was introduced but later
+        became an invasive aquatic weed.
+      </p>
+    </div>
+
+    <h2>Classification According to Growth Habit</h2>
+
+    <h3>I. Erect Weeds</h3>
+
+    <p>
+      Erect weeds grow upright.
+    </p>
+
+    <ul>
+      <li>Pigweed</li>
+      <li>Spiny amaranth</li>
+    </ul>
+
+    <h3>II. Creeping Weeds</h3>
+
+    <p>
+      Creeping weeds spread horizontally along the soil surface.
+    </p>
+
+    <ul>
+      <li>Purslane</li>
+      <li>Some grasses with stolons</li>
+    </ul>
+
+    <h3>III. Climbing Weeds</h3>
+
+    <p>
+      Climbing weeds climb using stems, tendrils, or twining growth.
+    </p>
+
+    <ul>
+      <li>Morning glory</li>
+      <li>Other vine-type weeds</li>
+    </ul>
+
+    <h2>Importance of Weed Classification in Management</h2>
+
+    <p>
+      Weed classification is important because management methods differ
+      depending on the type of weed.
+    </p>
+
+    <ul>
+      <li>Annual weeds are often controlled before seed production.</li>
+      <li>Perennial weeds require control of underground vegetative structures.</li>
+      <li>Grasses, sedges, and broadleaves may require different herbicides.</li>
+      <li>Aquatic weeds need different management compared with terrestrial weeds.</li>
+      <li>Correct classification prevents wrong herbicide selection.</li>
+    </ul>
+
+    <h2>ALE Quick Facts</h2>
+
+    <div class="info-box">
+      <ul>
+        <li>Annual weeds complete life cycle in one year.</li>
+        <li>Biennial weeds complete life cycle in two years.</li>
+        <li>Perennial weeds live for more than two years.</li>
+        <li>Grasses belong to Poaceae.</li>
+        <li>Sedges belong to Cyperaceae.</li>
+        <li>Broadleaf weeds have broad leaves and reticulate veins.</li>
+        <li>Purple nutsedge is a sedge.</li>
+        <li>Cogon grass is a perennial grass.</li>
+        <li>Water hyacinth is an aquatic weed.</li>
+        <li>Perennial weeds are usually the hardest to control.</li>
+      </ul>
+    </div>
+
+    <h2>ALE High-Yield Exam Tips</h2>
+
+    <div class="info-box">
+      <h3>Board Trap #1</h3>
+      <p>
+        “Sedges have edges.” A triangular stem usually indicates a sedge.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Board Trap #2</h3>
+      <p>
+        Grasses usually have round stems, hollow internodes, and parallel veins.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Board Trap #3</h3>
+      <p>
+        Broadleaf weeds usually have broad leaves and reticulate venation.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Board Trap #4</h3>
+      <p>
+        Purple nutsedge, <em>Cyperus rotundus</em>, is a sedge, not a grass.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Board Trap #5</h3>
+      <p>
+        Perennial weeds are difficult to control because they possess
+        underground vegetative structures such as rhizomes, stolons, tubers,
+        bulbs, and rootstocks.
+      </p>
+    </div>
+
+    <h2>Summary</h2>
+
+    <div class="info-box">
+      <p>
+        Weed classification groups weeds according to life cycle, morphology,
+        habitat, origin, and growth habit. Based on life cycle, weeds may be
+        annual, biennial, or perennial. Based on morphology, weeds are classified
+        as grasses, sedges, or broadleaves. Sedges are distinguished by triangular
+        stems, grasses by round and usually hollow stems, and broadleaf weeds by
+        broad leaves and reticulate venation. Proper classification is essential
+        for weed identification, herbicide selection, and effective weed
+        management.
+      </p>
+    </div>
+
+  </div>
+
+  <a href="crop-weed-science.html" class="back-btn">
+    ← Back to Weed Science Review
+  </a>
+
 </div>
 
-<div class="content">
-
-<!-- Introduction -->
-
-<!-- Definition of Weed Classification -->
-
-<!-- Importance of Weed Classification -->
-
-<!-- Classification According to Life Cycle -->
-<!-- Annual Weeds -->
-<!-- Biennial Weeds -->
-<!-- Perennial Weeds -->
-
-<!-- Comparison Table -->
-
-<!-- Classification According to Morphology -->
-<!-- Grasses -->
-<!-- Sedges -->
-<!-- Broadleaves -->
-
-<!-- Comparison Table -->
-
-<!-- Classification According to Habitat -->
-<!-- Terrestrial -->
-<!-- Aquatic -->
-
-<!-- Classification According to Origin -->
-<!-- Native -->
-<!-- Introduced -->
-
-<!-- Classification According to Growth Habit -->
-<!-- Erect -->
-<!-- Creeping -->
-<!-- Climbing -->
-
-<!-- Importance in Weed Management -->
-
-<!-- ALE Quick Facts -->
-
-<!-- ALE High Yield Board Tips -->
-
-<!-- Summary -->
-
-</div>
-
-<a href="crop-weed-science.html" class="back-btn">
-  ← Back to Weed Science Review
-</a>
-
-</div>
 </body>
 </html>
